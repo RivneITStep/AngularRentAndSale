@@ -1,15 +1,401 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
-<a href="../../../../Upload/documents.txt" download="documents.txt">Docs</a>
+<!--BODY-->
+<div class="container">
+
+  <!--MENU OF CATEGORIES-->
+  <div class="row">
+
+    <div class="col col-lg-12 col-md 12 col-sm-12 col-xs-12">
+
+      <div class="dropdown show">
+        <a class="category-item" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Чоловіче<span class="lil-arrow">></span></a>
+        <div class="dropdown-menu dropdown-menu-subcategories" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Кеди</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Майки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Сорочки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Футболки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Худі</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Штани</a>
+        </div>
+      </div>
+
+      <div class="dropdown show">
+        <a class="category-item" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Жіноче<span class="lil-arrow">></span></a>
+        <div class="dropdown-menu dropdown-menu-subcategories" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Блузи</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Кеди</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Сорочки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Футболки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Худі</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Штани</a>
+        </div>
+      </div>
+
+      <div class="dropdown show">
+        <a class="category-item" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Дитяче<span class="lil-arrow">></span></a>
+        <div class="dropdown-menu dropdown-menu-subcategories" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Піжами</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Футболки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Кофти</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Штани</a>
+        </div>
+      </div>
+
+      <div class="dropdown show">
+        <a class="category-item" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Аксесуари<span class="lil-arrow">></span></a>
+        <div class="dropdown-menu dropdown-menu-subcategories" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Браслети</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Брелоки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Кільця</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Ланцюги</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Сережки</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Таро</a>
+          <a class="dropdown-item dropdown-subcategories" href="#"><span
+              class="lil-arrow drop-arrow">></span>Шкарпетки</a>
+        </div>
+      </div>
+
+      <!--MODAL WINDOW OF CATEGORIES-->
+      <button type="button" class="btn btn-primary btn-catalogue" data-toggle="modal"
+        data-target="#exampleModalLong">Каталог товарів</button>
+
+      <div class="modal cat-modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+
+              <h5 class="modal-title modal-cat-title" id="exampleModalLongTitle">Каталог товарів
+              </h5>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="cat-close" aria-hidden="true">&times;</span>
+              </button>
+
+            </div>
+
+            <div class="modal-body">
+
+              <ul class="modal-category-menu">
+
+                <li class="modal-category-menu-item">
+                  <span class="modal-drop-arrow-category">></span>
+                  <a href="" class="modal-ctgr-menu-link">Чоловіче</a>
+                  <ul class="modal-subcategory-menu">
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Кеди</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Майки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Сорочки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Футболки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Худі</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Штани</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="modal-category-menu-item">
+                  <span class="modal-drop-arrow-category">></span>
+                  <a href="" class="modal-ctgr-menu-link">Жіноче</a>
+                  <ul class="modal-subcategory-menu">
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Блузи</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Кеди</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Сорочки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Футболки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Худі</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Штани</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="modal-category-menu-item">
+                  <span class="modal-drop-arrow-category">></span>
+                  <a href="" class="modal-ctgr-menu-link">Дитяче</a>
+                  <ul class="modal-subcategory-menu">
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Піжами</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Футболки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Кофти</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Штани</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="modal-category-menu-item">
+                  <span class="modal-drop-arrow-category">></span>
+                  <a href="" class="modal-ctgr-menu-link">Аксесуари</a>
+                  <ul class="modal-subcategory-menu">
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Браслети</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Брелоки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Кільця</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Ланцюги</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Сережки</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Таро</a>
+                    </li>
+                    <li class="modal-subcategory-menu-item">
+                      <span class="modal-drop-arrow-subcategory">></span>
+                      <a href="" class="modal-subctgr-menu-link">Шкарпетки</a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--CARDS OF PRODUCTS-->
+  <div class="row">
+
+    <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+      <div class="product-wrap">
+        <div class="product-image">
+          <a href=""><img src="../../assets/images/Products/photo-1.jpg"></a>
+          <div class="shadow"></div>
+          <div class="actions">
+            <div class="actions-btn">
+              <div class="add-to-cart">
+                <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
+              </div>
+              <div class="add-to-links">
+                <div class="add-to-wishlist">
+                  <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
+                </div>
+                <div class="quikview">
+                  <a class="quikview-button" href="#" title="Перегляд товару"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list">
+          <h3>Футболка UF</h3>
+          <div class="price">₴ 499</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+      <div class="product-wrap">
+        <div class="product-image">
+          <a href=""><img src="../../assets/images/Products/photo-2.jpg"></a>
+          <div class="shadow"></div>
+          <div class="actions">
+            <div class="actions-btn">
+              <div class="add-to-cart">
+                <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
+              </div>
+              <div class="add-to-links">
+                <div class="add-to-wishlist">
+                  <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
+                </div>
+                <div class="quikview">
+                  <a class="quikview-button" href="#" title="Перегляд товару"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list">
+          <h3>Футболка UF</h3>
+          <div class="price">₴ 449</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+      <div class="product-wrap">
+        <div class="product-image">
+          <a href=""><img src="../../assets/images/Products/photo-3.jpg"></a>
+          <div class="shadow"></div>
+          <div class="actions">
+            <div class="actions-btn">
+              <div class="add-to-cart">
+                <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
+              </div>
+              <div class="add-to-links">
+                <div class="add-to-wishlist">
+                  <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
+                </div>
+                <div class="quikview">
+                  <a class="quikview-button" href="#" title="Перегляд товару"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list">
+          <h3>Футболка UF</h3>
+          <div class="price">₴ 369</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-4 col-md-4 col-sm-6 col-xs 6">
+      <div class="product-wrap">
+        <div class="product-image">
+          <a href=""><img src="../../assets/images/Products/photo-4.jpg"></a>
+          <div class="shadow"></div>
+          <div class="actions">
+            <div class="actions-btn">
+              <div class="add-to-cart">
+                <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
+              </div>
+              <div class="add-to-links">
+                <div class="add-to-wishlist">
+                  <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
+                </div>
+                <div class="quikview">
+                  <a class="quikview-button" href="#" title="Перегляд товару"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list">
+          <h3>Футболка UF</h3>
+          <div class="price">₴ 369</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-4 col-md-4 col-sm-6 col-xs 6">
+      <div class="product-wrap">
+        <div class="product-image">
+          <a href=""><img src="../../assets/images/Products/photo-5.jpg"></a>
+          <div class="shadow"></div>
+          <div class="actions">
+            <div class="actions-btn">
+              <div class="add-to-cart">
+                <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
+              </div>
+              <div class="add-to-links">
+                <div class="add-to-wishlist">
+                  <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
+                </div>
+                <div class="quikview">
+                  <a class="quikview-button" href="#" title="Перегляд товару"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list">
+          <h3>Футболка UF</h3>
+          <div class="price">₴ 369</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+      <div class="product-wrap">
+        <div class="product-image">
+          <a href=""><img src="../../assets/images/Products/photo-1.jpg"></a>
+          <div class="shadow"></div>
+          <div class="actions">
+            <div class="actions-btn">
+              <div class="add-to-cart">
+                <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
+              </div>
+              <div class="add-to-links">
+                <div class="add-to-wishlist">
+                  <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
+                </div>
+                <div class="quikview">
+                  <a class="quikview-button" href="#" title="Перегляд товару"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list">
+          <h3>Футболка UF</h3>
+          <div class="price">₴ 499</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary btn-load-more">Завантажити ще</button>
+
+  </div>
+
+</div>

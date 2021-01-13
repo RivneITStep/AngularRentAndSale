@@ -5,11 +5,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import en from '@angular/common/locales/en';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,7 +21,6 @@ import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 import { NZ_I18N } from 'ng-zorro-antd/i18n/public-api';
 import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
 import { UserEditComponent } from './Areas/admin-area/Components/user-manager/user-edit/user-edit.component';
 import { NewsComponentComponent } from './news-component/news-component.component';
 import { FlatComponent } from './Flats/flat/flat.component';
@@ -30,6 +29,10 @@ import { AllFlatsMenuComponent } from './Flats/all-flats-menu/all-flats-menu.com
 import { SoldFlatsListComponent } from './Flats/sold-flats-list/sold-flats-list.component';
 import { EditFlatComponent } from './Flats/all-flats-menu/edit-flat/edit-flat.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { FooterComponent } from './footer/footer.component';
+import { CarouselComponent } from './carousel/carousel.component';
+
+import { LoginComponent } from './login/login.component';
 
 registerLocaleData(en);
 
@@ -58,6 +61,8 @@ const notifierOptions: NotifierOptions = {
       SoldFlatsListComponent,
       EditFlatComponent,
       ForgotPasswordComponent,
+      FooterComponent,
+      CarouselComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
