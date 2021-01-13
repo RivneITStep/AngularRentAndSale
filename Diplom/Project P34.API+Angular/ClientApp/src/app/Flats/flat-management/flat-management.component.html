@@ -1,0 +1,73 @@
+<!-- <hr>
+<h2>Свободные квартири</h2>
+<nz-table #rowSelectionTable nzShowSizeChanger [nzData]="Flats">
+  <thead>
+    <tr>
+        <th>Address</th>
+        <th>Floor</th>
+        <th>Number</th>
+        <th>Photo</th>
+        <th>Price</th>
+        <th>Rooms</th>
+        <th>Sold</th>
+        <th>SquareId</th>
+        
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of rowSelectionTable.data">
+        <td>{{ data.Address }}</td>
+        <td>{{ data.Floor }}</td>
+        <td>{{ data.Number }}</td>
+        <td>{{ data.Photo }}</td>
+        <td>{{ data.Price }}</td>
+        <td>{{ data.Rooms }}</td>
+        <td>{{ data.Sold }}</td>
+        <td>{{ data.SquareId }}</td>
+  
+  
+         <td>
+            <a nz-button nzType="primary" style="color:rgb(151, 0, 0)" 
+            nz-popconfirm 
+            nzPopconfirmTitle="Please, confirm delete"
+            (nzOnConfirm)="removeAnketas(data.id)" class="buttonMenu">Удалить</a>
+  
+            <a nz-button nzType="primary" style="color:rgb(143, 0, 0)" 
+            nz-popconfirm 
+            nzPopconfirmTitle="Please, confirm Close"
+            (nzOnConfirm)="closeAnketas(data.id)" class="buttonMenu">Закрыть</a>
+            
+        </td>
+      </tr>
+  </tbody>
+</nz-table> -->
+
+
+<nz-table #borderedTable nzBordered nzTitle="Свободные квартири" [nzData]="Flats">
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th>Floor</th>
+        <th>Number</th>
+        <th>Photo</th>
+        <th>Price</th>
+        <th>Rooms</th>
+        <th>Sold</th>
+        <th>SquareId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{ data.address }}</td>
+        <td>{{ data.floor }}</td>
+        <td>{{ data.number }}</td>
+        <td>{{ data.photo }}</td>
+        <td>{{ data.price }}</td>
+        <td>{{ data.rooms }}</td>
+        <td>{{ data.sold }}</td>
+        <td>{{ data.squareId }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+

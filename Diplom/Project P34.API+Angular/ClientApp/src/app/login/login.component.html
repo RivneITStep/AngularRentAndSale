@@ -1,0 +1,28 @@
+<!-- <div class="login-page">
+  <div class="form">
+    <h2>Login</h2>
+    <form class="login-form" #myForm="ngForm" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Email" [(ngModel)]="model.Email" name="Email"/>
+      <input type="password" placeholder="Password" [(ngModel)]="model.Password" name="Password"/>
+      <button type="submit">Sign In</button>
+      <p class="message">Dont have account? <a [routerLink]="['/register']">Sign Up</a></p>
+    </form>
+  </div>
+</div> -->
+
+
+<body> 
+  <div class="login-form">
+    <form class="" #myForm="ngForm" (ngSubmit)="onSubmit()">
+      <h1>login</h1>
+      <input type="email" placeholder="Email" [(ngModel)]="model.Email" name="Email">
+      <input type="password" placeholder="Password" [(ngModel)]="model.Password" name="Password">
+      <input type="submit" name="submit" value="login">
+    </form>
+    <p [routerLink]="['/forgot-password']">Forgot password?</p>
+    <h4>Don't have an account? <u [routerLink]="['/register']">Sign up here!</u></h4>
+  </div>
+
+
+
+</body>

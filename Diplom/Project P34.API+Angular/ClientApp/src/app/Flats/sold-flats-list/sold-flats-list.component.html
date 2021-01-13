@@ -1,0 +1,26 @@
+<nz-table #borderedTable nzBordered nzTitle="Занятые квартири" [nzData]="SoldFlats">
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th>Floor</th>
+        <th>Number</th>
+        <th>Photo</th>
+        <th>Price</th>
+        <th>Rooms</th>
+        <th>Sold</th>
+        <th>SquareId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{ data.address }}</td>
+        <td>{{ data.floor }}</td>
+        <td>{{ data.number }}</td>
+        <td>{{ data.photo }}</td>
+        <td>{{ data.price }}</td>
+        <td>{{ data.rooms }}</td>
+        <td>{{ data.sold }}</td>
+        <td>{{ data.squareId }}</td>
+      </tr>
+    </tbody>
+  </nz-table>

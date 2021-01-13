@@ -1,0 +1,24 @@
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.deps.json
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.dll
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.pdb
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfo.cs
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CopyComplete
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.dll
+C:\Users\PC\Desktop\Diplomka\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.pdb
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.deps.json
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.dll
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.pdb
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CoreCompileInputs.cache
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfoInputs.cache
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfo.cs
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CopyComplete
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.dll
+D:\Diplom Shag\copy\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.pdb

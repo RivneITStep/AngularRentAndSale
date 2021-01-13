@@ -1,0 +1,75 @@
+<h3>Редактирование квартирки</h3>
+ <div *ngIf="model">
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group>
+        <input type="text" [(ngModel)]="model.address" name="address"  nz-input placeholder="Address" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group >
+        <input type="number" name="floor"  [(ngModel)]="model.floor" nz-input placeholder="Floor" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group >
+        <input type="number" name="number" [(ngModel)]="model.number" nz-input placeholder="Number" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group >
+        <input type="number" name="rooms" [(ngModel)]="model.rooms" nz-input placeholder="Rooms" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group >
+        <input type="text" name="sold" [(ngModel)]="model.sold" nz-input placeholder="Sold" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group >
+        <input type="text" name="squareId" [(ngModel)]="model.squareId" nz-input placeholder="SquareId" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group >
+        <input type="text" name="price" [(ngModel)]="model.price" nz-input placeholder="Price" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group >
+        <input type="text" name="photo" [(ngModel)]="model.photo" nz-input placeholder="Photo" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  
+
+
+  <button nz-button class=" login-form-margin" nzType="primary"(click)="submitForm()">Зберегти зміни</button>
+  <button nz-button class=" login-form-margin baseBg text-color-white baseButton"  style="margin-left:20px"
+    [routerLink]="['/allflats']">Скасувати редагування</button>
+
+
+ </div>

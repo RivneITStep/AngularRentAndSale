@@ -1,0 +1,27 @@
+<nz-table #borderedTable nzBordered nzTitle="Все квартири" [nzData]="AllFlats">
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th>Floor</th>
+        <th>Number</th>
+        <th>Photo</th>
+        <th>Price</th>
+        <th>Rooms</th>
+        <th>Sold</th>
+        <th>SquareId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{ data.address }}</td>
+        <td>{{ data.floor }}</td>
+        <td>{{ data.number }}</td>
+        <td>{{ data.photo }}</td>
+        <td>{{ data.price }}</td>
+        <td>{{ data.rooms }}</td>
+        <td>{{ data.sold }}</td>
+        <td>{{ data.squareId }}</td>
+        <a nz-button style="margin-left: 20px;" [routerLink]="['/editflat/',data.id]">Редактировать квартиру</a>
+      </tr>
+    </tbody>
+  </nz-table>

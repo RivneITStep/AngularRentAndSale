@@ -1,0 +1,21 @@
+<div class="anketa">
+
+    <div class="anketa-triangle"></div>
+    <h2 class="anketa-header">Create flat</h2>
+  
+    <form class="anketa-container" (ngSubmit)="OnSubmit()" style="text-align: center;">
+      <p><input type="text"[(ngModel)]="model.Price" name="Price" placeholder="Price"></p>
+      <p><input type="number" [(ngModel)]="model.Rooms" name="Rooms" placeholder="Rooms"></p>
+      <p><input type="number" [(ngModel)]="model.Floor" name="Floor" placeholder="Floor"></p>
+      <p><input type="text" [(ngModel)]="model.Address" name="Address" placeholder="Address"></p>
+      <p><input type="text" [(ngModel)]="model.SquareId" name="SquareId" placeholder="SquareId"></p>
+      <p><input type="text" [(ngModel)]="model.Sold" name="Sold" placeholder="Sold"></p>
+      <p><input type="number" [(ngModel)]="model.Number" name="Number" placeholder="Number"></p>
+      <p><input type="text" [(ngModel)]="model.Photo" name="Photo" placeholder="Photo"></p>
+      <h3>{{message}}</h3>
+     
+      <p><input type="submit" value="Create Flat"></p>
+    </form>
+  </div>
+  
+  

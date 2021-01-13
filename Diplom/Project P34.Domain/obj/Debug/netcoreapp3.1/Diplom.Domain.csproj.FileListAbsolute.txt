@@ -1,0 +1,12 @@
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.deps.json
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.dll
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.pdb
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csprojAssemblyReference.cache
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csproj.CoreCompileInputs.cache
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.AssemblyInfoInputs.cache
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.AssemblyInfo.cs
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csproj.CopyComplete
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.dll
+D:\Diplom Shag\copy\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.pdb
