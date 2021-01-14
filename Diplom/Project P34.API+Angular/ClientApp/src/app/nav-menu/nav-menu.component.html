@@ -18,6 +18,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="isAdmin === true">
+          <a [routerLink]="['/']" class="nav-link">Адмін панель</a>
+        </li>
         <li class="nav-item">
           <button class="btn btn-theme"></button>
         </li>
@@ -32,11 +35,11 @@
             <a class="dropdown-item" href="#">English</a>
           </div>
         </li>
-        <li class="nav-item"><a *ngIf="isLoggedIn === false" class="nav-link" data-toggle="modal"
+        <li class="nav-item" *ngIf="isLoggedIn === false"><a class="nav-link" data-toggle="modal"
             data-target="#exampleModal">Вхід</a></li>
 
-        <li class="nav-item">
-          <a *ngIf="isLoggedIn === true" (click)="Logout()" class="nav-link">Вихід</a>
+        <li class="nav-item" *ngIf="isLoggedIn === true">
+          <a (click)="Logout()" class="nav-link">Вихід</a>
         </li>
       </ul>
     </div>
@@ -64,14 +67,17 @@
         </div>
 
         <div class="modal-body">
-          <input type="text" class="form-control login-data" placeholder="Email: ">
-          <input type="password" class="form-control login-data" placeholder="Пароль:">
-          <button class="btn btn-primary btn-authorize">УВІЙТИ</button>
+          <input type="email" class="form-control login-data" placeholder="Email: " [(ngModel)]="model.Email"
+            name="Email">
+          <input type="password" class="form-control login-data" placeholder="Пароль:" [(ngModel)]="model.Password"
+            name="Password">
+          <button class="btn btn-primary btn-authorize" type="submit" name="submit">УВІЙТИ</button>
 
           <ul class="login-menu">
             <li class="log-item"><a *ngIf="isLoggedIn === false" [routerLink]="['register']"
-                class="modal-bottom-link">РЕЄСТРАЦІЯ</a></li>
-            <li class="log-item"><a href="" class="modal-bottom-link">ЗАБУЛИ ПАРОЛЬ ?</a></li>
+                class="modal-bottom-link" data-dismiss="modal" aria-label="Close">РЕЄСТРАЦІЯ</a></li>
+            <li class="log-item"><a [routerLink]="['/forgot-password']" class="modal-bottom-link" data-dismiss="modal" aria-label="Close">ЗАБУЛИ ПАРОЛЬ ?</a>
+            </li>
           </ul>
 
           <div class="log-soc-block">

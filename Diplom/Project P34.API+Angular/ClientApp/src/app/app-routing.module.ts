@@ -36,8 +36,6 @@ const routes: Routes = [
   { path: 'editflat/:id', component: EditFlatComponent, pathMatch: 'full', canActivate: [AdminGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, pathMatch: 'full',canActivate:[NotLoginGuard] },
 
-
-
   {
     path: 'admin-panel',
     component: AdminAreaComponent,
@@ -48,9 +46,6 @@ const routes: Routes = [
       { path: 'edit-user/:id', component: UserEditComponent, pathMatch: 'full' }
     ]
   },
-
-
-
 
   { path: '**', component: NotFoundComponent }
 ];

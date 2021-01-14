@@ -11,8 +11,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-
   constructor(
     private apiService: ApiService,
     private notifier: NotifierService,
@@ -32,27 +30,35 @@ export class RegisterComponent implements OnInit {
     this.spinner.show();
 
     if (this.model.FullName === null) {
-      this.notifier.notify('error', 'Please, enter full name!');
-      this.isError = true;
-    }
-    if (this.confirmPassword !== this.model.Password) {
-      this.notifier.notify('error', 'Confirm password is not correct!');
-      this.isError = true;
-    }
-    if (!this.validateEmail(this.model.Email)) {
-      this.notifier.notify('error', 'Email is not correct format!');
+      this.notifier.notify('error', 'Поле "Ім\'я та прізвище" пусте!');
       this.isError = true;
     }
     if (this.model.Age === null) {
-      this.notifier.notify('error', 'Please, enter age!');
-      this.isError = true;
-    }
-    if (this.model.Address === null) {
-      this.notifier.notify('error', 'Please, enter address!');
+      this.notifier.notify('error', 'Поле "Вік" пусте!');
       this.isError = true;
     }
     if (this.model.PhoneNumber === null) {
-      this.notifier.notify('error', 'Please, enter phone number!');
+      this.notifier.notify('error', 'Поле "Телефон" пусте!');
+      this.isError = true;
+    }
+    if(this.model.Email === null){
+      this.notifier.notify('error', 'Поле "Email" пусте!');
+      this.isError = true;
+    }
+    if (!this.validateEmail(this.model.Email)) {
+      this.notifier.notify('error', 'Email не задане у коректному форматі!');
+      this.isError = true;
+    }
+    if(this.model.Password === null) {
+      this.notifier.notify('error', 'Поле "Пароль" пусте!');
+      this.isError = true;
+    }
+    if(this.confirmPassword === null) {
+      this.notifier.notify('error', 'Ви не підтвердили свій пароль!');
+      this.isError = true;
+    }
+    if (this.confirmPassword !== this.model.Password) {
+      this.notifier.notify('error', 'Паролі не співпадають!');
       this.isError = true;
     }
 
@@ -85,12 +91,9 @@ export class RegisterComponent implements OnInit {
       }
   }
 
-
   validateEmail(email: string) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
-
-
 
 }

@@ -55,5 +55,4 @@ export class ApiService {
     this.loginStatus.emit(false);
   }
 
-
 }
