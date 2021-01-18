@@ -30,16 +30,14 @@ import { NotFoundComponent } from './NotFound/NotFound.component';
 
 /*COMPONENTS OF THE STORE*/
 import { CarouselComponent } from './carousel/carousel.component';
-
 import { CategoryComponent } from './home/category/category.component';
-
 import { SubcategoryComponent } from './home/category/subcategory/subcategory.component';
-
 import { ProductComponent } from './home/product/product.component';
 
 /*AREAS OF ADMIN*/
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
 import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
+import { EditProductComponent } from './Areas/admin-area/Components/edit-product/edit-product.component';
 
 /*AREAS OF USER*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
@@ -71,13 +69,12 @@ const notifierOptions: NotifierOptions = {
 
       AdminAreaComponent,
       DashboardComponent,
+      EditProductComponent,
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,
       CategoryComponent,
-
       SubcategoryComponent,
-
       ProductComponent,
 
       /*GARBAGE*/

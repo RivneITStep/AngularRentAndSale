@@ -15,8 +15,9 @@ import { NotLoginGuard } from './guards/notLogin.guard';
 import { AdminGuard } from './guards/admin.guard';
 
 /*ADMIN AREA*/
-import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
+import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
+import { EditProductComponent } from './Areas/admin-area/Components/edit-product/edit-product.component';
 
 /*GARBAGE*/
 import { LoginComponent } from './login/login.component';
@@ -39,7 +40,7 @@ const routes: Routes = [
     canActivate: [AdminGuard],
     children: [
       { path: '', component: DashboardComponent, pathMatch: 'full' },
-      
+      { path: 'editProduct:id', component: EditProductComponent, pathMatch: 'full' },
     ]
   },
 
