@@ -23,6 +23,11 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 
+/*AUTHORIZATION 'N' 404*/
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { RegisterComponent } from './register/register.component';
+import { NotFoundComponent } from './NotFound/NotFound.component';
+
 /*COMPONENTS OF THE STORE*/
 import { CarouselComponent } from './carousel/carousel.component';
 
@@ -31,11 +36,6 @@ import { CategoryComponent } from './home/category/category.component';
 import { SubcategoryComponent } from './home/category/subcategory/subcategory.component';
 
 import { ProductComponent } from './home/product/product.component';
-
-/*AUTHORIZATION 'N' 404*/
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { RegisterComponent } from './register/register.component';
-import { NotFoundComponent } from './NotFound/NotFound.component';
 
 /*AREAS OF ADMIN*/
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';

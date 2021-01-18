@@ -4,7 +4,7 @@
 
     <!--BIG BACK LINK-->
     <div class="col col-lg-2 col-md-2 col-sm-0 col-xs-0 col-hs">
-      <a routerLink="['/']" class="back-link"><span class="back-arrow"></span> Назад </a>
+      <a [routerLink]="['/']" class="back-link"><span class="back-arrow"></span> Назад </a>
     </div>
 
     <!--LABELS-->
@@ -26,7 +26,7 @@
 
       <form #myForm="ngForm" (ngSubmit)="onSubmit()">
         <!--SMALL BACK LINK-->
-        <a routerLink="['/']" class="back-link bk-link-ss"> <span class="back-arrow"></span> Назад</a>
+        <a [routerLink]="['/']" class="back-link bk-link-ss"> <span class="back-arrow"></span> Назад</a>
 
         <!--DATA OF USER-->
         <div class="form-group">
