@@ -38,22 +38,13 @@ import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 
 /*AREAS OF ADMIN*/
-import { UserManagerComponent } from './Areas/admin-area/Components/user-manager/user-manager.component';
-import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
-import { UserEditComponent } from './Areas/admin-area/Components/user-manager/user-edit/user-edit.component';
+import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
 
 /*AREAS OF USER*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 
 /*GARBAGE*/
-import { NewsComponentComponent } from './news-component/news-component.component';
-import { FlatComponent } from './Flats/flat/flat.component';
-import { FlatManagementComponent } from './Flats/flat-management/flat-management.component';
-import { AllFlatsMenuComponent } from './Flats/all-flats-menu/all-flats-menu.component';
-import { SoldFlatsListComponent } from './Flats/sold-flats-list/sold-flats-list.component';
-import { EditFlatComponent } from './Flats/all-flats-menu/edit-flat/edit-flat.component';
-
 import { LoginComponent } from './login/login.component';
 
 registerLocaleData(en);
@@ -76,11 +67,10 @@ const notifierOptions: NotifierOptions = {
       ForgotPasswordComponent,
 
       /*AREAS*/
-      AdminAreaComponent,
       UserAreaComponent,
+
+      AdminAreaComponent,
       DashboardComponent,
-      UserManagerComponent,
-      UserEditComponent,
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,
@@ -92,12 +82,6 @@ const notifierOptions: NotifierOptions = {
 
       /*GARBAGE*/
       LoginComponent,
-      NewsComponentComponent,
-      FlatComponent,
-      FlatManagementComponent,
-      AllFlatsMenuComponent,
-      SoldFlatsListComponent,
-      EditFlatComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
