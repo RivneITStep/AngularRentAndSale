@@ -67,16 +67,19 @@
         </div>
 
         <div class="modal-body">
-          <input type="email" class="form-control login-data" placeholder="Email: " [(ngModel)]="model.Email"
-            name="Email">
-          <input type="password" class="form-control login-data" placeholder="Пароль:" [(ngModel)]="model.Password"
-            name="Password">
-          <button class="btn btn-primary btn-authorize" type="submit" name="submit">УВІЙТИ</button>
+          <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+            <input type="email" class="form-control login-data" placeholder="Email: " [(ngModel)]="model.Email"
+              name="Email">
+            <input type="password" class="form-control login-data" placeholder="Пароль:" [(ngModel)]="model.Password"
+              name="Password">
+            <button class="btn btn-primary btn-authorize" type="submit" name="submit">УВІЙТИ</button>
+          </form>
 
           <ul class="login-menu">
-            <li class="log-item"><a *ngIf="isLoggedIn === false" [routerLink]="['register']"
-                class="modal-bottom-link" data-dismiss="modal" aria-label="Close">РЕЄСТРАЦІЯ</a></li>
-            <li class="log-item"><a [routerLink]="['/forgot-password']" class="modal-bottom-link" data-dismiss="modal" aria-label="Close">ЗАБУЛИ ПАРОЛЬ ?</a>
+            <li class="log-item"><a *ngIf="isLoggedIn === false" [routerLink]="['register']" class="modal-bottom-link"
+                data-dismiss="modal" aria-label="Close">РЕЄСТРАЦІЯ</a></li>
+            <li class="log-item"><a [routerLink]="['forgot-password']" class="modal-bottom-link" data-dismiss="modal"
+                aria-label="Close">ЗАБУЛИ ПАРОЛЬ ?</a>
             </li>
           </ul>
 
