@@ -6,7 +6,6 @@ import { NotFoundComponent } from './NotFound/NotFound.component';
 //INFO
 import { AboutUsComponent } from './footer/Components/INFO/about-us/about-us.component';
 import { FaqComponent } from './footer/Components/INFO/faq/faq.component';
-import { PaymentAndDeliveryComponent } from './footer/Components/INFO/payment-and-delivery/payment-and-delivery.component';
 import { TableOfSizesComponent } from './footer/Components/INFO/table-of-sizes/table-of-sizes.component';
 
 //SERVS
@@ -53,7 +52,6 @@ const routes: Routes = [
   //INFO
   { path: 'aboutUs', component: AboutUsComponent, pathMatch: 'full' },
   { path: 'faq', component: FaqComponent, pathMatch: 'full' },
-  { path: 'paymentAndDelivery', component: PaymentAndDeliveryComponent, pathMatch: 'full' },
   { path: 'tableOfSizes', component: TableOfSizesComponent, pathMatch: 'full' },
 
   //SERVS

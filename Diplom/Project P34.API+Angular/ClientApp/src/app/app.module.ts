@@ -25,23 +25,18 @@ import { FooterComponent } from './footer/footer.component';
 
 /*FOOTER COMPONENTS*/
 //INFO
-
 import { AboutUsComponent } from './footer/Components/INFO/about-us/about-us.component';
 import { FaqComponent } from './footer/Components/INFO/faq/faq.component';
-import { PaymentAndDeliveryComponent } from './footer/Components/INFO/payment-and-delivery/payment-and-delivery.component';
 import { TableOfSizesComponent } from './footer/Components/INFO/table-of-sizes/table-of-sizes.component';
 
 //SERVS
-
 import { ContactsComponent } from './footer/Components/SERVS/contacts/contacts.component';
 import { ReturnComponent } from './footer/Components/SERVS/return/return.component';
 
 //ADDITIONAL
-
 import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches-products/watches-products.component';
 
 //PRIVATE ROOM
-
 import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
 import { MainRoomComponent } from './footer/Components/PRIVATE ROOM/main-room/main-room.component';
 import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
@@ -86,7 +81,6 @@ const notifierOptions: NotifierOptions = {
       //INFO
       AboutUsComponent,
       FaqComponent,
-      PaymentAndDeliveryComponent,
       TableOfSizesComponent,
 
       //SERVS
