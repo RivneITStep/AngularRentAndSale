@@ -123,7 +123,7 @@ namespace Project_IDA.Api___Angular.Controllers
                     return new ResultErrorDto
                     {
                         Status = 400,
-                        Message = "user not found!",
+                        Message = "User not found!",
                         Errors = error
                     };
                 }

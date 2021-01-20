@@ -19,7 +19,7 @@
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav">
         <li class="nav-item" *ngIf="isAdmin === true">
-          <a [routerLink]="['/dashboard']" class="nav-link">Адмін панель</a>
+          <a [routerLink]="['/admin-panel']" class="nav-link">Панель</a>
         </li>
         <li class="nav-item">
           <button class="btn btn-theme"></button>
@@ -78,15 +78,15 @@
           <ul class="login-menu">
             <li class="log-item"><a *ngIf="isLoggedIn === false" [routerLink]="['register']" class="modal-bottom-link"
                 data-dismiss="modal" aria-label="Close">РЕЄСТРАЦІЯ</a></li>
-            <li class="log-item"><a [routerLink]="['forgot-password']" class="modal-bottom-link" data-dismiss="modal"
+            <li class="log-item"><a *ngIf="isLoggedIn === false" [routerLink]="['forgot-password']" class="modal-bottom-link" data-dismiss="modal"
                 aria-label="Close">ЗАБУЛИ ПАРОЛЬ ?</a>
             </li>
           </ul>
 
           <div class="log-soc-block">
-            <i class="log-soc-link fa fa-2x fa-google" aria-hidden="true"></i>
+            <i *ngIf="isLoggedIn === false" class="log-soc-link fa fa-2x fa-google" aria-hidden="true"></i>
 
-            <i class="log-soc-link fa fa-2x fa-facebook-square" aria-hidden="true"></i>
+            <i *ngIf="isLoggedIn === false" class="log-soc-link fa fa-2x fa-facebook-square" aria-hidden="true"></i>
           </div>
         </div>
 

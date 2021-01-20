@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit():void {
-
     document.getElementById("defActionOpen").click();
     function chooseAction(evt, actionName) {
     var i, tabcontentAction, tablinksAction;
