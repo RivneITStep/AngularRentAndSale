@@ -9,7 +9,7 @@
 
 .nav-link:hover { color: tomato !important; }
 
-.btn-theme {
+.btn-act {
     background-color: #000000 !important;
     color: #ffffff !important;
     padding-top: 6px !important;
@@ -17,7 +17,11 @@
 
 .btn-theme::before { content: '\f186'; font-family: FontAwesome; }
 
-.btn-theme:active, .btn-theme:focus { box-shadow: none !important; }
+.btn-cart::before { content: '\f07a'; font-family: FontAwesome; }
+
+.btn-wishlist::before { content: '\f08a'; font-family: FontAwesome; }
+
+.btn-act:active, .btn-act:focus { box-shadow: none !important; }
 
 .dropdown-menu { border-radius: 0px !important; background-color: #212529 !important; }
 
@@ -237,13 +241,36 @@
       font-size: 16px;
     }
 
-    .btn-theme { padding-left: 0px; }
+    .btn-cart::before {
+      content: 'Корзина';
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .btn-wishlist::before {
+      content: 'Бажане';
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .btn-act { padding-left: 0px; }
 
     .btn-theme::after {
       content: '';
       display: block;
       width: 100%;
       background-color: #f0f0f1;
+      height: 1px;
+      transform: scale(1);
+    }
+
+    .btn-cart::after, .btn-wishlist::after {
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: tomato;
       height: 1px;
       transform: scale(1);
     }

@@ -137,7 +137,7 @@
 
   .search-form { width: 340px; }
 
-  .question-link, .question { font-size: 14px; font-weight: 200; }
+  .question-link, .question { font-size: 14px; font-weight: 200; line-height: 1.5; }
 
   .theme-of-question { font-size: 16px; }
 }

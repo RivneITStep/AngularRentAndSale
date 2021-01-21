@@ -22,7 +22,13 @@
           <a [routerLink]="['/admin-panel']" class="nav-link">Панель</a>
         </li>
         <li class="nav-item">
-          <button class="btn btn-theme"></button>
+          <button class="btn btn-theme btn-act"></button>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn === true && isAdmin === false">
+          <button class="btn btn-cart btn-act"></button>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn === true && isAdmin === false">
+          <button class="btn btn-wishlist btn-act"></button>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
