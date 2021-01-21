@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -59,6 +60,7 @@ namespace Project_P34.API_Angular
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             }).AddJwtBearer(cfg =>
             {
                 cfg.RequireHttpsMetadata = false;
@@ -73,6 +75,15 @@ namespace Project_P34.API_Angular
                     // set ClockSkew is zero
                     ClockSkew = TimeSpan.Zero
                 };
+            })
+            .AddCookie(options =>
+            {
+                options.LoginPath = "/Account/google-login";
+            })
+            .AddGoogle(options =>
+            {
+                options.ClientId = "684459149538-l24k7pnpg6iflnjk6jt1lmpa9tsi0vg2.apps.googleusercontent.com";
+                options.ClientSecret = "qSRyYXZSdCWzCLJHcp599eHM";
             });
 
 
