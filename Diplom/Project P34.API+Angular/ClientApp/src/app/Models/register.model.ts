@@ -3,7 +3,6 @@ export class RegisterModel {
   public Email: string;
   public Password: string;
   public PhoneNumber: string;
-  public Address: string;
   public Age: number;
 
   constructor() {
@@ -11,7 +10,6 @@ export class RegisterModel {
     this.Email = null;
     this.Password = null;
     this.PhoneNumber = null;
-    this.Address = null;
     this.Age = null;
   }
 

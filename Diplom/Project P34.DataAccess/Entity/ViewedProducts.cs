@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Project_P34.DataAccess.Entity
 {
-    [Table("tblViewedPorducts")]
+    [Table("tblViewedProducts")]
     public class ViewedProducts
     {
         [Key]

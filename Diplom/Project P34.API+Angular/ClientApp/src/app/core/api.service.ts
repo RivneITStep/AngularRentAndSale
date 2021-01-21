@@ -11,7 +11,7 @@ import { ApiResult } from '../Models/result.model';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = '/api/Account';
+  baseUrl = 'api/Account';
   loginStatus = new EventEmitter<boolean>();
 
   SingUp(UserRegisterDto: RegisterModel): Observable<ApiResult> {
@@ -53,6 +53,10 @@ export class ApiService {
   Logout () {
     localStorage.removeItem('token');
     this.loginStatus.emit(false);
+  }
+  
+  GoogleLogin () {
+    return this.http.get<ApiResult>(this.baseUrl + '/google-login');
   }
 
 }

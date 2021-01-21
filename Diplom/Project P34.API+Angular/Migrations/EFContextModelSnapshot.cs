@@ -228,6 +228,9 @@ namespace Project_P34.API_Angular.Migrations
                     b.Property<string>("CartId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
                     b.Property<string>("CountryMade")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -365,32 +368,17 @@ namespace Project_P34.API_Angular.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Email")
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Promocode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -405,7 +393,7 @@ namespace Project_P34.API_Angular.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tblViewedPorducts");
+                    b.ToTable("tblViewedProducts");
                 });
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.WishList", b =>
@@ -519,7 +507,8 @@ namespace Project_P34.API_Angular.Migrations
                 {
                     b.HasOne("Project_P34.DataAccess.Entity.Category", "Categories")
                         .WithMany("Subcategories")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.UserMoreInfo", b =>

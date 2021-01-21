@@ -68,10 +68,9 @@ namespace Project_IDA.Api___Angular.Controllers
 
             var userMoreInfo = new UserMoreInfo()
             {
-                Name = model.Name,
-                Surname = model.Surnmame,
-                Id = user.Id,
-                
+                FullName = model.FullName,
+                Age = model.Age,
+                Id = user.Id             
             };
 
 
@@ -142,7 +141,32 @@ namespace Project_IDA.Api___Angular.Controllers
                 }
             }
         }
-        
+
+
+        [HttpGet("google-login")]
+        public IActionResult GoogleLogin()
+        {
+            var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+
+        }
+
+        [HttpGet("google-response")]
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            var claims = result.Principal.Identities.FirstOrDefault()
+                .Claims.Select(claim => new
+                {
+                    claim.Issuer,
+                    claim.OriginalIssuer,
+                    claim.Type,
+                    claim.Value
+                });
+
+            return (IActionResult)claims;
+        }
+
 
 
     }
