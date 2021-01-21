@@ -10,8 +10,8 @@ using Project_P34.DataAccess;
 namespace Project_P34.API_Angular.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20210111123815_imagesWithProducts")]
-    partial class imagesWithProducts
+    [Migration("20210121191654_Top migration")]
+    partial class Topmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -188,10 +188,15 @@ namespace Project_P34.API_Angular.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("UserId");
 
@@ -222,6 +227,12 @@ namespace Project_P34.API_Angular.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("CartId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
                     b.Property<string>("CountryMade")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -248,7 +259,24 @@ namespace Project_P34.API_Angular.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SubcategoryId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("WishListId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("viewProductId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("SubcategoryId");
+
+                    b.HasIndex("WishListId");
+
+                    b.HasIndex("viewProductId");
 
                     b.ToTable("tblProduct");
                 });
@@ -258,11 +286,16 @@ namespace Project_P34.API_Angular.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("CategoryId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("tblSubCategory");
                 });
@@ -337,32 +370,17 @@ namespace Project_P34.API_Angular.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Email")
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Promocode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -377,7 +395,7 @@ namespace Project_P34.API_Angular.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tblViewedPorducts");
+                    b.ToTable("tblViewedProducts");
                 });
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.WishList", b =>
@@ -441,8 +459,21 @@ namespace Project_P34.API_Angular.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Project_P34.DataAccess.Entity.Cart", b =>
+                {
+                    b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
+                        .WithOne("Carts")
+                        .HasForeignKey("Project_P34.DataAccess.Entity.Cart", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Project_P34.DataAccess.Entity.Commentaries", b =>
                 {
+                    b.HasOne("Project_P34.DataAccess.Entity.Product", "Products")
+                        .WithMany("Commentariess")
+                        .HasForeignKey("ProductId");
+
                     b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
                         .WithMany("Commentariess")
                         .HasForeignKey("UserId");
@@ -455,11 +486,56 @@ namespace Project_P34.API_Angular.Migrations
                         .HasForeignKey("ProductId");
                 });
 
+            modelBuilder.Entity("Project_P34.DataAccess.Entity.Product", b =>
+                {
+                    b.HasOne("Project_P34.DataAccess.Entity.Cart", "Carts")
+                        .WithMany("Products")
+                        .HasForeignKey("CartId");
+
+                    b.HasOne("Project_P34.DataAccess.Entity.Subcategory", "Subcategories")
+                        .WithMany("Products")
+                        .HasForeignKey("SubcategoryId");
+
+                    b.HasOne("Project_P34.DataAccess.Entity.WishList", "WishLists")
+                        .WithMany("Products")
+                        .HasForeignKey("WishListId");
+
+                    b.HasOne("Project_P34.DataAccess.Entity.ViewedProducts", "ViewedProducts")
+                        .WithMany("Products")
+                        .HasForeignKey("viewProductId");
+                });
+
+            modelBuilder.Entity("Project_P34.DataAccess.Entity.Subcategory", b =>
+                {
+                    b.HasOne("Project_P34.DataAccess.Entity.Category", "Categories")
+                        .WithMany("Subcategories")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Project_P34.DataAccess.Entity.UserMoreInfo", b =>
                 {
                     b.HasOne("Project_P34.DataAccess.Entity.User", "User")
                         .WithOne("UserMoreInfo")
                         .HasForeignKey("Project_P34.DataAccess.Entity.UserMoreInfo", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Project_P34.DataAccess.Entity.ViewedProducts", b =>
+                {
+                    b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
+                        .WithOne("ViewedProducts")
+                        .HasForeignKey("Project_P34.DataAccess.Entity.ViewedProducts", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Project_P34.DataAccess.Entity.WishList", b =>
+                {
+                    b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
+                        .WithOne("WishLists")
+                        .HasForeignKey("Project_P34.DataAccess.Entity.WishList", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

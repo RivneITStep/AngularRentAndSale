@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Project_P34.API_Angular.Migrations
 {
-    public partial class alltableswithoutlinks : Migration
+    public partial class Topmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -47,17 +47,6 @@ namespace Project_P34.API_Angular.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "tblCart",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tblCart", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "tblCategory",
                 columns: table => new
                 {
@@ -67,83 +56,6 @@ namespace Project_P34.API_Angular.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_tblCategory", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "tblCommentaries",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Description = table.Column<string>(nullable: false),
-                    DateComment = table.Column<DateTime>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tblCommentaries", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "tblImages",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Image = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tblImages", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "tblProduct",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: false),
-                    Image = table.Column<string>(nullable: false),
-                    Price = table.Column<decimal>(nullable: false),
-                    Size = table.Column<string>(nullable: false),
-                    CountryMade = table.Column<string>(nullable: false),
-                    Description = table.Column<string>(nullable: false),
-                    Rating = table.Column<double>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tblProduct", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "tblSubCategory",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tblSubCategory", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "tblViewedPorducts",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tblViewedPorducts", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "tblWishList",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tblWishList", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -257,13 +169,10 @@ namespace Project_P34.API_Angular.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: false),
-                    Surname = table.Column<string>(nullable: false),
-                    Phone = table.Column<string>(nullable: false),
-                    Email = table.Column<string>(nullable: false),
-                    Password = table.Column<string>(nullable: false),
-                    Promocode = table.Column<string>(nullable: false),
-                    Image = table.Column<string>(nullable: false)
+                    FullName = table.Column<string>(nullable: false),
+                    Age = table.Column<int>(nullable: false),
+                    Promocode = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -274,6 +183,169 @@ namespace Project_P34.API_Angular.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tblSubCategory",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
+                    CategoryId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblSubCategory", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_tblSubCategory_tblCategory_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "tblCategory",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tblCart",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblCart", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_tblCart_tblUserMoreInfo_Id",
+                        column: x => x.Id,
+                        principalTable: "tblUserMoreInfo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tblViewedProducts",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblViewedProducts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_tblViewedProducts_tblUserMoreInfo_Id",
+                        column: x => x.Id,
+                        principalTable: "tblUserMoreInfo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tblWishList",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblWishList", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_tblWishList_tblUserMoreInfo_Id",
+                        column: x => x.Id,
+                        principalTable: "tblUserMoreInfo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tblProduct",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
+                    Image = table.Column<string>(nullable: false),
+                    Price = table.Column<float>(nullable: false),
+                    Size = table.Column<string>(nullable: false),
+                    CountryMade = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: false),
+                    Rating = table.Column<double>(nullable: false),
+                    Count = table.Column<int>(nullable: false),
+                    SubcategoryId = table.Column<string>(nullable: true),
+                    WishListId = table.Column<string>(nullable: true),
+                    CartId = table.Column<string>(nullable: true),
+                    viewProductId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblProduct", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_tblProduct_tblCart_CartId",
+                        column: x => x.CartId,
+                        principalTable: "tblCart",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_tblProduct_tblSubCategory_SubcategoryId",
+                        column: x => x.SubcategoryId,
+                        principalTable: "tblSubCategory",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_tblProduct_tblWishList_WishListId",
+                        column: x => x.WishListId,
+                        principalTable: "tblWishList",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_tblProduct_tblViewedProducts_viewProductId",
+                        column: x => x.viewProductId,
+                        principalTable: "tblViewedProducts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tblCommentaries",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: false),
+                    DateComment = table.Column<DateTime>(nullable: false),
+                    UserId = table.Column<string>(nullable: true),
+                    ProductId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblCommentaries", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_tblCommentaries_tblProduct_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "tblProduct",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_tblCommentaries_tblUserMoreInfo_UserId",
+                        column: x => x.UserId,
+                        principalTable: "tblUserMoreInfo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tblImages",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Image = table.Column<string>(nullable: false),
+                    ProductId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblImages", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_tblImages_tblProduct_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "tblProduct",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -314,6 +386,46 @@ namespace Project_P34.API_Angular.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblCommentaries_ProductId",
+                table: "tblCommentaries",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblCommentaries_UserId",
+                table: "tblCommentaries",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblImages_ProductId",
+                table: "tblImages",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblProduct_CartId",
+                table: "tblProduct",
+                column: "CartId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblProduct_SubcategoryId",
+                table: "tblProduct",
+                column: "SubcategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblProduct_WishListId",
+                table: "tblProduct",
+                column: "WishListId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblProduct_viewProductId",
+                table: "tblProduct",
+                column: "viewProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tblSubCategory_CategoryId",
+                table: "tblSubCategory",
+                column: "CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -334,34 +446,34 @@ namespace Project_P34.API_Angular.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "tblCart");
-
-            migrationBuilder.DropTable(
-                name: "tblCategory");
-
-            migrationBuilder.DropTable(
                 name: "tblCommentaries");
 
             migrationBuilder.DropTable(
                 name: "tblImages");
 
             migrationBuilder.DropTable(
+                name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
                 name: "tblProduct");
+
+            migrationBuilder.DropTable(
+                name: "tblCart");
 
             migrationBuilder.DropTable(
                 name: "tblSubCategory");
 
             migrationBuilder.DropTable(
-                name: "tblUserMoreInfo");
-
-            migrationBuilder.DropTable(
-                name: "tblViewedPorducts");
-
-            migrationBuilder.DropTable(
                 name: "tblWishList");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "tblViewedProducts");
+
+            migrationBuilder.DropTable(
+                name: "tblCategory");
+
+            migrationBuilder.DropTable(
+                name: "tblUserMoreInfo");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

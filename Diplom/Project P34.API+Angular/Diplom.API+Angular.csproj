@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
@@ -41,18 +42,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Migrations\20210107123317_all tables without links.cs" />
-    <Compile Include="Migrations\20210107123317_all tables without links.Designer.cs" />
-    <Compile Include="Migrations\20210110130459_test-links.cs" />
-    <Compile Include="Migrations\20210110130459_test-links.Designer.cs" />
-    <Compile Include="Migrations\20210110130520_test-links2.cs" />
-    <Compile Include="Migrations\20210110130520_test-links2.Designer.cs" />
-    <Compile Include="Migrations\20210111123815_imagesWithProducts.cs" />
-    <Compile Include="Migrations\20210111123815_imagesWithProducts.Designer.cs" />
-    <Compile Include="Migrations\20210111140254_links2.cs" />
-    <Compile Include="Migrations\20210111140254_links2.Designer.cs" />
-    <Compile Include="Migrations\20210111152254_allLinks1.cs" />
-    <Compile Include="Migrations\20210111152254_allLinks1.Designer.cs" />
+    <Compile Include="Migrations\20210121191654_Top migration.cs" />
+    <Compile Include="Migrations\20210121191654_Top migration.Designer.cs" />
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
   </ItemGroup>
 

@@ -27,7 +27,8 @@ namespace Project_P34.DataAccess.Entity
         [Required]
         public double Rating { get; set; }
 
-       
+       [Required]
+        public int Count { get; set; }
 
 
         //id images 1-8  +

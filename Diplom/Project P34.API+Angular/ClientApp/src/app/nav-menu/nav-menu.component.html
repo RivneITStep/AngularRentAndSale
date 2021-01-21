@@ -84,7 +84,7 @@
           </ul>
 
           <div class="log-soc-block">
-            <i *ngIf="isLoggedIn === false" class="log-soc-link fa fa-2x fa-google" aria-hidden="true"></i>
+            <i (click)="google()" *ngIf="isLoggedIn === false" class="log-soc-link fa fa-2x fa-google" aria-hidden="true"></i>
 
             <i *ngIf="isLoggedIn === false" class="log-soc-link fa fa-2x fa-facebook-square" aria-hidden="true"></i>
           </div>

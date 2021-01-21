@@ -105,4 +105,16 @@ export class NavMenuComponent implements OnInit {
   toggle() {
     this.isExpanded = !this.isExpanded;
   }
+  
+  google() {
+    this.spinner.show();
+
+    this.apiService.GoogleLogin().subscribe(
+      data => {
+        if(data.status === 200){
+          this.notifier.notify('succes', "Hi");
+        }
+      }
+    )
+  }
 }

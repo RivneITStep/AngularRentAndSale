@@ -42,8 +42,8 @@ namespace Project_P34.API_Angular.Controllers
                 temp.Phone = item.PhoneNumber;
                 if(moreInfo != null)
                 {
-                    temp.Name = moreInfo.Name;
-                    temp.Surname = moreInfo.Surname;
+                    temp.FullName = moreInfo.FullName;
+                    temp.Age = moreInfo.Age;
                     
                 }
               
@@ -107,9 +107,8 @@ namespace Project_P34.API_Angular.Controllers
 
             if (userMoreInfo!=null)
             {
-               
-                model.Name = userMoreInfo.Name;
-                model.Surname = userMoreInfo.Surname;
+                model.Age = userMoreInfo.Age;
+                model.FullName = userMoreInfo.FullName;
             }
 
             return model;
@@ -123,8 +122,8 @@ namespace Project_P34.API_Angular.Controllers
             var userMoreInfo = _context.userMoreInfos.FirstOrDefault(t => t.Id == id);
 
             user.PhoneNumber = model.Phone;
-            userMoreInfo.Name = model.Name;
-            userMoreInfo.Surname = model.Surname;
+            userMoreInfo.FullName = model.FullName;
+            userMoreInfo.Age = model.Age;
             user.Email = model.Email;
 
             _context.SaveChanges();

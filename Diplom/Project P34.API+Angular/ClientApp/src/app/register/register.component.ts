@@ -62,16 +62,16 @@ export class RegisterComponent implements OnInit {
       this.isError = true;
     }
 
-    if (this.isError === false) {
+    if (this.isError == false) {
       this.apiService.SingUp(this.model).subscribe(
         data => {
           console.log(data);
           if (data.status === 200) {
             this.spinner.hide();
             this.notifier.notify('success', 'You registered!');
-            this.router.navigate(['/login']);
+            this.router.navigate(['/']);
           } else {
-            // console.log(data.errors);
+             console.log(data.errors);
             for (let i = 0; i < data.errors.length; i++) {
               this.notifier.notify('error', data.errors[i]);
             }
@@ -87,7 +87,7 @@ export class RegisterComponent implements OnInit {
         setTimeout(() => {
           this.spinner.hide();
           this.isError = false;
-        }, 2500);
+        }, 1500);
       }
   }
 

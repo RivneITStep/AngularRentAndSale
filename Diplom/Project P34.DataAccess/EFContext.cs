@@ -9,7 +9,7 @@ namespace Project_P34.DataAccess
 {
     public class EFContext : IdentityDbContext<User>
     {
-        public EFContext(DbContextOptions<EFContext> options): base(options) { }
+        public EFContext(DbContextOptions<EFContext> options) : base(options) { }
 
         public DbSet<Cart> carts { get; set; }
         public DbSet<Category> categories { get; set; }
@@ -20,7 +20,7 @@ namespace Project_P34.DataAccess
         public DbSet<UserMoreInfo> userMoreInfos { get; set; }
         public DbSet<ViewedProducts> viewedProducts { get; set; }
         public DbSet<WishList> wishLists { get; set; }
-      
+
 
 
 
@@ -32,36 +32,37 @@ namespace Project_P34.DataAccess
                 .HasForeignKey<UserMoreInfo>(ui => ui.Id);
 
             builder.Entity<Commentaries>().HasOne(pt => pt.UserMoreInfo)
-            .WithMany(p => p.Commentariess)
-      .HasForeignKey(pt => pt.UserId);
+                .WithMany(p => p.Commentariess)
+                .HasForeignKey(pt => pt.UserId);
 
             builder.Entity<Images>().HasOne(pt => pt.Products)
-            .WithMany(p => p.Images)
-      .HasForeignKey(pt => pt.ProductId);
+                 .WithMany(p => p.Images)
+                 .HasForeignKey(pt => pt.ProductId);
 
             builder.Entity<Subcategory>().HasOne(pt => pt.Categories)
-           .WithMany(p => p.Subcategories)
-     .HasForeignKey(pt => pt.CategoryId);
+                  .WithMany(p => p.Subcategories)
+                  .HasForeignKey(pt => pt.CategoryId)
+                  .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<Product>().HasOne(pt => pt.Subcategories)
-       .WithMany(p => p.Products)
- .HasForeignKey(pt => pt.SubcategoryId);
+                  .WithMany(p => p.Products)
+                  .HasForeignKey(pt => pt.SubcategoryId);
 
             builder.Entity<Commentaries>().HasOne(pt => pt.Products)
-   .WithMany(p => p.Commentariess)
-.HasForeignKey(pt => pt.ProductId);
+                  .WithMany(p => p.Commentariess)
+                  .HasForeignKey(pt => pt.ProductId);
 
             builder.Entity<Product>().HasOne(pt => pt.WishLists)
-.WithMany(p => p.Products)
-.HasForeignKey(pt => pt.WishListId);
+                  .WithMany(p => p.Products)
+                  .HasForeignKey(pt => pt.WishListId);
 
             builder.Entity<Product>().HasOne(pt => pt.Carts)
-.WithMany(p => p.Products)
-.HasForeignKey(pt => pt.CartId);
+                  .WithMany(p => p.Products)
+                  .HasForeignKey(pt => pt.CartId);
 
             builder.Entity<Product>().HasOne(pt => pt.ViewedProducts)
-.WithMany(p => p.Products)
-.HasForeignKey(pt => pt.viewProductId);
+                  .WithMany(p => p.Products)
+                  .HasForeignKey(pt => pt.viewProductId);
 
 
             builder.Entity<UserMoreInfo>()
