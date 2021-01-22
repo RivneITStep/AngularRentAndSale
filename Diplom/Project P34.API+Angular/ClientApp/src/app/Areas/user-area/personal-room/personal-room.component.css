@@ -7,6 +7,12 @@
 .user-image { width: 100%; }
 
 /*DATA OF USER*/
+td { border: 1px solid transparent;  color: #f0f0f1; font-weight: 300; font-size: 16px; }
+
+.data-first { text-align: left; }
+
+.data-second { text-align: right; text-decoration: underline tomato; }
+
 .subtitle-of-page {
   text-align: center;
   color: #b4b4b4;
@@ -14,12 +20,10 @@
   margin-top: 4%;
 }
 
-.data-label { color: #f0f0f1; font-weight: 300; font-size: 16px; }
-
-.data-of-user { margin-left: 3%; border-bottom: 1px solid tomato; }
-
 /*ACTIONS*/
-.action-link { text-decoration: none; color: #b4b4b4; border: 1px solid transparent }
+hr { width: 90%; background-color: tomato; display: none; }
+
+.action-link { text-decoration: none; color: #b4b4b4; border: 1px solid transparent; font-size: 14px; letter-spacing: 2px; }
 
 .action-link:hover { border-bottom: 1px solid tomato; transition: all .6s; }
 
@@ -39,8 +43,19 @@
 
 }
 
+/*IPAD*/
+@media screen and (width: 768px) and (height: 1024px) {
+  .user-image { width: 100px; }
+
+  hr { display: none; }
+
+  .action-link { text-align: center; display: block; margin-left: 0; }
+}
+
 /*PHONES*/
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  hr { display: block; }
+
   .user-image {
     width: 300px;
     height: auto;
@@ -49,10 +64,15 @@
     margin-right: auto;
   }
 
+  .action-link { text-align: center; display: block; margin-left: auto; margin-right: auto; }
+
+  .action-link:hover { text-decoration: underline tomato; transition: all .6s; border-bottom: 1px solid transparent; }
 }
 
 /*XS SCREENS*/
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
+  hr { display: block; }
+
   .user-image {
     width: 250px;
     height: auto;
@@ -61,4 +81,9 @@
     margin-right: auto;
   }
 
+  .action-link { text-align: center; display: block; margin-left: auto; margin-right: auto; }
+
+  .action-link:hover { text-decoration: underline tomato; transition: all .6s; border-bottom: 1px solid transparent; }
+
+  .data-first, .data-second { font-size: 12px; }
 }
