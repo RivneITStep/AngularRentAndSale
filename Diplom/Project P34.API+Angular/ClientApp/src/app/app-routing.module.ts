@@ -17,7 +17,6 @@ import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches
 
 //PRIVATE ROOM
 import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
-import { MainRoomComponent } from './footer/Components/PRIVATE ROOM/main-room/main-room.component';
 import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
 
 /*AUTHORIZATION*/
@@ -40,7 +39,7 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 
 /*USER AREA*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
-
+import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
 
 const routes: Routes = [
   //MAIN PAGE
@@ -85,8 +84,8 @@ const routes: Routes = [
     children: [
       //PRIVATE ROOM
       { path: 'historyOfOrders', component: HistoryOfOrdersComponent, pathMatch:'full' },
-      { path: 'personalRoom', component: MainRoomComponent, pathMatch: 'full' },
       { path: 'wishlist', component: WishListComponent, pathMatch: 'full' },
+      { path: 'personalRoom', component: PersonalRoomComponent, pathMatch: 'full' },
     ]
   },
 
