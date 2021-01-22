@@ -60,9 +60,6 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 /*AREAS OF USER*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 
-/*GARBAGE*/
-import { LoginComponent } from './login/login.component';
-
 registerLocaleData(en);
 
 const notifierOptions: NotifierOptions = {
@@ -115,9 +112,6 @@ const notifierOptions: NotifierOptions = {
       CategoryComponent,
       SubcategoryComponent,
       ProductComponent,
-
-      /*GARBAGE*/
-      LoginComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),

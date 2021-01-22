@@ -41,8 +41,6 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 /*USER AREA*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 
-/*GARBAGE*/
-import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   //MAIN PAGE
@@ -67,9 +65,6 @@ const routes: Routes = [
   //AUTHORIZATION
   { path: 'register', component: RegisterComponent, pathMatch: 'full', canActivate: [NotLoginGuard]  },
   { path: 'forgot-password', component: ForgotPasswordComponent, pathMatch: 'full',canActivate:[NotLoginGuard] },
-
-  //GARBAGE
-  { path: 'login', component: LoginComponent, pathMatch: 'full', canActivate: [NotLoginGuard] },
 
   //ADMIN AREA
   {
