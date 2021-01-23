@@ -40,6 +40,7 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 /*USER AREA*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
+import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
 
 const routes: Routes = [
   //MAIN PAGE
@@ -85,7 +86,8 @@ const routes: Routes = [
       //PRIVATE ROOM
       { path: 'historyOfOrders', component: HistoryOfOrdersComponent, pathMatch:'full' },
       { path: 'wishlist', component: WishListComponent, pathMatch: 'full' },
-      { path: 'personalRoom', component: PersonalRoomComponent, pathMatch: 'full' },
+      { path: 'personal-room', component: PersonalRoomComponent, pathMatch: 'full' },
+      { path: 'edit-info', component: EditUserInfoComponent, pathMatch: 'full' },
     ]
   },
 

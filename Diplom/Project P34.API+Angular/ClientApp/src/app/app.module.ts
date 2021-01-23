@@ -59,6 +59,7 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 /*AREAS OF USER*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
+import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
 
 registerLocaleData(en);
 
@@ -99,6 +100,7 @@ const notifierOptions: NotifierOptions = {
       /*AREAS*/
       UserAreaComponent,
       PersonalRoomComponent,
+      EditUserInfoComponent,
 
       AdminAreaComponent,
       DashboardComponent,
