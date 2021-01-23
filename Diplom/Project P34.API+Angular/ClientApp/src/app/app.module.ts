@@ -61,6 +61,12 @@ import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
 import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
 
+/*FAQ COMPONENTS*/
+//ORDER
+import { OrderFirstComponent } from './footer/Components/INFO/faq/Components/Order/order-first/order-first.component';
+import { OrderSecondComponent } from './footer/Components/INFO/faq/Components/Order/order-second/order-second.component';
+import { OrderThirdComponent } from './footer/Components/INFO/faq/Components/Order/order-third/order-third.component';
+
 registerLocaleData(en);
 
 const notifierOptions: NotifierOptions = {
@@ -111,6 +117,12 @@ const notifierOptions: NotifierOptions = {
       CategoryComponent,
       SubcategoryComponent,
       ProductComponent,
+
+      /*FAQ COMPONENTS*/
+      //ORDER
+      OrderFirstComponent,
+      OrderSecondComponent,
+      OrderThirdComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),

@@ -42,6 +42,12 @@ import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
 import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
 
+/*FAQ COMPONENTS*/
+//ORDER
+import { OrderFirstComponent } from './footer/Components/INFO/faq/Components/Order/order-first/order-first.component';
+import { OrderSecondComponent } from './footer/Components/INFO/faq/Components/Order/order-second/order-second.component';
+import { OrderThirdComponent } from './footer/Components/INFO/faq/Components/Order/order-third/order-third.component';
+
 const routes: Routes = [
   //MAIN PAGE
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -90,6 +96,12 @@ const routes: Routes = [
       { path: 'edit-info', component: EditUserInfoComponent, pathMatch: 'full' },
     ]
   },
+
+  /*FAQ COMPONENTS*/
+  //ORDER
+  { path: 'faq/order-first', component: OrderFirstComponent, pathMatch: 'full' },
+  { path: 'faq/order-second', component: OrderSecondComponent, pathMatch: 'full' },
+  { path: 'faq/order-third', component: OrderThirdComponent, pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent }
 ];
