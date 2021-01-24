@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iP/sI1L7Dala5fKCU289qe0S6mr7C2nexjOW1I1xIjKXggFv1yKCI0jAZTcBUukSCLip2M4pQ/Y1vEIjJZUphA==",
+  "dgSpecHash": "qOZnk2yjjg8Afs/K0XvH8b1Tt5819ehdgeB866gBkCxqRpgxvPHRTvf9lLWyWbrK5x6OI0LjS1mN0eP1uzimEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.1\\microsoft.aspnetcore.authentication.google.3.1.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.11\\microsoft.aspnetcore.authentication.facebook.3.1.11.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.11\\microsoft.aspnetcore.authentication.google.3.1.11.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.1\\microsoft.aspnetcore.cryptography.internal.3.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.1\\microsoft.aspnetcore.cryptography.keyderivation.3.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.1\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.1.nupkg.sha512",

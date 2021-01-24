@@ -31,4 +31,3 @@ C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\n
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.genruntimeconfig.cache
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csprojAssemblyReference.cache

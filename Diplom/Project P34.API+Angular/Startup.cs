@@ -84,7 +84,7 @@ namespace Project_P34.API_Angular
             {
                 options.ClientId = "684459149538-l24k7pnpg6iflnjk6jt1lmpa9tsi0vg2.apps.googleusercontent.com";
                 options.ClientSecret = "qSRyYXZSdCWzCLJHcp599eHM";
-            });
+            });            
 
 
 
