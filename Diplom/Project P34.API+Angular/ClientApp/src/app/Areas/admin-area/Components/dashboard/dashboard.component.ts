@@ -44,6 +44,9 @@ export class DashboardComponent implements OnInit {
       document.getElementById(listName).style.display = "block";
       evt.currentTarget.className += " active";
     }
+
+
+    
   }
 
   sendDataToNewUser() {}

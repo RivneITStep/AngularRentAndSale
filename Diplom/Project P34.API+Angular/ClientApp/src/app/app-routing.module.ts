@@ -48,6 +48,10 @@ import { OrderFirstComponent } from './footer/Components/INFO/faq/Components/Ord
 import { OrderSecondComponent } from './footer/Components/INFO/faq/Components/Order/order-second/order-second.component';
 import { OrderThirdComponent } from './footer/Components/INFO/faq/Components/Order/order-third/order-third.component';
 
+//PRODUCTS
+import { ProductFirstComponent } from './footer/Components/INFO/faq/Components/Product/product-first/product-first.component';
+import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/Product/product-second/product-second.component';
+
 const routes: Routes = [
   //MAIN PAGE
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -102,6 +106,10 @@ const routes: Routes = [
   { path: 'faq/order-first', component: OrderFirstComponent, pathMatch: 'full' },
   { path: 'faq/order-second', component: OrderSecondComponent, pathMatch: 'full' },
   { path: 'faq/order-third', component: OrderThirdComponent, pathMatch: 'full' },
+
+  //PRODUCTS
+  { path: 'faq/product-first', component: ProductFirstComponent, pathMatch: 'full' },
+  { path: 'faq/product-second', component: ProductSecondComponent, pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent }
 ];

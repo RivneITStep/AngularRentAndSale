@@ -67,6 +67,10 @@ import { OrderFirstComponent } from './footer/Components/INFO/faq/Components/Ord
 import { OrderSecondComponent } from './footer/Components/INFO/faq/Components/Order/order-second/order-second.component';
 import { OrderThirdComponent } from './footer/Components/INFO/faq/Components/Order/order-third/order-third.component';
 
+//PRODUCTS
+import { ProductFirstComponent } from './footer/Components/INFO/faq/Components/Product/product-first/product-first.component';
+import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/Product/product-second/product-second.component';
+
 registerLocaleData(en);
 
 const notifierOptions: NotifierOptions = {
@@ -123,6 +127,10 @@ const notifierOptions: NotifierOptions = {
       OrderFirstComponent,
       OrderSecondComponent,
       OrderThirdComponent,
+
+      //PRODUCTS
+      ProductFirstComponent,
+      ProductSecondComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
