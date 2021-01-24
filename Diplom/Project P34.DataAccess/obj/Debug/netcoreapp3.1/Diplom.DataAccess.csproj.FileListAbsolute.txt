@@ -31,6 +31,8 @@ C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\n
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.genruntimeconfig.cache
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+=======
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csprojAssemblyReference.cache
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.deps.json
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.json
@@ -42,3 +44,4 @@ C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debu
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.AssemblyInfo.cs
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.dll
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+>>>>>>> 3d7d95bfd6605f07c8f0fd0cb62326779c72fcf7
