@@ -23,7 +23,7 @@ namespace Project_P34.API_Angular.Controllers
             _context = context;
 
         }
-
+        //***
 
         [HttpGet("getCategories")]
         public IEnumerable<CategoryDTO> getCategories()
