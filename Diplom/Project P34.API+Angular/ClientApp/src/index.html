@@ -16,8 +16,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <!--ICONS-->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <!-- <link rel="shortcut icon" href="../../wwwroot/icon.png" type="image/png"> -->
+  <link rel="icon" type="image/png" href="uf.png"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 </head>
@@ -37,6 +36,45 @@
             $('body,html').animate({ scrollTop: 0 }, 800);
         });
     });
+</script>
+
+<!--ADMIN PANEL-->
+<script>
+      document.getElementById("defActionOpen").click();
+      function chooseAction(evt, actionName) {
+      var i, tabcontentAction, tablinksAction;
+
+      tabcontentAction = document.getElementsByClassName("tabcontent-action");
+      for (i = 0; i < tabcontentAction.length; i++) {
+        tabcontentAction[i].style.display = "none";
+      }
+
+      tablinksAction = document.getElementsByClassName("tablink-action");
+      for (i = 0; i < tablinksAction.length; i++) {
+        tablinksAction[i].className = tablinksAction[i].className.replace(" active", "");
+      }
+
+      document.getElementById(actionName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+
+      document.getElementById("defListOpen").click();
+      function openList(evt, listName) {
+      var i, tabcontentList, tablinkList;
+
+      tabcontentList = document.getElementsByClassName("tabcontent-list");
+      for (i = 0; i < tabcontentList.length; i++) {
+        tabcontentList[i].style.display = "none";
+      }
+
+      tablinkList = document.getElementsByClassName("tablink-list");
+      for (i = 0; i < tablinkList.length; i++) {
+        tablinkList[i].className = tablinkList[i].className.replace(" active", "");
+      }
+
+      document.getElementById(listName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 </script>
 
 <!--BOOTSTRAP'S SCRIPTS-->

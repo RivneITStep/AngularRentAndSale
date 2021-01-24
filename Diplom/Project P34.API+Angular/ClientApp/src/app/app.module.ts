@@ -38,7 +38,6 @@ import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches
 
 //PRIVATE ROOM
 import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
-import { MainRoomComponent } from './footer/Components/PRIVATE ROOM/main-room/main-room.component';
 import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
 
 /*AUTHORIZATION 'N' 404*/
@@ -59,9 +58,14 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 
 /*AREAS OF USER*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
+import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
+import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
 
-/*GARBAGE*/
-import { LoginComponent } from './login/login.component';
+/*FAQ COMPONENTS*/
+//ORDER
+import { OrderFirstComponent } from './footer/Components/INFO/faq/Components/Order/order-first/order-first.component';
+import { OrderSecondComponent } from './footer/Components/INFO/faq/Components/Order/order-second/order-second.component';
+import { OrderThirdComponent } from './footer/Components/INFO/faq/Components/Order/order-third/order-third.component';
 
 registerLocaleData(en);
 
@@ -84,18 +88,14 @@ const notifierOptions: NotifierOptions = {
       TableOfSizesComponent,
 
       //SERVS
-
       ContactsComponent,
       ReturnComponent,
 
       //ADDITIONAL
-
       WatchesProductsComponent,
 
       //PRIVATE ROOM
-
       HistoryOfOrdersComponent,
-      MainRoomComponent,
       WishListComponent,
 
       /*AUTHORIZATION*/
@@ -105,6 +105,8 @@ const notifierOptions: NotifierOptions = {
 
       /*AREAS*/
       UserAreaComponent,
+      PersonalRoomComponent,
+      EditUserInfoComponent,
 
       AdminAreaComponent,
       DashboardComponent,
@@ -116,8 +118,11 @@ const notifierOptions: NotifierOptions = {
       SubcategoryComponent,
       ProductComponent,
 
-      /*GARBAGE*/
-      LoginComponent,
+      /*FAQ COMPONENTS*/
+      //ORDER
+      OrderFirstComponent,
+      OrderSecondComponent,
+      OrderThirdComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
