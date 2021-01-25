@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+}
+
+#contact{
+    text-align: center;
+    color: ivory;
+    font-style: italic;
+    font-family: 'Potta One', cursive;
+    font-size: 30px;
+}
+
+.tel{
+    font-family: 'Potta One', cursive;
+    margin-left: 4%;
+    font-style: inherit !important;
+}
+
+.telephones{
+    margin-left: 7%;
+}
+
+.info{
+    color: ivory;
+    font-size: 25px;
+    font-style: oblique;
+}
+
+.schedule{
+    color: ivory;
+    font-size: 25px;
+    font-style: oblique;
+}
+
+#mail{
+    margin-left: 7%;
+}
+
+
