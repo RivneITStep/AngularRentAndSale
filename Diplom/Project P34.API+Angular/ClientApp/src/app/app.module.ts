@@ -71,6 +71,11 @@ import { OrderThirdComponent } from './footer/Components/INFO/faq/Components/Ord
 import { ProductFirstComponent } from './footer/Components/INFO/faq/Components/Product/product-first/product-first.component';
 import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/Product/product-second/product-second.component';
 
+//DELIVERY
+import { DeliveryFirstComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-first/delivery-first.component';
+import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-second/delivery-second.component';
+import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
+
 registerLocaleData(en);
 
 const notifierOptions: NotifierOptions = {
@@ -131,6 +136,11 @@ const notifierOptions: NotifierOptions = {
       //PRODUCTS
       ProductFirstComponent,
       ProductSecondComponent,
+
+      //DELIVERY
+      DeliveryFirstComponent,
+      DeliverySecondComponent,
+      DeliveryThirdComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
