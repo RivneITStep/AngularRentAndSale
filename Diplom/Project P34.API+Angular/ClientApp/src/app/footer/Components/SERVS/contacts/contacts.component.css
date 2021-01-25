@@ -1,39 +1,56 @@
-body{
-    background-color: black;
+.container { margin-bottom: 3%; }
+
+.title-contacts {
+  color: #b4b4b4;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 200;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
 }
 
-#contact{
-    text-align: center;
-    color: ivory;
-    font-style: italic;
-    font-family: 'Potta One', cursive;
-    font-size: 30px;
+.title-contacts::after {
+  content: ' ';
+  display: block;
+  background-color: tomato;
+  height: 1px;
+  transform: scale(1);
+  width: 100%;
 }
 
-.tel{
-    font-family: 'Potta One', cursive;
-    margin-left: 4%;
-    font-style: inherit !important;
+.subtitle-contacts {
+  color: #b4b4b4;
+  letter-spacing: 2px;
+  font-weight: 400;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
 }
 
-.telephones{
-    margin-left: 7%;
+.data-contacts { font-size: 14px; color: #f0f0f1; font-weight: 200; }
+
+/*LAPTOPS 'N' HIGH SCREENS*/
+@media screen and (min-width: 1240px) {
+
 }
 
-.info{
-    color: ivory;
-    font-size: 25px;
-    font-style: oblique;
+/*TABLETS*/
+@media screen and (min-width: 1024px) and (max-width: 1240px) {
+
 }
 
-.schedule{
-    color: ivory;
-    font-size: 25px;
-    font-style: oblique;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
 }
 
-#mail{
-    margin-left: 7%;
+/*MOBILE PHONES*/
+@media screen and (max-width: 768px) {
+  .subtitle-contacts { font-size: 20px; }
+
+  .data-contacts { font-size: 14px; }
 }
-
-
