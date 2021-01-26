@@ -33,3 +33,14 @@ C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\ne
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csproj.CopyComplete
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.dll
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.deps.json
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csproj.CoreCompileInputs.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.AssemblyInfoInputs.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.AssemblyInfo.cs
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csproj.CopyComplete
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.pdb

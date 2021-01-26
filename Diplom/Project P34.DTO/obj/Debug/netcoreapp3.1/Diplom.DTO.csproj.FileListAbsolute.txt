@@ -45,3 +45,15 @@ C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netco
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CopyComplete
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.dll
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.deps.json
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CoreCompileInputs.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfoInputs.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfo.cs
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CopyComplete
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.pdb
