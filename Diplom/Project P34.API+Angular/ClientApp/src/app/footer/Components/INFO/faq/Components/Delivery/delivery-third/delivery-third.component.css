@@ -23,8 +23,6 @@
 
 /*BODY OF THE PAGE*/
 
-.number-li { color: #b4b4b4; }
-
 .question-title { color: #b4b4b4; font-weight: 400; }
 
 .answer-title { margin-top: 30px; color: #b4b4b4; font-weight: 300; }
@@ -47,16 +45,6 @@
 .btn:focus { box-shadow: 0 0 20px rgba(255, 99, 71, 0.5); }
 
 .new-post { color: tomato; }
-
-.cart {
-  padding: 2px 5px;
-  background-color: #f0f0f1;
-  color: #191919;
-  font-weight: normal;
-  font-size: 12px;
-}
-
-.br-sm { display: none; }
 
 /*MEDIA*/
 /*LAPTOPS*/
@@ -86,6 +74,4 @@
   .row-sm { display: block; }
 
   .col-lg { display: none; }
-
-  .br-sm { display: block; }
 }

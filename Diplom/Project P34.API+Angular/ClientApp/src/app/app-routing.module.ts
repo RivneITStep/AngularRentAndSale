@@ -52,22 +52,27 @@ import { OrderThirdComponent } from './footer/Components/INFO/faq/Components/Ord
 import { ProductFirstComponent } from './footer/Components/INFO/faq/Components/Product/product-first/product-first.component';
 import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/Product/product-second/product-second.component';
 
+//DELIVERY
+import { DeliveryFirstComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-first/delivery-first.component';
+import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-second/delivery-second.component';
+import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
+
 const routes: Routes = [
   //MAIN PAGE
   { path: '', component: HomeComponent, pathMatch: 'full'},
 
   /*FOOTER COMPONENTS*/
   //INFO
-  { path: 'aboutUs', component: AboutUsComponent, pathMatch: 'full' },
+  { path: 'about-us', component: AboutUsComponent, pathMatch: 'full' },
   { path: 'faq', component: FaqComponent, pathMatch: 'full' },
-  { path: 'tableOfSizes', component: TableOfSizesComponent, pathMatch: 'full' },
+  { path: 'table-of-sizes', component: TableOfSizesComponent, pathMatch: 'full' },
 
   //SERVS
   { path: 'contacts', component: ContactsComponent, pathMatch: 'full' },
   { path: 'return', component: ReturnComponent, pathMatch: 'full' },
 
   //ADDITIONAL
-  { path: 'watchesProducts', component: WatchesProductsComponent, pathMatch: 'full' },
+  { path: 'watches-products', component: WatchesProductsComponent, pathMatch: 'full' },
 
   //PRIVATE ROOM
   //(IN USER AREA)
@@ -110,6 +115,11 @@ const routes: Routes = [
   //PRODUCTS
   { path: 'faq/product-first', component: ProductFirstComponent, pathMatch: 'full' },
   { path: 'faq/product-second', component: ProductSecondComponent, pathMatch: 'full' },
+
+  //DELIVERY
+  { path: 'faq/delivery-first', component: DeliveryFirstComponent, pathMatch: 'full' },
+  { path: 'faq/delivery-second', component: DeliverySecondComponent, pathMatch: 'full' },
+  { path: 'faq/delivery-third', component: DeliveryThirdComponent, pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent }
 ];
