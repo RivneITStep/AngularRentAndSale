@@ -57,6 +57,20 @@ import { DeliveryFirstComponent } from './footer/Components/INFO/faq/Components/
 import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-second/delivery-second.component';
 import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
 
+//PAYMENT
+import { PaymentFirstComponent } from './footer/Components/INFO/faq/Components/Payment/payment-first/payment-first.component';
+import { PaymentSecondComponent } from './footer/Components/INFO/faq/Components/Payment/payment-second/payment-second.component';
+import { PaymentThirdComponent } from './footer/Components/INFO/faq/Components/Payment/payment-third/payment-third.component';
+import { PaymentFourthComponent } from './footer/Components/INFO/faq/Components/Payment/payment-fourth/payment-fourth.component';
+
+//GARANCY
+import { GarancyFirstComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-first/garancy-first.component';
+import { GarancySecondComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-second/garancy-second.component';
+
+//PRIVATE-ROOM
+import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
+import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
+
 const routes: Routes = [
   //MAIN PAGE
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -108,18 +122,32 @@ const routes: Routes = [
 
   /*FAQ COMPONENTS*/
   //ORDER
-  { path: 'faq/order-first', component: OrderFirstComponent, pathMatch: 'full' },
-  { path: 'faq/order-second', component: OrderSecondComponent, pathMatch: 'full' },
-  { path: 'faq/order-third', component: OrderThirdComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-I-made-an-order-What-is-next-', component: OrderFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-find-out-if-the-order-can-already-be-picked-up-', component: OrderSecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-cancel-an-order-', component: OrderThirdComponent, pathMatch: 'full' },
 
   //PRODUCTS
-  { path: 'faq/product-first', component: ProductFirstComponent, pathMatch: 'full' },
-  { path: 'faq/product-second', component: ProductSecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-choose-the-right-size-', component: ProductFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-find-out-if-the-product-is-available-', component: ProductSecondComponent, pathMatch: 'full' },
 
   //DELIVERY
-  { path: 'faq/delivery-first', component: DeliveryFirstComponent, pathMatch: 'full' },
-  { path: 'faq/delivery-second', component: DeliverySecondComponent, pathMatch: 'full' },
-  { path: 'faq/delivery-third', component: DeliveryThirdComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-order-goods-', component: DeliveryFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-When-and-where-can-I-pick-up-my-order-', component: DeliverySecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-I-want-to-place-an-order-When-will-it-be-delivered-', component: DeliveryThirdComponent, pathMatch: 'full' },
+
+  //PAYMENT
+  { path: 'faq/0223369/-How-can-I-get-a-promo-code-', component: PaymentFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-use-a-promo-code-', component: PaymentSecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-pay-for-an-order-by-cashless-payment-', component: PaymentThirdComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-pay-for-an-order-by-card-', component: PaymentFourthComponent, pathMatch: 'full' },
+
+  //PRIVATE ROOM
+  { path: 'faq/0223369/-How-do-I-change-the-email-address-in-my-account-', component: PrivateRoomFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-do-I-delete-my-account-', component: PrivateRoomSecondComponent, pathMatch: 'full' },
+
+  //GARANCY
+  { path: 'faq/0223369/-What-goods-are-subject-to-exchange-and-return-', component: GarancyFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-return-the-goods-in-my-city-', component: GarancySecondComponent, pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent }
 ];
