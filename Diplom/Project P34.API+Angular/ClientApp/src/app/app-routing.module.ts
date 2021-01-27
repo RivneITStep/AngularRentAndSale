@@ -142,8 +142,8 @@ const routes: Routes = [
   { path: 'faq/0223369/-How-to-pay-for-an-order-by-card-', component: PaymentFourthComponent, pathMatch: 'full' },
 
   //PRIVATE ROOM
-  { path: 'faq/0223369/-How-do-I-change-the-email-address-in-my-account-', component: PrivateRoomFirstComponent, pathMatch: 'full' },
-  { path: 'faq/0223369/-How-do-I-delete-my-account-', component: PrivateRoomSecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-do-I-can-change-the-email-address-in-my-account-', component: PrivateRoomFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-do-I-can-delete-my-account-', component: PrivateRoomSecondComponent, pathMatch: 'full' },
 
   //GARANCY
   { path: 'faq/0223369/-What-goods-are-subject-to-exchange-and-return-', component: GarancyFirstComponent, pathMatch: 'full' },

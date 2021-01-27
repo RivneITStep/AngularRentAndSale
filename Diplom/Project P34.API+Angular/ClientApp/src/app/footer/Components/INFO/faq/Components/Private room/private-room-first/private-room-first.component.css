@@ -48,6 +48,15 @@
 
 .number-li { color: #b4b4b4; font-weight: 200; }
 
+.edit {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #f0f0f1;
+  border-bottom: 1px solid transparent;
+}
+
+.edit:hover { border-bottom: 1px solid tomato; transition: all .6s; }
+
 /*MEDIA*/
 /*LAPTOPS*/
 @media screen and (min-width: 1240px) {
