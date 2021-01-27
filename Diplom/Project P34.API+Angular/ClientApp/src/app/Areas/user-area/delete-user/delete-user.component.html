@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="row row-sm">
+    <a [routerLink]="['/user-area/personal-room']" class="back-link bl-sm">Назад</a>
+  </div>
+
+  <div class="row">
+
+    <div class="col col-lg-2 col-md-2 col-sm-0 col-xs-0 col-lg">
+      <a [routerLink]="['/user-area/personal-room']" class="back-link">Назад</a>
+    </div>
+
+    <div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      <form>
+        <div class="form-group">
+          <h4 class="title"><span class="word">Основне</span></h4>
+          <textarea type="text" cols="40" class="form-control"
+            placeholder="Причина видалення (заповнити за бажанням):"></textarea>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="deleteResult">
+          <label class="lbl-delete" for="deleteResult">Я погоджуюсь з
+            <a href="" class="result-delete">наслідками видалення аккаунта</a>.</label>
+        </div>
+
+        <div class="div-for-button">
+          <button class="btn btn-submit" type="submit">Видалити</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>

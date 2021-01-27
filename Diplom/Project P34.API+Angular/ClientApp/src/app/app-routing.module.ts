@@ -41,6 +41,7 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
 import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
+import { DeleteUserComponent } from './Areas/user-area/delete-user/delete-user.component';
 
 /*FAQ COMPONENTS*/
 //ORDER
@@ -118,6 +119,7 @@ const routes: Routes = [
       { path: 'wishlist', component: WishListComponent, pathMatch: 'full' },
       { path: 'personal-room', component: PersonalRoomComponent, pathMatch: 'full' },
       { path: 'edit-info', component: EditUserInfoComponent, pathMatch: 'full' },
+      { path: 'delete-profile', component: DeleteUserComponent, pathMatch: 'full' },
     ]
   },
 
