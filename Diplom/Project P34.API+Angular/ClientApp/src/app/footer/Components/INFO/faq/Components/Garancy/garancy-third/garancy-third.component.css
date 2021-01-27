@@ -48,16 +48,6 @@
 
 .number-li { color: #b4b4b4; font-weight: 200; }
 
-.table-row, .first-item, .second-item { border: 1px solid #1c1b1b; color: #f0f0f1; }
-
-.table-row:hover { border: 1px solid tomato !important; transition: all .6s; }
-
-.table { border: 1px solid tomato; }
-
-.first-item { text-align: left; }
-
-.second-item { text-align: right; font-weight: 200; }
-
 /*MEDIA*/
 /*LAPTOPS*/
 @media screen and (min-width: 1240px) {
@@ -90,8 +80,4 @@
   .col-lg { display: none; }
 
   .br-sm { display: block; }
-
-  .table { font-size: 12px; }
-
-  .first-item { padding-left: 0; }
 }

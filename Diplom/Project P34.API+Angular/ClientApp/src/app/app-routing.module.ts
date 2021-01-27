@@ -66,6 +66,7 @@ import { PaymentFourthComponent } from './footer/Components/INFO/faq/Components/
 //GARANCY
 import { GarancyFirstComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-first/garancy-first.component';
 import { GarancySecondComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-second/garancy-second.component';
+import { GarancyThirdComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-third/garancy-third.component';
 
 //PRIVATE-ROOM
 import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
@@ -146,8 +147,9 @@ const routes: Routes = [
   { path: 'faq/0223369/-How-do-I-can-delete-my-account-', component: PrivateRoomSecondComponent, pathMatch: 'full' },
 
   //GARANCY
-  { path: 'faq/0223369/-What-goods-are-subject-to-exchange-and-return-', component: GarancyFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-What-goods-are-not-subject-to-exchange-and-return-', component: GarancyFirstComponent, pathMatch: 'full' },
   { path: 'faq/0223369/-How-to-return-the-goods-in-my-city-', component: GarancySecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-In-which-cases-is-the-guarantee-not-provided-', component: GarancyThirdComponent, pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent }
 ];

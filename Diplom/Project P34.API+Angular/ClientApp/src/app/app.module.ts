@@ -85,6 +85,7 @@ import { PaymentFourthComponent } from './footer/Components/INFO/faq/Components/
 //GARANCY
 import { GarancyFirstComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-first/garancy-first.component';
 import { GarancySecondComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-second/garancy-second.component';
+import { GarancyThirdComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-third/garancy-third.component';
 
 //PRIVATE-ROOM
 import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
@@ -165,6 +166,7 @@ const notifierOptions: NotifierOptions = {
       //GARANCY
       GarancyFirstComponent,
       GarancySecondComponent,
+      GarancyThirdComponent,
 
       //PRIVATE ROOM
       PrivateRoomFirstComponent,
