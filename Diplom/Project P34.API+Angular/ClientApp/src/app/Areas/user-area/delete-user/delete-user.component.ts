@@ -9,6 +9,10 @@ export class DeleteUserComponent implements OnInit {
 
   constructor() { }
 
+  isConfirm:boolean = false;
+
+  onChecked() { this.isConfirm = !this.isConfirm; }
+
   ngOnInit() {  }
 
 }
