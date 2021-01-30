@@ -11,7 +11,7 @@ namespace Project_P34.DTO.Models
 
         public string Id { get; set; }
 
-        public string SubcategoryId { get; set; }
+      
 
     }
 }
