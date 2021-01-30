@@ -14,6 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="3.1.11" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.11" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
@@ -44,8 +45,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Migrations\20210121191654_Top migration.cs" />
-    <Compile Include="Migrations\20210121191654_Top migration.Designer.cs" />
+    <Compile Include="Migrations\20210130212303_top.cs" />
+    <Compile Include="Migrations\20210130212303_top.Designer.cs" />
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
   </ItemGroup>
 

@@ -20,6 +20,7 @@ namespace Project_P34.DataAccess
         public DbSet<UserMoreInfo> userMoreInfos { get; set; }
         public DbSet<ViewedProducts> viewedProducts { get; set; }
         public DbSet<WishList> wishLists { get; set; }
+        public DbSet<SupportRequest> requests { get; set; }
 
 
 

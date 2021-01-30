@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Project_P34.API_Angular.Helper;
+using Project_P34.API_Angular.Mapper;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
 using Project_P34.Domain;
@@ -30,9 +32,22 @@ namespace Project_P34.API_Angular
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            services.AddCors(
+                options =>
+                {
+                    options.AddPolicy(name: MyAllowSpecificOrigins,
+                                      builder =>
+                                      {
+                                          builder.WithOrigins("http://google.com",
+                                                              "https://localhost:44336")
+                                                                .AllowAnyHeader()
+                                                                .AllowAnyMethod()
+                                                                .AllowAnyOrigin();
+                                      });
+                });
             services.AddDbContext<EFContext>(
                     opt => opt.UseSqlServer(Configuration["ConnectionString"],
                     b => b.MigrationsAssembly("Diplom.API+Angular"))
@@ -43,6 +58,7 @@ namespace Project_P34.API_Angular
                 .AddDefaultTokenProviders();
 
             services.AddTransient<IJWTTokenService, JWTTokenService>();
+            services.AddAutoMapper(typeof(MapperProfiles));
 
             var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<string>("SecretPhrase")));
 
@@ -84,7 +100,12 @@ namespace Project_P34.API_Angular
             {
                 options.ClientId = "684459149538-l24k7pnpg6iflnjk6jt1lmpa9tsi0vg2.apps.googleusercontent.com";
                 options.ClientSecret = "qSRyYXZSdCWzCLJHcp599eHM";
-            });            
+            })
+            .AddFacebook(options =>
+           {
+               options.ClientId = "216235266889171";
+               options.ClientSecret = "c902f2c67d9236b4e8f512b97feaf570";
+           });
 
 
 
@@ -119,10 +140,10 @@ namespace Project_P34.API_Angular
             {
                 app.UseSpaStaticFiles();
             }
-
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();  
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
@@ -143,7 +164,7 @@ namespace Project_P34.API_Angular
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
-             //SeederDatabase.SeedData(app.ApplicationServices, env, Configuration);
+             SeederDatabase.SeedData(app.ApplicationServices, env, Configuration);
 
         }
     }

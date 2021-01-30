@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +24,7 @@ using WebCrudApi.Helpers;
 
 namespace Project_IDA.Api___Angular.Controllers
 {
+    [EnableCors("MyAllowSpecificOrigins")]
     [Route("api/Account")]
     [ApiController]
     public class AccountController : ControllerBase
