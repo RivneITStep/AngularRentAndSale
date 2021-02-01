@@ -159,3 +159,14 @@
 
   .theme-of-question { font-size: 16px; }
 }
+
+@media screen and (min-width: 445px) and (max-width: 575px) {
+  .quest-col { padding-right: 7%; padding-left: 7%; }
+}
+
+/*XS SCREENS*/
+@media screen and (min-width: 280px) and (max-width: 375px) {
+  .search-form { width: 90%; }
+
+  .quest-col { width: 100%; }
+}

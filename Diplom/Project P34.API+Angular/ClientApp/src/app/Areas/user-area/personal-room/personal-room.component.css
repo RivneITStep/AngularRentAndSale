@@ -53,7 +53,7 @@ hr { width: 90%; background-color: tomato; display: none; }
 }
 
 /*PHONES*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   hr { display: block; }
 
   .user-image {
@@ -69,12 +69,18 @@ hr { width: 90%; background-color: tomato; display: none; }
   .action-link:hover { text-decoration: underline tomato; transition: all .6s; border-bottom: 1px solid transparent; }
 }
 
+@media screen and (min-width: 570px) and (max-width: 575px) {
+  .user-image { width: 310px; height: 310px; }
+}
+
 /*XS SCREENS*/
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   hr { display: block; }
 
+  .title-page { font-size: 20px; }
+
   .user-image {
-    width: 250px;
+    width: 200px;
     height: auto;
     display: block;
     margin-left: auto;

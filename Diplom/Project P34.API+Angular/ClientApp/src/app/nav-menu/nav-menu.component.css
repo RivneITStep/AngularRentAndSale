@@ -276,3 +276,45 @@
 
     .srch-btn { width: 20%; height: 37px; }
 }
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .btn-theme::before {
+    content: 'Темна тема: ВКЛ';
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+  }
+
+  .btn-cart::before {
+    content: 'Кошик';
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .btn-act { padding-left: 0px; }
+
+  .btn-theme::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #f0f0f1;
+    height: 1px;
+    transform: scale(1);
+  }
+
+  .btn-cart::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: tomato;
+    height: 1px;
+    transform: scale(1);
+  }
+}
+
+/*XS SCREENS*/
+@media screen and (min-width: 280px) and (max-width: 400px) {
+  .navbar-brand { font-size: 14px; }
+
+  .log-soc-link { font-size: 16px; padding-left: 20px; padding-right: 20px; }
+}
