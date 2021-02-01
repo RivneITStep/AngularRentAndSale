@@ -10,8 +10,8 @@ using Project_P34.DataAccess;
 namespace Project_P34.API_Angular.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20210121191654_Top migration")]
-    partial class Topmigration
+    [Migration("20210130212303_top")]
+    partial class top
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -298,6 +298,24 @@ namespace Project_P34.API_Angular.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("tblSubCategory");
+                });
+
+            modelBuilder.Entity("Project_P34.DataAccess.Entity.SupportRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("requests");
                 });
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.User", b =>

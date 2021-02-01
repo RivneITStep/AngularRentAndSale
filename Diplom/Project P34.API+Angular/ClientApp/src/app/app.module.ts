@@ -28,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './footer/Components/INFO/about-us/about-us.component';
 import { FaqComponent } from './footer/Components/INFO/faq/faq.component';
 import { TableOfSizesComponent } from './footer/Components/INFO/table-of-sizes/table-of-sizes.component';
+import { SupportComponent } from './footer/Components/INFO/support/support.component';
 
 //SERVS
 import { ContactsComponent } from './footer/Components/SERVS/contacts/contacts.component';
@@ -111,6 +112,7 @@ const notifierOptions: NotifierOptions = {
       AboutUsComponent,
       FaqComponent,
       TableOfSizesComponent,
+      SupportComponent,
 
       //SERVS
       ContactsComponent,

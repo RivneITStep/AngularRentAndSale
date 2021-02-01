@@ -298,6 +298,24 @@ namespace Project_P34.API_Angular.Migrations
                     b.ToTable("tblSubCategory");
                 });
 
+            modelBuilder.Entity("Project_P34.DataAccess.Entity.SupportRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("requests");
+                });
+
             modelBuilder.Entity("Project_P34.DataAccess.Entity.User", b =>
                 {
                     b.Property<string>("Id")

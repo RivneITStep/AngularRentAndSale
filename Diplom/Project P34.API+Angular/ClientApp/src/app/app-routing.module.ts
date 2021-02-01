@@ -57,6 +57,7 @@ import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/
 import { DeliveryFirstComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-first/delivery-first.component';
 import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-second/delivery-second.component';
 import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
+import { SupportComponent } from './footer/Components/INFO/support/support.component';
 
 //PAYMENT
 import { PaymentFirstComponent } from './footer/Components/INFO/faq/Components/Payment/payment-first/payment-first.component';
@@ -82,6 +83,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent, pathMatch: 'full' },
   { path: 'faq', component: FaqComponent, pathMatch: 'full' },
   { path: 'table-of-sizes', component: TableOfSizesComponent, pathMatch: 'full' },
+  { path: 'support-request', component: SupportComponent, pathMatch: 'full' },
 
   //SERVS
   { path: 'contacts', component: ContactsComponent, pathMatch: 'full' },

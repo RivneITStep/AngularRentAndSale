@@ -4,6 +4,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiResult } from '../Models/result.model';
+import { SupportModel } from '../Models/support.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ import { ApiResult } from '../Models/result.model';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = 'api/Account';
+  baseUrl = '/api/Account';
+  supportURL = 'api/Support'
   loginStatus = new EventEmitter<boolean>();
 
   SingUp(UserRegisterDto: RegisterModel): Observable<ApiResult> {
@@ -57,6 +59,15 @@ export class ApiService {
   
   GoogleLogin () {
     return this.http.get<ApiResult>(this.baseUrl + '/google-login');
+  }
+
+  FacebookLogin() {
+    return this.http.get<ApiResult>(this.baseUrl + '/facebook-login');
+  }
+
+  SupportRequest(SupportModel: SupportModel){
+    return this.http.post<ApiResult>(this.supportURL + '/support-request', SupportModel);
+
   }
 
 }
