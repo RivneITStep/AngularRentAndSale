@@ -50,7 +50,6 @@ D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Dipl
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.pdb
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
-D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CoreCompileInputs.cache
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfoInputs.cache
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfo.cs

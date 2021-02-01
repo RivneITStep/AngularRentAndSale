@@ -32,7 +32,7 @@ namespace Project_P34.DataAccess.Entity
 
 
         //id images 1-8  +
-        public ICollection<Images> Images { get; set; }
+        public virtual ICollection<Images> Images { get; set; }
         //id subcategory 8-1 +
         public string SubcategoryId { get; set; }
         public virtual Subcategory Subcategories { get; set; }

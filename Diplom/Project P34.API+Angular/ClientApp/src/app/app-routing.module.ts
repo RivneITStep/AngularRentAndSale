@@ -56,6 +56,8 @@ import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/
 import { DeliveryFirstComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-first/delivery-first.component';
 import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-second/delivery-second.component';
 import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
+import { AddProductComponent } from './Areas/admin-area/Components/add-product/add-product.component';
+import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subcategory/add-subcategory.component';
 
 const routes: Routes = [
   //MAIN PAGE
@@ -89,6 +91,9 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent, pathMatch: 'full' },
       { path: 'editProduct/:id', component: EditProductComponent, pathMatch: 'full' },
+      { path: 'addProduct', component: AddProductComponent, pathMatch: 'full' },
+      { path: 'addSubcategory', component: AddSubcategoryComponent, pathMatch: 'full' },
+      { path: 'addCategory', component: AddSubcategoryComponent, pathMatch: 'full' },
     ]
   },
 

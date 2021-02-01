@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-add-product',
+  templateUrl: './add-product.component.html',
+  styleUrls: ['./add-product.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class AddProductComponent implements OnInit {
+
   constructor() { }
 
   ngOnInit():void {
@@ -45,12 +46,7 @@ export class DashboardComponent implements OnInit {
       evt.currentTarget.className += " active";
     }
 
-
-    
   }
-  
-  
-  
-
   sendDataToNewUser() {}
+
 }

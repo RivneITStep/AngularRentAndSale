@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Project_IDA.DTO.Models.Result;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
@@ -21,6 +22,17 @@ namespace Project_P34.API_Angular.Controllers
         {
             _context = context;
         }
+
+        //*
+        //[HttpGet("getProducts")]
+        //public async Task<IEnumerable<ProductDTO>> getProductsss()
+        //{
+        //    var dataFromDB = await _context.products.ToListAsync();
+
+        //    return data;
+        //}
+
+        //*
 
         [HttpGet("getProducts")]
         public IEnumerable<ProductDTO> getProducts()
@@ -56,7 +68,7 @@ namespace Project_P34.API_Angular.Controllers
             List<ProductDTO> data = new List<ProductDTO>();
 
             
-            var product = _context.products.FirstOrDefault(t => t.Id == id);
+            var product = _context.products.Include(t=>t.Images).FirstOrDefault(t => t.Id == id);
 
             var images = _context.images.Where(t => t.ProductId == id);
 

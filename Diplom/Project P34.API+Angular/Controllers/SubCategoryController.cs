@@ -120,9 +120,9 @@ namespace Project_P34.API_Angular.Controllers
             {
                 var subcategory = _context.subCategories.FirstOrDefault(t => t.Id == id);
 
-                var products = _context.products.Where(t => t.SubcategoryId == id);
+                var products = _context.products.Where(t => t.SubcategoryId == id).ToList();
 
-                if (products!= null)
+                if (products.Count!= 0)
                 {
                     foreach (var item in products)
                     {

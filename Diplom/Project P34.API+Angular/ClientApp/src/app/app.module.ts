@@ -75,6 +75,8 @@ import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/
 import { DeliveryFirstComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-first/delivery-first.component';
 import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-second/delivery-second.component';
 import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
+import { AddProductComponent } from './Areas/admin-area/Components/add-product/add-product.component';
+import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subcategory/add-subcategory.component';
 
 registerLocaleData(en);
 
@@ -120,6 +122,9 @@ const notifierOptions: NotifierOptions = {
       AdminAreaComponent,
       DashboardComponent,
       EditProductComponent,
+      AddProductComponent,
+      AddSubcategoryComponent,
+     /* AddCategoryComponent,/*
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,
