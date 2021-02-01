@@ -41,6 +41,7 @@ import { EditProductComponent } from './Areas/admin-area/Components/edit-product
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
 import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
+import { DeleteUserComponent } from './Areas/user-area/delete-user/delete-user.component';
 
 /*FAQ COMPONENTS*/
 //ORDER
@@ -58,6 +59,22 @@ import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components
 import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
 import { AddProductComponent } from './Areas/admin-area/Components/add-product/add-product.component';
 import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subcategory/add-subcategory.component';
+import { SupportComponent } from './footer/Components/INFO/support/support.component';
+
+//PAYMENT
+import { PaymentFirstComponent } from './footer/Components/INFO/faq/Components/Payment/payment-first/payment-first.component';
+import { PaymentSecondComponent } from './footer/Components/INFO/faq/Components/Payment/payment-second/payment-second.component';
+import { PaymentThirdComponent } from './footer/Components/INFO/faq/Components/Payment/payment-third/payment-third.component';
+import { PaymentFourthComponent } from './footer/Components/INFO/faq/Components/Payment/payment-fourth/payment-fourth.component';
+
+//GARANCY
+import { GarancyFirstComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-first/garancy-first.component';
+import { GarancySecondComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-second/garancy-second.component';
+import { GarancyThirdComponent } from './footer/Components/INFO/faq/Components/Garancy/garancy-third/garancy-third.component';
+
+//PRIVATE-ROOM
+import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
+import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
 
 const routes: Routes = [
   //MAIN PAGE
@@ -68,6 +85,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent, pathMatch: 'full' },
   { path: 'faq', component: FaqComponent, pathMatch: 'full' },
   { path: 'table-of-sizes', component: TableOfSizesComponent, pathMatch: 'full' },
+  { path: 'support-request', component: SupportComponent, pathMatch: 'full' },
 
   //SERVS
   { path: 'contacts', component: ContactsComponent, pathMatch: 'full' },
@@ -108,23 +126,39 @@ const routes: Routes = [
       { path: 'wishlist', component: WishListComponent, pathMatch: 'full' },
       { path: 'personal-room', component: PersonalRoomComponent, pathMatch: 'full' },
       { path: 'edit-info', component: EditUserInfoComponent, pathMatch: 'full' },
+      { path: 'delete-profile', component: DeleteUserComponent, pathMatch: 'full' },
     ]
   },
 
   /*FAQ COMPONENTS*/
   //ORDER
-  { path: 'faq/order-first', component: OrderFirstComponent, pathMatch: 'full' },
-  { path: 'faq/order-second', component: OrderSecondComponent, pathMatch: 'full' },
-  { path: 'faq/order-third', component: OrderThirdComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-I-made-an-order-What-is-next-', component: OrderFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-find-out-if-the-order-can-already-be-picked-up-', component: OrderSecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-cancel-an-order-', component: OrderThirdComponent, pathMatch: 'full' },
 
   //PRODUCTS
-  { path: 'faq/product-first', component: ProductFirstComponent, pathMatch: 'full' },
-  { path: 'faq/product-second', component: ProductSecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-choose-the-right-size-', component: ProductFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-find-out-if-the-product-is-available-', component: ProductSecondComponent, pathMatch: 'full' },
 
   //DELIVERY
-  { path: 'faq/delivery-first', component: DeliveryFirstComponent, pathMatch: 'full' },
-  { path: 'faq/delivery-second', component: DeliverySecondComponent, pathMatch: 'full' },
-  { path: 'faq/delivery-third', component: DeliveryThirdComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-order-goods-', component: DeliveryFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-When-and-where-can-I-pick-up-my-order-', component: DeliverySecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-I-want-to-place-an-order-When-will-it-be-delivered-', component: DeliveryThirdComponent, pathMatch: 'full' },
+
+  //PAYMENT
+  { path: 'faq/0223369/-How-can-I-get-a-promo-code-', component: PaymentFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-use-a-promo-code-', component: PaymentSecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-pay-for-an-order-by-cashless-payment-', component: PaymentThirdComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-pay-for-an-order-by-card-', component: PaymentFourthComponent, pathMatch: 'full' },
+
+  //PRIVATE ROOM
+  { path: 'faq/0223369/-How-do-I-can-change-the-email-address-in-my-account-', component: PrivateRoomFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-do-I-can-delete-my-account-', component: PrivateRoomSecondComponent, pathMatch: 'full' },
+
+  //GARANCY
+  { path: 'faq/0223369/-What-goods-are-not-subject-to-exchange-and-return-', component: GarancyFirstComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-How-to-return-the-goods-in-my-city-', component: GarancySecondComponent, pathMatch: 'full' },
+  { path: 'faq/0223369/-In-which-cases-is-the-guarantee-not-provided-', component: GarancyThirdComponent, pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent }
 ];

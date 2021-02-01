@@ -117,4 +117,16 @@ export class NavMenuComponent implements OnInit {
       }
     )
   }
+
+  facebook() {
+    this.spinner.show();
+
+    this.apiService.FacebookLogin().subscribe(
+      data => {
+        if(data.status === 200){
+          this.notifier.notify('succes', "Hi");
+        }
+      }
+    )
+  }
 }

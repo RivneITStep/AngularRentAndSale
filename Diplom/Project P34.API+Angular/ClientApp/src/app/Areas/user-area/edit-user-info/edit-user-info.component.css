@@ -75,3 +75,15 @@
 
   .col-lg { display: none; }
 }
+
+@media screen and (min-width: 280px) and (max-width: 499px) {
+  .form-control { height: 34px; font-size: 14px; }
+
+  .subtitle { font-size: 20px; }
+
+  .btn-submit { font-size: 14px; }
+
+  .back-link { font-size: 14px; }
+
+  .back-link::before { font-size: 16px; }
+}

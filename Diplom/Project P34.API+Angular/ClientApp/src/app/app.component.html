@@ -4,7 +4,7 @@
 
   <main>
 
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
 
     <notifier-container></notifier-container>
 

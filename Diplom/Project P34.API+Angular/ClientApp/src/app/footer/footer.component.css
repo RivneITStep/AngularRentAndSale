@@ -105,3 +105,18 @@ hr { background-color: #b4b4b4; width: 100%; }
 @media only screen and (max-width: 768px) {
   #toTop { display: none !important; }
 }
+
+/*XS SCREENS*/
+@media screen and (min-width: 497px) {
+  .footer-info { padding-left: 30px; padding-right: 30px; }
+
+  .footer-title { font-size: 18px; }
+}
+
+@media screen and (min-width: 334px) and (max-width: 354px) {
+  .footer-info { padding-left: 30px; padding-right: 30px; }
+}
+
+@media screen and (min-width: 280px) and (max-width: 321px) {
+  .follow, .fa-soc-webs { font-size: 10px; }
+}
