@@ -57,3 +57,15 @@ D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.dll
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.genruntimeconfig.cache
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.deps.json
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.json
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.dev.json
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csprojAssemblyReference.cache
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.AssemblyInfoInputs.cache
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.AssemblyInfo.cs
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.genruntimeconfig.cache

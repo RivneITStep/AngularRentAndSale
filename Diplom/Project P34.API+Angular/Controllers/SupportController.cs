@@ -29,7 +29,7 @@ namespace Project_P34.API_Angular.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("AddRequest")]
         public async Task<ResultDto> AddRequest([FromBody] SupportDTO model)
         {
             try

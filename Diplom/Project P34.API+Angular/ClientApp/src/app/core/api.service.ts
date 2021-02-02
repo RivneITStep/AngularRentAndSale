@@ -13,7 +13,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   baseUrl = '/api/Account';
-  supportURL = 'api/Support'
+  supportURL = '/api/Support'
   loginStatus = new EventEmitter<boolean>();
 
   SingUp(UserRegisterDto: RegisterModel): Observable<ApiResult> {
@@ -65,8 +65,8 @@ export class ApiService {
     return this.http.get<ApiResult>(this.baseUrl + '/facebook-login');
   }
 
-  SupportRequest(SupportModel: SupportModel){
-    return this.http.post<ApiResult>(this.supportURL + '/support-request', SupportModel);
+  SupportRequest(model: SupportModel){
+    return this.http.post<ApiResult>(this.supportURL + '/AddRequest', model);
 
   }
 
