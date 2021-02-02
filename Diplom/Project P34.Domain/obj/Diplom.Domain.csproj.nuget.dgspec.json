@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
         "packagesPath": "C:\\Users\\veremeychuk\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
+=======
+    "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
+        "projectName": "Diplom.DataAccess",
+        "projectPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\mka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
+>>>>>>> 76c90fe14e008247f78cf564f9e701804b197a7a
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\veremeychuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\mka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 76c90fe14e008247f78cf564f9e701804b197a7a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,6 +114,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -104,12 +123,26 @@
         "projectPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
         "packagesPath": "C:\\Users\\veremeychuk\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\obj\\",
+=======
+    "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
+        "projectName": "Diplom.Domain",
+        "projectPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
+        "packagesPath": "C:\\Users\\mka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\obj\\",
+>>>>>>> 76c90fe14e008247f78cf564f9e701804b197a7a
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\veremeychuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\mka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 76c90fe14e008247f78cf564f9e701804b197a7a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -122,8 +155,13 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
                 "projectPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
+=======
+              "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
+>>>>>>> 76c90fe14e008247f78cf564f9e701804b197a7a
               }
             }
           }

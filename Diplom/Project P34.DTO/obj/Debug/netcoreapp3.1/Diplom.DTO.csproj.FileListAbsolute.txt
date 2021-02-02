@@ -58,6 +58,7 @@ D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Dipl
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.pdb
 >>>>>>> e87163930bb105617601b62846a75ed020ca9923
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.deps.json
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.dll
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.pdb
@@ -70,3 +71,17 @@ C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CopyComplete
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.dll
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.pdb
+=======
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.deps.json
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.dll
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DTO.pdb
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfoInputs.cache
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.AssemblyInfo.cs
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CoreCompileInputs.cache
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csproj.CopyComplete
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.dll
+C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.pdb
+>>>>>>> 76c90fe14e008247f78cf564f9e701804b197a7a
