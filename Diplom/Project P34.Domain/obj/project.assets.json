@@ -1383,19 +1383,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\romap\\.nuget\\packages\\": {}
+    "C:\\Users\\mka\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
       "projectName": "Diplom.Domain",
-      "projectPath": "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
-      "packagesPath": "C:\\Users\\romap\\.nuget\\packages\\",
-      "outputPath": "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.Domain\\obj\\",
+      "projectPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
+      "packagesPath": "C:\\Users\\mka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\romap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1408,8 +1412,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
-              "projectPath": "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
+            "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
             }
           }
         }
@@ -1466,7 +1470,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

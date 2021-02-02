@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {}
+    "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+    "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
         "projectName": "Diplom.DataAccess",
-        "projectPath": "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\romap\\.nuget\\packages\\",
-        "outputPath": "D:\\DIPLOM\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\mka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mka\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\romap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
