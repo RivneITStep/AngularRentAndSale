@@ -17,7 +17,7 @@ import { UserItem } from '../models/user-item.model';
     }
 
     editUser(id: string, model: UserItem): Observable<ApiResult>{
-      return this.http.post<ApiResult>(this.url + '/' + id, model);
+      return this.http.post<ApiResult>(this.url + '/editUser' + '/' + id, model);
     }
 
    

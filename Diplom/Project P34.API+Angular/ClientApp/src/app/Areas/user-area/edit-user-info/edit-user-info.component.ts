@@ -8,6 +8,7 @@ import { ApiResult } from '../../../Models/result.model';
 import { ApiService } from '../../../core/api.service';
 
 
+
 @Component({
   selector: 'app-edit-user-info',
   templateUrl: './edit-user-info.component.html',
@@ -15,7 +16,8 @@ import { ApiService } from '../../../core/api.service';
 })
 export class EditUserInfoComponent implements OnInit {
 
-  constructor(private userService: UserService ) { 
+  constructor(private userService: UserService,
+    private notifier: NotifierService) { 
 
     const token = localStorage.getItem('token');
       if (token !== null) {
@@ -38,6 +40,24 @@ export class EditUserInfoComponent implements OnInit {
 
   user: UserItem = new UserItem();
 
+  Save() {
+    this.userService.editUser(this.user.id, this.user).subscribe(
+      data => {
+        console.log(data);
+        if (data.status === 200) {
+          this.notifier.notify('success', 'Edited!');
+        } else {
+           console.log(data.errors);
+          for (let i = 0; i < data.errors.length; i++) {
+            this.notifier.notify('error', data.errors[i]);
+          }
+        }
+      },
+      errors => {
+        console.log(errors);
+      });
+  } 
+  
   
 
 

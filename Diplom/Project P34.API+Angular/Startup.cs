@@ -35,19 +35,18 @@ namespace Project_P34.API_Angular
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(
-                options =>
-                {
-                    options.AddPolicy(name: MyAllowSpecificOrigins,
-                                      builder =>
-                                      {
-                                          builder.WithOrigins("http://google.com",
-                                                              "https://localhost:44336")
-                                                                .AllowAnyHeader()
-                                                                .AllowAnyMethod()
-                                                                .AllowAnyOrigin();
-                                      });
-                });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                                    builder =>
+                                    {
+                                        builder.WithOrigins("http://localhost:44336")
+                                                            .AllowAnyHeader()
+                                                            .AllowAnyMethod();
+                                    });
+            });
+
+            services.AddControllers();
             services.AddDbContext<EFContext>(
                     opt => opt.UseSqlServer(Configuration["ConnectionString"],
                     b => b.MigrationsAssembly("Diplom.API+Angular"))
@@ -143,7 +142,7 @@ namespace Project_P34.API_Angular
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();  
-            app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {
