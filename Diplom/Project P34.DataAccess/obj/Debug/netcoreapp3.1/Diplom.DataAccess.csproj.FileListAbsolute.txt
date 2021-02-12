@@ -57,7 +57,6 @@ D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.dll
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.genruntimeconfig.cache
-<<<<<<< HEAD
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.deps.json
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.json
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.dev.json
@@ -70,7 +69,6 @@ C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\ob
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.dll
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.genruntimeconfig.cache
-=======
 C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.deps.json
 C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.json
 C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.dev.json

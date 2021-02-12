@@ -47,7 +47,6 @@ D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\D
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.dll
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.pdb
 >>>>>>> e87163930bb105617601b62846a75ed020ca9923
-<<<<<<< HEAD
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.deps.json
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.dll
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.pdb
@@ -60,7 +59,6 @@ C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\De
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csproj.CopyComplete
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.dll
 C:\Users\veremeychuk\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.pdb
-=======
 C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.deps.json
 C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.dll
 C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.Domain\bin\Debug\netcoreapp3.1\Diplom.Domain.pdb

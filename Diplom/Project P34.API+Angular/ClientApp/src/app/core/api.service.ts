@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiResult } from '../Models/result.model';
 import { SupportModel } from '../Models/support.model';
+import { UserItem } from '../Areas/user-area/personal-room/models/user-item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,8 @@ export class ApiService {
   SignIn(UserLoginDto: SignInModel) {
     return this.http.post<ApiResult>(this.baseUrl + '/login', UserLoginDto);
   }
+
+  
 
   isAdmin() {
     const token = localStorage.getItem('token');
