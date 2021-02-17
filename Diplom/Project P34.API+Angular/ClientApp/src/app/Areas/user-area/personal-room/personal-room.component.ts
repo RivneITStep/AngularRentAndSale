@@ -12,12 +12,7 @@ import { UserItem } from './models/user-item.model';
 })
 export class PersonalRoomComponent implements OnInit {
 
-  constructor( private userService: UserService,
-    private notifier: NotifierService,
-    private spinner: NgxSpinnerService,
-    private router: Router,
-    private route: ActivatedRoute
-    ) {
+  constructor( private userService: UserService) {
       const token = localStorage.getItem('token');
       if (token !== null) {
         const jwtData = token.split('.')[1];
@@ -41,10 +36,7 @@ export class PersonalRoomComponent implements OnInit {
 
   user: UserItem = new UserItem();
 
-  ngOnInit() {
-     
-      
-    
+  ngOnInit() {    
   }
 
 
