@@ -35,10 +35,7 @@ namespace Project_P34.Domain
             {
                 //new Claim(JwtRegisteredClaimNames.Sub, user.Id)
                 new Claim("id", user.Id.ToString()),
-                new Claim("fullName", user.UserName),
-                new Claim("email", user.Email),
-                new Claim("phone", user.PhoneNumber)
-                //new Claim("age", user.UserMoreInfo.Age.ToString())
+                new Claim("email", user.Email)
             };
 
             foreach (var role in roles)

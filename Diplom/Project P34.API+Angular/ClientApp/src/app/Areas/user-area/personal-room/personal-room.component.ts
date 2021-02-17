@@ -23,17 +23,12 @@ export class PersonalRoomComponent implements OnInit {
         const jwtData = token.split('.')[1];
         const decodedJwtJsonData = window.atob(jwtData);
         const decodedJwtData = JSON.parse(decodedJwtJsonData);
-        this.user.id = decodedJwtData.id;
-        this.user.email = decodedJwtData.email;
-        if(decodedJwtData.phone !== null){
-          this.user.phone = decodedJwtData.phone;
-        }
-        this.user.age = decodedJwtData.age;
-        this.user.fullName = decodedJwtData.fullName;
+
 
         this.userService.getUser(decodedJwtData.id).subscribe(
           (data: UserItem) => {
             this.user = data;
+            
           }
         );
 
