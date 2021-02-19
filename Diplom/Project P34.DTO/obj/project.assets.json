@@ -389,10 +389,7 @@
         },
         "runtime": {
           "bin/placeholder/Diplom.DataAccess.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -1089,12 +1086,18 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\admin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+=======
+    "C:\\Users\\PC\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+>>>>>>> eda1cb6e9cbc130076692ea557995bbb0127969b
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\admin\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
       "projectName": "Diplom.DTO",
       "projectPath": "C:\\Users\\admin\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
@@ -1107,6 +1110,21 @@
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
+      "projectName": "Diplom.DTO",
+      "projectPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+>>>>>>> eda1cb6e9cbc130076692ea557995bbb0127969b
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -1118,8 +1136,13 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\admin\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
               "projectPath": "C:\\Users\\admin\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
+=======
+            "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
+>>>>>>> eda1cb6e9cbc130076692ea557995bbb0127969b
             }
           }
         }
@@ -1168,7 +1191,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+>>>>>>> eda1cb6e9cbc130076692ea557995bbb0127969b
       }
     }
   }

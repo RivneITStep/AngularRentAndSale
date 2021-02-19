@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiResult } from '../Models/result.model';
 import { SupportModel } from '../Models/support.model';
+import { UserItem } from '../Areas/user-area/personal-room/models/user-item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   baseUrl = '/api/Account';
-  supportURL = 'api/Support'
+  supportURL = '/api/Support'
   loginStatus = new EventEmitter<boolean>();
 
   SingUp(UserRegisterDto: RegisterModel): Observable<ApiResult> {
@@ -23,6 +24,8 @@ export class ApiService {
   SignIn(UserLoginDto: SignInModel) {
     return this.http.post<ApiResult>(this.baseUrl + '/login', UserLoginDto);
   }
+
+  
 
   isAdmin() {
     const token = localStorage.getItem('token');
@@ -65,8 +68,8 @@ export class ApiService {
     return this.http.get<ApiResult>(this.baseUrl + '/facebook-login');
   }
 
-  SupportRequest(SupportModel: SupportModel){
-    return this.http.post<ApiResult>(this.supportURL + '/support-request', SupportModel);
+  SupportRequest(model: SupportModel){
+    return this.http.post<ApiResult>(this.supportURL + '/AddRequest', model);
 
   }
 

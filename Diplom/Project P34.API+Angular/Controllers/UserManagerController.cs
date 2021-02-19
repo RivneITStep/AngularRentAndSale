@@ -116,7 +116,7 @@ namespace Project_P34.API_Angular.Controllers
 
 
         [HttpPost("editUser/{id}")]
-        public ResultDto EditUser([FromRoute]string id, [FromBody]UserItemDTO model)
+        public ResultDto editUser([FromRoute]string id, [FromBody]UserItemDTO model)
         {
             var user = _context.Users.FirstOrDefault(t => t.Id == id);
             var userMoreInfo = _context.userMoreInfos.FirstOrDefault(t => t.Id == id);

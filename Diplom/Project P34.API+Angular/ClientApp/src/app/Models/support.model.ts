@@ -3,7 +3,7 @@ export class SupportModel{
     text: string;
 
     constructor(){
-        this.email = null;
-        this.text = null;
+        this.email = "";
+        this.text = "";
     }
 }

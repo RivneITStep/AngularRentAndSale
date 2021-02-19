@@ -29,7 +29,7 @@
 
         <div class="div-for-button">
           <button class="btn btn-submit" type="submit" disabled *ngIf="isConfirm === false">Видалити</button>
-          <button class="btn btn-submit" type="submit" *ngIf="isConfirm === true">Видалити</button>
+          <button class="btn btn-submit" type="submit" (click)="deleteUser(tmpId)" *ngIf="isConfirm === true">Видалити</button>
         </div>
       </form>
     </div>
