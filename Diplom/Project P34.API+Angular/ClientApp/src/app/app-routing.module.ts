@@ -2,6 +2,8 @@
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 
+import { ProductViewComponent } from './home/product/product-view/product-view.component';
+
 /*FOOTER COMPONENTS*/
 //INFO
 import { AboutUsComponent } from './footer/Components/INFO/about-us/about-us.component';
@@ -77,6 +79,9 @@ import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Componen
 import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
 
 const routes: Routes = [
+  //PRODUCT VIEW
+  { path: 'product-view', component: ProductViewComponent, pathMatch: "full" },
+
   //MAIN PAGE
   { path: '', component: HomeComponent, pathMatch: 'full'},
 

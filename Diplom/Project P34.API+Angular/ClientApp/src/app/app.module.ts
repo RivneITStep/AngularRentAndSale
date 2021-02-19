@@ -48,9 +48,13 @@ import { NotFoundComponent } from './NotFound/NotFound.component';
 
 /*COMPONENTS OF THE STORE*/
 import { CarouselComponent } from './carousel/carousel.component';
+
 import { CategoryComponent } from './home/category/category.component';
+
 import { SubcategoryComponent } from './home/category/subcategory/subcategory.component';
+
 import { ProductComponent } from './home/product/product.component';
+import { ProductViewComponent } from './home/product/product-view/product-view.component';
 
 /*AREAS OF ADMIN*/
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
@@ -150,6 +154,7 @@ const notifierOptions: NotifierOptions = {
       CategoryComponent,
       SubcategoryComponent,
       ProductComponent,
+      ProductViewComponent,
 
       /*FAQ COMPONENTS*/
       //ORDER
