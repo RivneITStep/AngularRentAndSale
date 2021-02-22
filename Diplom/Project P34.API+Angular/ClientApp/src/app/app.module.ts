@@ -38,9 +38,10 @@ import { ReturnComponent } from './footer/Components/SERVS/return/return.compone
 import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches-products/watches-products.component';
 
 /*AUTHORIZATION 'N' 404*/
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './forgot-password/change-password/change-password.component' ;
 import { NotFoundComponent } from './NotFound/NotFound.component';
 
 /*COMPONENTS OF THE STORE*/
@@ -127,8 +128,9 @@ const notifierOptions: NotifierOptions = {
       /*AUTHORIZATION*/
       RegisterComponent,
       LoginComponent,
-      NotFoundComponent,
       ForgotPasswordComponent,
+      ChangePasswordComponent,
+      NotFoundComponent,
 
       /*USER AREAS*/
       UserAreaComponent,

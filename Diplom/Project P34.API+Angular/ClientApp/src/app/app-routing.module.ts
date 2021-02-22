@@ -21,6 +21,7 @@ import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './forgot-password/change-password/change-password.component' ;
 
 /*ADDITIONAL SOURCES*/
 import { NgModule } from '@angular/core';
@@ -101,9 +102,10 @@ const routes: Routes = [
   { path: 'watches-products', component: WatchesProductsComponent, pathMatch: 'full' },
 
   //AUTHORIZATION
-  { path: 'register', component: RegisterComponent, pathMatch: 'full', canActivate: [NotLoginGuard]  },
-  { path: 'forgot-password', component: ForgotPasswordComponent, pathMatch: 'full',canActivate:[NotLoginGuard] },
   { path: 'login', component: LoginComponent, pathMatch: 'full',canActivate:[NotLoginGuard] },
+  { path: 'register', component: RegisterComponent, pathMatch: 'full', canActivate: [NotLoginGuard]  },
+  { path: 'forgot-password', component: ForgotPasswordComponent, pathMatch: 'full', canActivate:[NotLoginGuard] },
+  { path: 'change-password', component: ChangePasswordComponent, pathMatch: 'full', canActivate: [NotLoginGuard] },
 
   //ADMIN AREA
   {
