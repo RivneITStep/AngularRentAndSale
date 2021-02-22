@@ -15,27 +15,31 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class ForgotPasswordComponent implements OnInit {
 
-  isError: boolean;
-  email: string;
-  model: ForgotPasswordModel;
+
   constructor(  private spinner: NgxSpinnerService,
     private notifier: NotifierService, 
     private ForgotPasswordService: ForgotPasswordService,
     private router: Router,
     private route: ActivatedRoute) { }
 
-  
 
-  sendMail(){
-    this.spinner.show();
+    isError: boolean;
+    model = new ForgotPasswordModel();
 
-    if(this.model == null){
-      this.notifier.notify('error', 'Please, enter email!');
-      this.isError = true;
+
+    ngOnInit() {
+      this.isError = false;
     }
 
-    if (this.isError === false) {
-      this.ForgotPasswordService.recoverPassword(this.email, this.model).subscribe(
+
+    recoverPass(){
+      
+      if(this.model.email === ""){
+      this.notifier.notify('error', 'Please, enter email!');
+      this.isError = true;
+      }
+      if (this.isError == false) {
+      this.ForgotPasswordService.recoverPassword(this.model).subscribe(
       (data: ApiResult) => {
         if (data.status === 200) {
           this.notifier.notify('success', 'Mail sended successfuly');
@@ -46,17 +50,11 @@ export class ForgotPasswordComponent implements OnInit {
         this.notifier.notify('error', 'Server error');
       }
     );
-  }
-
-  this.isError = false;
-  this.spinner.hide();
-
-
+    }
   }
 
 
-  ngOnInit() {
-  }
+  
   
   
 
