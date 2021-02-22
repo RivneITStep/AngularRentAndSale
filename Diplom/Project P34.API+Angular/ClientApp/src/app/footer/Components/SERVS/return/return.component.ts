@@ -19,12 +19,7 @@ export class ReturnComponent implements OnInit {
     private notifier: NotifierService
   ) { }
 
-<<<<<<< HEAD
-    
 
-  
-
-=======
   ngOnInit() {
     this.isError = false;
   }
@@ -81,6 +76,5 @@ export class ReturnComponent implements OnInit {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
->>>>>>> c17d132d6a7ee6aa805f603a44468cce597c44c5
 
 }
