@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductItem } from './model/product-item.model';
+import { ProductService } from './service/product.service';
 
 @Component({
   selector: 'app-product-view',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productService: ProductService) {
+
+    this.productService.getProduct('02fbaf7d-c40d-42d4-84e1-d212cf4b3f35').subscribe(
+      (data: ProductItem) => {
+          this.product = data;
+        }
+      );
+
+    
+  }
+
+product: ProductItem = new ProductItem();
 
   ngOnInit():void {
     //BTS OF SIZE
@@ -23,5 +36,8 @@ export class ProductViewComponent implements OnInit {
     //END OF THIS FUNCTION
 
   }
+
+
+  
 
 }

@@ -19,6 +19,7 @@ export class ReturnComponent implements OnInit {
     private notifier: NotifierService
   ) { }
 
+
   ngOnInit() {
     this.isError = false;
   }

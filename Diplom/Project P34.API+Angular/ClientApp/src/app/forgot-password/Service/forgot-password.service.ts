@@ -19,8 +19,8 @@ export class ForgotPasswordService {
     }
 
 
-    recoverPassword(email: string, model: ForgotPasswordModel): Observable<ApiResult>{
-        return this.http.post<ApiResult>(this.baseUrl + '/recoverPassword/' + email, model);
+    recoverPassword(model: ForgotPasswordModel): Observable<ApiResult>{
+        return this.http.post<ApiResult>(this.baseUrl + '/recoverPassword/', model);
     }
 
     

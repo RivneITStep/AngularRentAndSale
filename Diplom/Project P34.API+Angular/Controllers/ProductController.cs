@@ -62,7 +62,7 @@ namespace Project_P34.API_Angular.Controllers
 
 
 
-        [HttpGet("getProduct/{id}")]
+        [HttpGet("{id}")]
         public IEnumerable<ProductDTO> getProductyId([FromRoute] string id)
         {
             List<ProductDTO> data = new List<ProductDTO>();
@@ -84,10 +84,10 @@ namespace Project_P34.API_Angular.Controllers
                 temp.Description = product.Description;
                 temp.Rating = product.Rating;
                 temp.Count = product.Count;
-            foreach (var item in images)
-            {
-                temp.Images.Add(item.Image);
-            }
+            //foreach (var item in images)
+            //{
+            //    temp.Images.Add(item.Image);
+            //}
                 
 
                 data.Add(temp);

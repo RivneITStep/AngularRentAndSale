@@ -3,7 +3,7 @@ export class ForgotPasswordModel{
     email: string;
 
     constructor(){
-        this.email = null;
+        this.email = "";
     }
 
 }
