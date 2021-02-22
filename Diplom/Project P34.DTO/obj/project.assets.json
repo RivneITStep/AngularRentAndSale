@@ -389,7 +389,10 @@
         },
         "runtime": {
           "bin/placeholder/Diplom.DataAccess.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

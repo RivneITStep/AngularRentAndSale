@@ -37,12 +37,9 @@ import { ReturnComponent } from './footer/Components/SERVS/return/return.compone
 //ADDITIONAL
 import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches-products/watches-products.component';
 
-//PRIVATE ROOM
-import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
-import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
-
 /*AUTHORIZATION 'N' 404*/
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 
@@ -51,6 +48,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CategoryComponent } from './home/category/category.component';
 import { SubcategoryComponent } from './home/category/subcategory/subcategory.component';
 import { ProductComponent } from './home/product/product.component';
+import { ProductViewComponent } from './home/product/product-view/product-view.component';
 
 /*AREAS OF ADMIN*/
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
@@ -62,6 +60,9 @@ import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
 import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
 import { DeleteUserComponent } from './Areas/user-area/delete-user/delete-user.component';
+import { ShoppingCartComponent } from './Areas/user-area/shopping-cart/shopping-cart.component';
+import { WishListComponent } from './Areas/user-area/wish-list/wish-list.component';
+import { HistoryOfOrdersComponent } from './Areas/user-area/history-of-orders/history-of-orders.component';
 
 /*FAQ COMPONENTS*/
 //ORDER
@@ -123,33 +124,36 @@ const notifierOptions: NotifierOptions = {
       //ADDITIONAL
       WatchesProductsComponent,
 
-      //PRIVATE ROOM
-      HistoryOfOrdersComponent,
-      WishListComponent,
-
       /*AUTHORIZATION*/
       RegisterComponent,
+      LoginComponent,
       NotFoundComponent,
       ForgotPasswordComponent,
 
-      /*AREAS*/
+      /*USER AREAS*/
       UserAreaComponent,
       PersonalRoomComponent,
       EditUserInfoComponent,
       DeleteUserComponent,
 
+      ShoppingCartComponent,
+      WishListComponent,
+      HistoryOfOrdersComponent,
+
+      /*ADMIN AREA*/
       AdminAreaComponent,
       DashboardComponent,
       EditProductComponent,
       AddProductComponent,
       AddSubcategoryComponent,
-     /* AddCategoryComponent,/*
+      // AddCategoryComponent,
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,
       CategoryComponent,
       SubcategoryComponent,
       ProductComponent,
+      ProductViewComponent,
 
       /*FAQ COMPONENTS*/
       //ORDER
