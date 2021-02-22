@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!--FONTS-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <!--ICONS-->
   <link rel="icon" type="image/png" href="uf.png" />
@@ -21,25 +22,25 @@
 </head>
 
 <!--BTN TO TOP-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
-  //$(function () {
-  //    $(window).scroll(function () {
-  //        if ($(this).scrollTop() >= 500) {
-  //            $('#toTop').fadeIn();
-  //        } else {
-  //            $('#toTop').fadeOut();
-  //        }
-  //    });
-  //    $('#toTop').click(function () {
-  //        $('body,html').animate({ scrollTop: 0 }, 800);
-  //    });
-  //});
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() >= 500) {
+        $('#toTop').fadeIn();
+      } else {
+        $('#toTop').fadeOut();
+      }
+    });
+    $('#toTop').click(function () {
+      $('body,html').animate({ scrollTop: 0 }, 800);
+    });
+  });
 </script>
 
 <!--ADMIN PANEL-->
 <script>
-  //document.getElementById("defActionOpen").click();
+  document.getElementById("defActionOpen").click();
   function chooseAction(evt, actionName) {
     var i, tabcontentAction, tablinksAction;
 
@@ -57,7 +58,7 @@
     evt.currentTarget.className += " active";
   }
 
-  //document.getElementById("defListOpen").click();
+  document.getElementById("defListOpen").click();
   function openList(evt, listName) {
     var i, tabcontentList, tablinkList;
 
@@ -76,11 +77,47 @@
   }
 </script>
 
+<!--BTNS WITH SIZE (PAGE OF CURRENT PRODUCT)-->
+<script>
+  function makeActive(evt) {
+    var i, sizeBtns;
+
+    sizeBtns = document.getElementsByClassName("size-btn");
+    for (i = 0; i < sizeBtns.length; i++) {
+      sizeBtns[i].className = sizeBtns[i].className.replace(" active", "");
+    }
+
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("DefaultActive").click();
+</script>
+
+<!--ABOUT US-->
+<script>
+function ChoosePage(evt, choosePage) {
+      var i, subpage, chooseLink;
+
+      subpage = document.getElementsByClassName("about-us-subpage");
+      for (i = 0; i < subpage.length; i++) {
+        subpage[i].style.display = "none";
+      }
+
+      chooseLink = document.getElementsByClassName("choose-link");
+      for (i = 0; i < chooseLink.length; i++) {
+        chooseLink[i].className = chooseLink[i].className.replace(" active", "");
+      }
+
+      document.getElementById(choosePage).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpenPage").click();
+</script>
+
 <!--BOOTSTRAP'S SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 
 <body>
   <app-root></app-root>

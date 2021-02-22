@@ -2,14 +2,14 @@
 
   <!--BACK LINK-->
   <div class="row row-sm">
-    <a [routerLink]="['/home']" class="back-link">Допомога</a>
+    <a [routerLink]="['/']" class="back-link">На головну</a>
   </div>
 
   <!--MAIN DATA OF PRODUCT-->
   <div class="row">
 
     <div class="col col-lg-2 col-md-2 col-sm-0 col-xs-0 col-lg">
-      <a [routerLink]="['/home']" class="back-link">Назад</a>
+      <a [routerLink]="['/']" class="back-link">На головну</a>
     </div>
 
     <div class="col col-lg-10 col-md-12 col-sm-12 col-xs-12">
@@ -17,7 +17,7 @@
       <div class="container internal-container">
 
         <div class="row">
-          <div class="col col-lg-5 col-md-5 col-sm-12 col-xs-12">
+          <div class="col col-lg-5 col-md-5 col-sm-12 col-xs-12 col-main-image">
             <img src="../../../assets/images/Products/photo-1.jpg" alt="Основна картинка" class="main-image-prod">
           </div>
 
@@ -57,11 +57,11 @@
 
                 <div class="row size-row">
                   <div class="btns-block">
-                    <button class="btn size-btn">S</button>
-                    <button class="btn size-btn">M</button>
-                    <button class="btn size-btn">L</button>
-                    <button class="btn size-btn">XL</button>
-                    <button class="btn size-btn">2XL</button>
+                    <button class="btn size-btn" onclick="makeActive(event)" id="DefaultActive">S</button>
+                    <button class="btn size-btn" onclick="makeActive(event)">M</button>
+                    <button class="btn size-btn" onclick="makeActive(event)">L</button>
+                    <button class="btn size-btn" onclick="makeActive(event)">XL</button>
+                    <button class="btn size-btn" onclick="makeActive(event)">2XL</button>
                   </div>
                 </div>
               </div>
@@ -88,9 +88,9 @@
 
   <!--COMENTARIES-->
   <div class="row">
-    <form class="srch-form">
-      <input class="srch-area" type="text" placeholder="Залиште свій коментарій:">
-      <button class="btn btn-primary srch-btn" type="submit">&#10146;</button>
+    <form class="leave-comment-form">
+      <input class="leave-comment-area" type="text" placeholder="Ваш коментарій:">
+      <button class="btn btn-primary leave-comment-btn" type="submit"><span class="leave-comment-btn-arrow">&#10146;</span></button>
     </form>
   </div>
 
