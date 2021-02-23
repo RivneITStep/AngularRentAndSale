@@ -38,8 +38,8 @@ import { ReturnComponent } from './footer/Components/SERVS/return/return.compone
 import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches-products/watches-products.component';
 
 //PRIVATE ROOM
-import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
-import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
+// import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
+// import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
 
 /*AUTHORIZATION 'N' 404*/
 import { LoginComponent } from './login/login.component';

@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj": {}
+    "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+    "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
         "projectName": "Diplom.DataAccess",
-        "projectPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\veremeychuk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\veremeychuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -97,22 +96,21 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj": {
+    "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
         "projectName": "Diplom.DTO",
-        "projectPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\obj\\",
+        "projectPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\Diplom.DTO.csproj",
+        "packagesPath": "C:\\Users\\veremeychuk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\veremeychuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -124,8 +122,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
+              "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\veremeychuk\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
               }
             }
           }
