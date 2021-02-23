@@ -6,18 +6,18 @@
 
 
       <div class="data-box">
-        <form action="" class="data-form">
+        <form (ngSubmit)="onSubmit()" class="data-form">
           <div class="data-form__block">
             <p class="block-text">Email:</p>
-            <input type="email" name="email" class="form-control email-area">
+            <input type="email" [(ngModel)]="model.email" name="email" class="form-control email-area">
           </div>
 
           <div class="data-form__block">
             <p class="block-text">Питання:</p>
-            <textarea name="question" id="" cols="30" rows="10" class="form-control question-area"></textarea>
+            <textarea name="question" id="" cols="30" [(ngModel)]="model.text" rows="10" class="form-control question-area"></textarea>
           </div>
 
-          <button class="btn btn-submit" type="submit">Надіслати</button>
+          <button type="submit">Надіслати</button>
         </form>
       </div>
 

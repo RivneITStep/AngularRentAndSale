@@ -16,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Project_IDA.DTO.Models;
 using Project_IDA.DTO.Models.Result;
+using Project_P34.API_Angular.Helper;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
 using Project_P34.Domain.Interfaces;
@@ -75,7 +76,7 @@ namespace Project_IDA.Api___Angular.Controllers
             {
                 FullName = model.FullName,
                 Age = model.Age,
-                Id = user.Id             
+                Id = user.Id
             };
 
 
@@ -173,6 +174,29 @@ namespace Project_IDA.Api___Angular.Controllers
         }
 
 
+        [HttpPost("recoverPassword")]
+        public ResultDto recoverPassword([FromBody] RecoverPasswordDTO model)
+        {
+         
+            MailAddress from = new MailAddress("veremeychukdenis2@gmail.com", "Denchik");
+            MailAddress to = new MailAddress(model.Email.ToString());
+            MailMessage m = new MailMessage(from, to);
+            m.Subject = "Recover Password | Undead Family";
+            m.Body = "<h2>pass</h2>";
+            m.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("veremeychukdenis2@gmail.com", "AcVsMXKhw8nc1cc4");
+            smtp.EnableSsl = true;
+            smtp.Send(m);
 
+            return new ResultDto
+            {
+                Status = 200,
+                Message = "OK"
+            };
+        }
+
+
+     
     }
 }

@@ -2,6 +2,8 @@
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 
+import { ProductViewComponent } from './home/product/product-view/product-view.component';
+
 /*FOOTER COMPONENTS*/
 //INFO
 import { AboutUsComponent } from './footer/Components/INFO/about-us/about-us.component';
@@ -15,13 +17,11 @@ import { ReturnComponent } from './footer/Components/SERVS/return/return.compone
 //ADDITIONAL
 import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches-products/watches-products.component';
 
-//PRIVATE ROOM
-import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
-import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
-
 /*AUTHORIZATION*/
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './forgot-password/change-password/change-password.component' ;
 
 /*ADDITIONAL SOURCES*/
 import { NgModule } from '@angular/core';
@@ -44,6 +44,10 @@ import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
 import { EditUserInfoComponent } from './Areas/user-area/edit-user-info/edit-user-info.component';
 import { DeleteUserComponent } from './Areas/user-area/delete-user/delete-user.component';
+
+import { ShoppingCartComponent } from './Areas/user-area/shopping-cart/shopping-cart.component';
+import { WishListComponent } from './Areas/user-area/wish-list/wish-list.component';
+import { HistoryOfOrdersComponent } from './Areas/user-area/history-of-orders/history-of-orders.component';
 
 /*FAQ COMPONENTS*/
 //ORDER
@@ -80,6 +84,9 @@ import { from } from 'rxjs';
 import { AddCategoryComponent } from './Areas/admin-area/Components/add-category/add-category.component';
 
 const routes: Routes = [
+  //PRODUCT VIEW
+  { path: 'product-view', component: ProductViewComponent, pathMatch: "full" },
+
   //MAIN PAGE
   { path: '', component: HomeComponent, pathMatch: 'full'},
 
@@ -97,12 +104,11 @@ const routes: Routes = [
   //ADDITIONAL
   { path: 'watches-products', component: WatchesProductsComponent, pathMatch: 'full' },
 
-  //PRIVATE ROOM
-  //(IN USER AREA)
-
   //AUTHORIZATION
+  { path: 'login', component: LoginComponent, pathMatch: 'full',canActivate:[NotLoginGuard] },
   { path: 'register', component: RegisterComponent, pathMatch: 'full', canActivate: [NotLoginGuard]  },
-  { path: 'forgot-password', component: ForgotPasswordComponent, pathMatch: 'full',canActivate:[NotLoginGuard] },
+  { path: 'forgot-password', component: ForgotPasswordComponent, pathMatch: 'full', canActivate:[NotLoginGuard] },
+  { path: 'change-password', component: ChangePasswordComponent, pathMatch: 'full', canActivate: [NotLoginGuard] },
 
   //ADMIN AREA
   {
@@ -125,11 +131,13 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       //PRIVATE ROOM
-      { path: 'historyOfOrders', component: HistoryOfOrdersComponent, pathMatch:'full' },
-      { path: 'wishlist', component: WishListComponent, pathMatch: 'full' },
       { path: 'personal-room', component: PersonalRoomComponent, pathMatch: 'full' },
       { path: 'edit-info', component: EditUserInfoComponent, pathMatch: 'full' },
       { path: 'delete-profile', component: DeleteUserComponent, pathMatch: 'full' },
+
+      { path: 'shopping-cart', component: ShoppingCartComponent, pathMatch: 'full' },
+      { path: 'wish-list', component: WishListComponent, pathMatch: 'full' },
+      { path: 'orders-history', component: HistoryOfOrdersComponent, pathMatch:'full' },
     ]
   },
 

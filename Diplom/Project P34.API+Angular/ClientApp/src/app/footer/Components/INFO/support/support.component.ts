@@ -20,7 +20,7 @@ export class SupportComponent implements OnInit {
     { }
 
     isError: boolean;
-    model: SupportModel;
+    model = new SupportModel();
 
   ngOnInit() {
     this.isError = false;
@@ -29,13 +29,15 @@ export class SupportComponent implements OnInit {
   onSubmit(){
     this.spinner.show();
 
-    if(this.model.email === null){
+    if(this.model.email === ""){
       this.notifier.hideOldest();
       this.notifier.notify('warn', 'Field email is empty');
+      this.isError = true;
     }
-    if(this.model.text === null){
+    if(this.model.text === ""){
       this.notifier.hideOldest();
       this.notifier.notify('warn', 'Field text is empty');
+      this.isError = true;
     }
 
     if (this.isError == false) {

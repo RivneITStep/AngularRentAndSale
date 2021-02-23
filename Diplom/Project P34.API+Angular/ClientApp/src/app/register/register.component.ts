@@ -4,6 +4,7 @@ import { RegisterModel } from '../Models/register.model';
 import { NotifierService } from 'angular-notifier';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Router } from '@angular/router';
+import { SignInModel } from '../Models/login.model';
 
 @Component({
   selector: 'app-register',

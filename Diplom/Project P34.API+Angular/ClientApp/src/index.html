@@ -16,7 +16,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <!--ICONS-->
-  <link rel="icon" type="image/png" href="uf.png"/>
+  <link rel="icon" type="image/png" href="uf.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 </head>
@@ -24,57 +24,94 @@
 <!--BTN TO TOP-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
-    $(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= 500) {
-                $('#toTop').fadeIn();
-            } else {
-                $('#toTop').fadeOut();
-            }
-        });
-        $('#toTop').click(function () {
-            $('body,html').animate({ scrollTop: 0 }, 800);
-        });
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() >= 500) {
+        $('#toTop').fadeIn();
+      } else {
+        $('#toTop').fadeOut();
+      }
     });
+    $('#toTop').click(function () {
+      $('body,html').animate({ scrollTop: 0 }, 800);
+    });
+  });
 </script>
 
 <!--ADMIN PANEL-->
 <script>
-      document.getElementById("defActionOpen").click();
-      function chooseAction(evt, actionName) {
-      var i, tabcontentAction, tablinksAction;
+  document.getElementById("defActionOpen").click();
+  function chooseAction(evt, actionName) {
+    var i, tabcontentAction, tablinksAction;
 
-      tabcontentAction = document.getElementsByClassName("tabcontent-action");
-      for (i = 0; i < tabcontentAction.length; i++) {
-        tabcontentAction[i].style.display = "none";
+    tabcontentAction = document.getElementsByClassName("tabcontent-action");
+    for (i = 0; i < tabcontentAction.length; i++) {
+      tabcontentAction[i].style.display = "none";
+    }
+
+    tablinksAction = document.getElementsByClassName("tablink-action");
+    for (i = 0; i < tablinksAction.length; i++) {
+      tablinksAction[i].className = tablinksAction[i].className.replace(" active", "");
+    }
+
+    document.getElementById(actionName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("defListOpen").click();
+  function openList(evt, listName) {
+    var i, tabcontentList, tablinkList;
+
+    tabcontentList = document.getElementsByClassName("tabcontent-list");
+    for (i = 0; i < tabcontentList.length; i++) {
+      tabcontentList[i].style.display = "none";
+    }
+
+    tablinkList = document.getElementsByClassName("tablink-list");
+    for (i = 0; i < tablinkList.length; i++) {
+      tablinkList[i].className = tablinkList[i].className.replace(" active", "");
+    }
+
+    document.getElementById(listName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+<!--BTNS WITH SIZE (PAGE OF CURRENT PRODUCT)-->
+<script>
+  function makeActive(evt) {
+    var i, sizeBtns;
+
+    sizeBtns = document.getElementsByClassName("size-btn");
+    for (i = 0; i < sizeBtns.length; i++) {
+      sizeBtns[i].className = sizeBtns[i].className.replace(" active", "");
+    }
+
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("DefaultActive").click();
+</script>
+
+<!--ABOUT US-->
+<script>
+function ChoosePage(evt, choosePage) {
+      var i, subpage, chooseLink;
+
+      subpage = document.getElementsByClassName("about-us-subpage");
+      for (i = 0; i < subpage.length; i++) {
+        subpage[i].style.display = "none";
       }
 
-      tablinksAction = document.getElementsByClassName("tablink-action");
-      for (i = 0; i < tablinksAction.length; i++) {
-        tablinksAction[i].className = tablinksAction[i].className.replace(" active", "");
+      chooseLink = document.getElementsByClassName("choose-link");
+      for (i = 0; i < chooseLink.length; i++) {
+        chooseLink[i].className = chooseLink[i].className.replace(" active", "");
       }
 
-      document.getElementById(actionName).style.display = "block";
-      evt.currentTarget.className += " active";
-      }
-
-      document.getElementById("defListOpen").click();
-      function openList(evt, listName) {
-      var i, tabcontentList, tablinkList;
-
-      tabcontentList = document.getElementsByClassName("tabcontent-list");
-      for (i = 0; i < tabcontentList.length; i++) {
-        tabcontentList[i].style.display = "none";
-      }
-
-      tablinkList = document.getElementsByClassName("tablink-list");
-      for (i = 0; i < tablinkList.length; i++) {
-        tablinkList[i].className = tablinkList[i].className.replace(" active", "");
-      }
-
-      document.getElementById(listName).style.display = "block";
+      document.getElementById(choosePage).style.display = "block";
       evt.currentTarget.className += " active";
     }
+    document.getElementById("defaultOpenPage").click();
 </script>
 
 <!--BOOTSTRAP'S SCRIPTS-->
