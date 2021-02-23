@@ -47,3 +47,4 @@ D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\D
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.dll
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.pdb
 >>>>>>> e87163930bb105617601b62846a75ed020ca9923
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.Domain\obj\Debug\netcoreapp3.1\Diplom.Domain.csprojAssemblyReference.cache

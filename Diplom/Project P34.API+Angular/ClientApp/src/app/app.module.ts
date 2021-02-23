@@ -54,7 +54,7 @@ import { ProductComponent } from './home/product/product.component';
 
 /*AREAS OF ADMIN*/
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
-import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
+// import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
 import { EditProductComponent } from './Areas/admin-area/Components/edit-product/edit-product.component';
 
 /*AREAS OF USER*/
@@ -94,6 +94,7 @@ import { GarancyThirdComponent } from './footer/Components/INFO/faq/Components/G
 //PRIVATE-ROOM
 import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
 import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
+import { AddCategoryComponent } from './Areas/admin-area/Components/add-category/add-category.component';
 
 registerLocaleData(en);
 
@@ -139,11 +140,11 @@ const notifierOptions: NotifierOptions = {
       DeleteUserComponent,
 
       AdminAreaComponent,
-      DashboardComponent,
+      // DashboardComponent,
       EditProductComponent,
       AddProductComponent,
       AddSubcategoryComponent,
-     /* AddCategoryComponent,/*
+      AddCategoryComponent,
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,
@@ -197,3 +198,8 @@ const notifierOptions: NotifierOptions = {
 })
 
 export class AppModule { }
+
+
+
+
+/**/ 

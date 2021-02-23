@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Project_IDA.DTO.Models.Result;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
@@ -80,7 +81,12 @@ namespace Project_P34.API_Angular.Controllers
             subcategories.Id = Guid.NewGuid().ToString();
             subcategories.Name = model.Name;
 
-            _context.subCategories.Add(subcategories);
+            var category = _context.categories.Include(t => t.Subcategories).SingleOrDefault(t => t.Id == model.CategoryId);
+            category.Subcategories.Add(subcategories);
+            //subcategories.CategoryId = model.CategoryId;
+
+
+            //_context.subCategories.Add(subcategories);
 
             _context.SaveChanges();
 

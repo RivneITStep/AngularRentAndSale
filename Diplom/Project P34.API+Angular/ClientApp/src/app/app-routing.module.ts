@@ -34,8 +34,10 @@ import { AuthGuard } from './guards/auth.guard';
 
 /*ADMIN AREA*/
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
-import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
+// import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
 import { EditProductComponent } from './Areas/admin-area/Components/edit-product/edit-product.component';
+import { AddProductComponent } from './Areas/admin-area/Components/add-product/add-product.component';
+import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subcategory/add-subcategory.component';
 
 /*USER AREA*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
@@ -57,8 +59,7 @@ import { ProductSecondComponent } from './footer/Components/INFO/faq/Components/
 import { DeliveryFirstComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-first/delivery-first.component';
 import { DeliverySecondComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-second/delivery-second.component';
 import { DeliveryThirdComponent } from './footer/Components/INFO/faq/Components/Delivery/delivery-third/delivery-third.component';
-import { AddProductComponent } from './Areas/admin-area/Components/add-product/add-product.component';
-import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subcategory/add-subcategory.component';
+
 import { SupportComponent } from './footer/Components/INFO/support/support.component';
 
 //PAYMENT
@@ -75,6 +76,8 @@ import { GarancyThirdComponent } from './footer/Components/INFO/faq/Components/G
 //PRIVATE-ROOM
 import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
 import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
+import { from } from 'rxjs';
+import { AddCategoryComponent } from './Areas/admin-area/Components/add-category/add-category.component';
 
 const routes: Routes = [
   //MAIN PAGE
@@ -107,11 +110,11 @@ const routes: Routes = [
     component: AdminAreaComponent,
     canActivate: [AdminGuard],
     children: [
-      { path: '', component: DashboardComponent, pathMatch: 'full' },
+      // { path: '', component: AdminAreaComponent, pathMatch: 'full' },
       { path: 'editProduct/:id', component: EditProductComponent, pathMatch: 'full' },
       { path: 'addProduct', component: AddProductComponent, pathMatch: 'full' },
       { path: 'addSubcategory', component: AddSubcategoryComponent, pathMatch: 'full' },
-      { path: 'addCategory', component: AddSubcategoryComponent, pathMatch: 'full' },
+      { path: 'addCategory', component: AddCategoryComponent, pathMatch: 'full' },
     ]
   },
 

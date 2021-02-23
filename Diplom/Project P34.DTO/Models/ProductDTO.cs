@@ -26,6 +26,7 @@ namespace Project_P34.DTO.Models
       
         public int Count { get; set; }
 
+        public string SubcategoryId { get; set; }
         public List<string> Images { get; set; }
     }
 }

@@ -12,6 +12,8 @@ namespace Project_P34.DTO.Models
        
         public string Name { get; set; }
 
+        public string CategoryId { get; set; }
+
         public List<Product> products { get; set; }
     }
 }

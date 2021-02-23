@@ -9,6 +9,7 @@ using Project_IDA.DTO.Models.Result;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
 using Project_P34.DTO.Models;
+using Project_P34.DTO.Models.Result;
 
 namespace Project_P34.API_Angular.Controllers
 {
@@ -63,7 +64,7 @@ namespace Project_P34.API_Angular.Controllers
 
 
         [HttpGet("getProduct/{id}")]
-        public IEnumerable<ProductDTO> getProductyId([FromRoute] string id)
+        public IEnumerable<ProductDTO> getProductById([FromRoute] string id)
         {
             List<ProductDTO> data = new List<ProductDTO>();
 
@@ -95,12 +96,32 @@ namespace Project_P34.API_Angular.Controllers
             return data;
         }
 
+        [HttpPost("addImageToProduct/{id}")]
+        public ResultDto addImageToProduct([FromBody] ImagesDTO model, [FromRoute] string id)
+        {
+            var product = _context.products.FirstOrDefault(t => t.Id == id);
 
+            Images temp = new Images();
+
+            temp.Id = model.Id;
+            temp.Image = model.Image;
+
+            product.Images.Add(temp);
+            _context.SaveChanges();
+
+            return new ResultDto
+            {
+                Status = 200,
+                Message = "OK"
+            };
+
+        }
 
         [HttpPost("addProduct")]
         public ResultDto addProduct([FromBody] ProductDTO model)
         {
             Product products = new Product();
+            Images images = new Images();
 
             products.Id = Guid.NewGuid().ToString();
           
@@ -112,8 +133,21 @@ namespace Project_P34.API_Angular.Controllers
             products.Description = model.Description;
             products.Rating = model.Rating;
             products.Count = model.Count;
-
+            products.SubcategoryId = model.SubcategoryId;
             _context.products.Add(products);
+            _context.SaveChanges();
+            foreach (var item in model.Images)
+            {
+                images.Id = Guid.NewGuid().ToString();
+                images.Image = item;
+                images.ProductId = products.Id;
+                _context.images.Add(images);
+                //products.Images.Add(new Images { 
+                //Id= Guid.NewGuid().ToString(),
+                //Image = item,
+                //ProductId = products.Id,
+                //});
+            }
 
             _context.SaveChanges();
 
