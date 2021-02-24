@@ -11,16 +11,17 @@ export class ProductViewComponent implements OnInit {
 
   constructor(private productService: ProductService) {
 
-    this.productService.getProduct('02fbaf7d-c40d-42d4-84e1-d212cf4b3f35').subscribe(
+    this.productService.getProduct().subscribe(
       (data: ProductItem) => {
           this.product = data;
+          console.log(this.product.id);
         }
       );
 
     
   }
 
-product: ProductItem = new ProductItem();
+  product: ProductItem = new ProductItem();
 
   ngOnInit():void {
     //BTS OF SIZE
@@ -34,6 +35,7 @@ product: ProductItem = new ProductItem();
     }
     document.getElementById("DefaultActive").click();
     //END OF THIS FUNCTION
+
 
   }
 

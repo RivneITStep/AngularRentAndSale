@@ -1,6 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ProductItem } from '../model/product-item.model';
 
 @Injectable({
     providedIn: 'root'
@@ -9,10 +10,14 @@ import { Observable } from 'rxjs';
   
     constructor(private http: HttpClient) { }
     baseUrl = '/api/Product';
+    temp = '';
 
+    getProduct(){
+       return this.http.get(this.baseUrl + '/' + this.temp);
+    }
 
-    getProduct(id: string){
-       return this.http.get(this.baseUrl + '/' + id);
+    getProducts(){
+      return this.http.get(this.baseUrl + '/getProducts');
     }
 
 }
