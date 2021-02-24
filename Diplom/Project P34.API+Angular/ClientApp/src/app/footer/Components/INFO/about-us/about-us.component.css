@@ -33,3 +33,42 @@
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+.title { color: #b4b4b4; text-align: center; font-weight: 200; margin: 3% 0 1%; padding: 1% 0; }
+
+.title-element { border-bottom: 1px solid tomato; }
+
+.subtitle {
+  width: 75%;
+  margin: 0 auto 3%;
+  color: #f0f0f1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+  display: block;
+}
+
+.internal-container { padding: 0; display: block; margin: 0 auto; }
+
+.proofs-block { width: 33.3%; background-color: transparent; padding: 2% 0 0.5%; border-bottom: 1px solid tomato; }
+
+.proofs-block:hover { border-bottom: 1px solid #f0f0f1; transition: all .6s; }
+
+.proofs-text { color: #f0f0f1; font-size: 12px; }
+
+.free-text { margin: 2% 0; color: #f0f0f1; font-size: 12px; }
+
+.free-text-sm { font-size: 10px; }
+
+.pseudo-title { color: #b4b4b4; text-align: center; font-weight: 200; margin: 3% 0 1%; padding: 1% 0; }
+
+.other-page-link { color: tomato; text-decoration: none; }
+
+/*MEDIA*/
+/*LAPTOM*/
+
+/*TABLETS*/
+
+/*PHONES*/
+
+/*XS SCREENS*/
