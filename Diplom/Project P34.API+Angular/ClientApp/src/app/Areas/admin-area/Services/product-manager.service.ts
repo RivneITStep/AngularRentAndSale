@@ -3,16 +3,17 @@ import { ApiResult } from './../../../Models/result.model';
 import { ProductItem } from './../Models/product-item.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ImagesItem } from '../Models/Images-item.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductManagerService {
-  baseUrl = '/api/ProductManager';
+  baseUrl = '/api/Product';
   constructor(private http: HttpClient) {}
  
   getAllProducts() {
-    return this.http.get(this.baseUrl);
+    return this.http.get(this.baseUrl + '/*******/');
   }
 
   removeProduct(id: string) {
@@ -28,6 +29,10 @@ export class ProductManagerService {
   }
 
   addProduct(model: ProductItem): Observable<ApiResult> {
-    return this.http.post<ApiResult>(this.baseUrl + '/addProduct/', model);
+    return this.http.post<ApiResult>(this.baseUrl + '/addProduct', model);
   }
+
+// addImageToProduct(model:ImagesItem, id:string){
+// return this.http.post<ApiResult>(this.baseUrl+'/addImagesToProduct/'+id,model)
+// }
 }

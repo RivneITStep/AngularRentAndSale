@@ -37,6 +37,10 @@ import { ReturnComponent } from './footer/Components/SERVS/return/return.compone
 //ADDITIONAL
 import { WatchesProductsComponent } from './footer/Components/ADDITIONAL/watches-products/watches-products.component';
 
+//PRIVATE ROOM
+// import { HistoryOfOrdersComponent } from './footer/Components/PRIVATE ROOM/history-of-orders/history-of-orders.component';
+// import { WishListComponent } from './footer/Components/PRIVATE ROOM/wish-list/wish-list.component';
+
 /*AUTHORIZATION 'N' 404*/
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -53,7 +57,7 @@ import { ProductViewComponent } from './home/product/product-view/product-view.c
 
 /*AREAS OF ADMIN*/
 import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
-import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
+// import { DashboardComponent } from './Areas/admin-area/Components/dashboard/dashboard.component';
 import { EditProductComponent } from './Areas/admin-area/Components/edit-product/edit-product.component';
 
 /*AREAS OF USER*/
@@ -96,6 +100,7 @@ import { GarancyThirdComponent } from './footer/Components/INFO/faq/Components/G
 //PRIVATE-ROOM
 import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
 import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
+import { AddCategoryComponent } from './Areas/admin-area/Components/add-category/add-category.component';
 
 registerLocaleData(en);
 
@@ -125,12 +130,21 @@ const notifierOptions: NotifierOptions = {
       //ADDITIONAL
       WatchesProductsComponent,
 
+        //PRIVATE ROOM
+        HistoryOfOrdersComponent,
+        WishListComponent,
       /*AUTHORIZATION*/
       RegisterComponent,
       LoginComponent,
       ForgotPasswordComponent,
       ChangePasswordComponent,
-      NotFoundComponent,
+        NotFoundComponent,
+        ForgotPasswordComponent,
+        /*AREAS*/
+        UserAreaComponent,
+        PersonalRoomComponent,
+        EditUserInfoComponent,
+        DeleteUserComponent,
 
       /*USER AREAS*/
       UserAreaComponent,
@@ -144,11 +158,11 @@ const notifierOptions: NotifierOptions = {
 
       /*ADMIN AREA*/
       AdminAreaComponent,
-      DashboardComponent,
+      // DashboardComponent,
       EditProductComponent,
       AddProductComponent,
       AddSubcategoryComponent,
-      // AddCategoryComponent,
+      AddCategoryComponent,
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,
@@ -203,3 +217,8 @@ const notifierOptions: NotifierOptions = {
 })
 
 export class AppModule { }
+
+
+
+
+/**/ 
