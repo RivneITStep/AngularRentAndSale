@@ -1,4 +1,8 @@
-.row { margin-top: 1% !important; }
+.row, .col { margin-top: 1% !important; }
+
+.row-lg-md { display: block; }
+
+.row-sm-xs { display: none; margin: 0; }
 
 .choose { display: block; margin: 0 auto; width: 90%; overflow: hidden; }
 
@@ -34,6 +38,8 @@
   to {opacity: 1;}
 }
 
+.main-title { color: #b4b4b4; text-align: left; font-weight: 200; margin: 3% 0 1%; padding: 1% 0; }
+
 .title { color: #b4b4b4; text-align: center; font-weight: 200; margin: 3% 0 1%; padding: 1% 0; }
 
 .title-element { border-bottom: 1px solid tomato; }
@@ -56,19 +62,73 @@
 
 .proofs-text { color: #f0f0f1; font-size: 12px; }
 
+.free-text-lg { font-size: 14px; }
+
 .free-text { margin: 2% 0; color: #f0f0f1; font-size: 12px; }
 
 .free-text-sm { font-size: 10px; }
 
 .pseudo-title { color: #b4b4b4; text-align: center; font-weight: 200; margin: 3% 0 1%; padding: 1% 0; }
 
+.title-of-work { text-align: left; }
+
 .other-page-link { color: tomato; text-decoration: none; }
+
+.simple-menu { padding: 0; color: #b4b4b4; margin-top: 2%; }
+
+.simple-menu__item { color: #f0f0f1; font-size: 12px; margin: 5px 0; }
+
+.simple-menu__text { border-bottom: 1px solid transparent; }
+
+.simple-menu__text:hover { border-bottom: 1px solid tomato; transition: all .6s; }
+
+.empty-block { height: 3%; background-color: transparent; }
 
 /*MEDIA*/
 /*LAPTOM*/
 
 /*TABLETS*/
+@media screen and (min-width: 518px) and (max-width: 767px) {
+  .choose-link { font-size: 12px; }
+
+  .title { font-size: 18px; }
+
+  .pseudo-title { font-size: 16px; }
+
+  .free-text { font-size: 14px; }
+
+  .simple-menu { display: block; margin: 0 auto; }
+
+  .simple-menu__item { font-size: 10px; width: 100%; display: block; margin: 2% auto; text-align: center; }
+
+  .title-of-work { text-align: center; font-size: 16px; }
+  
+}
 
 /*PHONES*/
+
+@media screen and (min-width: 360px) and (max-width: 517px) {
+  .row-sm-xs { display: block; }
+
+  .row-lg-md { display: none; }
+
+  .col-vacantion { width: 100%; }
+
+  .col-info { width: 335px; }
+
+  .choose-link { font-size: 12px; width: 45%; }
+
+  .title { font-size: 16px; }
+
+  .pseudo-title { font-size: 14px; }
+
+  .free-text { margin: 4% 0; font-size: 12px; }
+
+  .simple-menu { display: block; margin: 0 auto; }
+
+  .simple-menu__item { font-size: 10px; width: 100%; display: block; margin: 2% auto; text-align: center; }
+
+  .title-of-work { text-align: center; }
+}
 
 /*XS SCREENS*/
