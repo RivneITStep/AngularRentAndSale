@@ -1,1 +1,70 @@
-<p>shopping-cart works!</p>
+<div class="container">
+  <div class="row">
+    <h4 class="title"><span class="title-element">Кошик</span></h4>
+  </div>
+
+  <!--ЗРОБИТИ ПЕРЕВІРКУ НА НАЯВНІСТЬ ПРОДУКТІВ У СПИСКУ-->
+  <!--
+  <div class="row">
+    <ul class="empty-list-menu">
+      <li class="empty-list-menu-item">
+        <p class="empty-list-text">Ваш кошик порожній</p>
+      </li>
+      <li class="empty-list-menu-item">
+        <p class="empty-list-text-sm">Гадаємо, саме час зробити перше замовлення :)</p>
+      </li>
+    </ul>
+  </div>
+  -->
+
+  <div class="row">
+    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <table class="table table-with-products">
+        <thead class="table-leader">
+          <tr>
+            <th class="table-header-item">Фото</th>
+            <th class="table-header-item">Назва</th>
+            <th class="table-header-item">Ціна</th>
+            <th class="table-header-item">Артикул</th>
+            <th class="table-header-item">Кількість</th>
+            <th class="table-header-item">Сума</th>
+            <th class="table-header-item"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="table-row">
+            <td class="table-body-item image-block"><img class="image-of-product" alt="Фотографія продукту"
+                src="../../../../assets/images/Products/photo-1.jpg"></td>
+            <td class="table-body-item">
+              <p class="data-of-product">
+                <a [routerLink]="['']" class="link-of-product">
+                  Футболка UF
+                </a>
+              </p>
+            </td>
+            <td class="table-body-item">
+              <p class="data-of-product">100$</p>
+            </td>
+            <td class="table-body-item">
+              <p class="data-of-product">SH12-5</p>
+            </td>
+            <td class="table-body-item">
+              <input type="number" class="form-control" placeholder="1">
+            </td>
+            <td class="table-body-item">
+              <p class="data-of-product">100$</p>
+            </td>
+            <td class="table-body-item">
+              <span class="action-icon"><i class="fa fa-times action-icon" aria-hidden="true"></i></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <span class="btn btn-load-more">Оформити замовлення</span>
+  </div>
+</div>
