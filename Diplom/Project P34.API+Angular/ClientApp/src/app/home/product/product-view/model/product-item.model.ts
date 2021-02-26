@@ -1,4 +1,4 @@
-export class ProductItem{
+export class ProductItem {
     public id: string;
     public name: string;
     public image: string;
@@ -7,4 +7,7 @@ export class ProductItem{
     public countryMade: string;
     public description: string;
     public rating: number;
+    public count: number;
+    public subcategoryId: string;
+    public images: [];
 }

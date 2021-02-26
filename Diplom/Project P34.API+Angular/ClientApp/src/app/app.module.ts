@@ -101,6 +101,9 @@ import { GarancyThirdComponent } from './footer/Components/INFO/faq/Components/G
 import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-first/private-room-first.component';
 import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
 import { AddCategoryComponent } from './Areas/admin-area/Components/add-category/add-category.component';
+import { ListCategoryComponent } from './Areas/admin-area/Components/list-category/list-category.component';
+import { ListProductComponent } from './Areas/admin-area/Components/list-product/list-product.component';
+import { ListSubcategoryComponent } from './Areas/admin-area/Components/list-subcategory/list-subcategory.component';
 
 registerLocaleData(en);
 
@@ -163,6 +166,9 @@ const notifierOptions: NotifierOptions = {
       AddProductComponent,
       AddSubcategoryComponent,
       AddCategoryComponent,
+      ListCategoryComponent,
+      ListSubcategoryComponent,
+      ListProductComponent,
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,

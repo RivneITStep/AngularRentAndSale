@@ -13,7 +13,7 @@ export class ProductManagerService {
   constructor(private http: HttpClient) {}
  
   getAllProducts() {
-    return this.http.get(this.baseUrl + '/*******/');
+    return this.http.get(this.baseUrl + '/getProducts');
   }
 
   removeProduct(id: string) {

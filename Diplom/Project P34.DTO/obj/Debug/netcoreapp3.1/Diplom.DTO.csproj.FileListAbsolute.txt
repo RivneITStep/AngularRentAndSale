@@ -85,3 +85,5 @@ C:\Users\mka\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcore
 >>>>>>> 76c90fe14e008247f78cf564f9e701804b197a7a
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
 D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Debug\netcoreapp3.1\Diplom.DTO.csprojAssemblyReference.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Project P34.DataAccess.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Debug\netcoreapp3.1\Project P34.DataAccess.pdb

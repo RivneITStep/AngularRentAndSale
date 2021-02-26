@@ -38,6 +38,9 @@ import { AdminAreaComponent } from './Areas/admin-area/admin-area.component';
 import { EditProductComponent } from './Areas/admin-area/Components/edit-product/edit-product.component';
 import { AddProductComponent } from './Areas/admin-area/Components/add-product/add-product.component';
 import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subcategory/add-subcategory.component';
+import {ListCategoryComponent} from './Areas/admin-area/Components/list-category/list-category.component';
+import {ListSubcategoryComponent} from './Areas/admin-area/Components/list-subcategory/list-subcategory.component';
+import {ListProductComponent} from './Areas/admin-area/Components/list-product/list-product.component';
 
 /*USER AREA*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';

@@ -55,6 +55,7 @@ namespace Project_P34.API_Angular.Controllers
                 temp.Description = item.Description;
                 temp.Rating = item.Rating;
                 temp.Count = item.Count;
+                temp.SubcategoryId = item.SubcategoryId;
 
                 data.Add(temp);
             }
