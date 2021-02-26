@@ -26,11 +26,9 @@ export class AddSubcategoryComponent implements OnInit {
     private router: Router
   ) { }
 
-  onOptionSelect(data:string){
-    
-    this.SelectedCategory=data;
-    
-    console.log(data);
+  getcompanyid(id){
+    this.model.categoryId=id;
+    console.log(id);
   }
 
   OnSubmit() {
@@ -44,7 +42,6 @@ export class AddSubcategoryComponent implements OnInit {
 
 
     if (this.isError === false) {
-      this.model.categoryId=this.SelectedCategory;
       console.log(this.SelectedCategory);
       this.subCategoryService.addSubCategory(this.model).subscribe(
         data => {

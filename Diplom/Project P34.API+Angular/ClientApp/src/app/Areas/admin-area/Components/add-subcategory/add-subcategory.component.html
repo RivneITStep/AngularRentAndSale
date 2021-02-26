@@ -1,7 +1,7 @@
 <div id="addSubcategory" class="tabcontent tabcontent-action">
     <form class="add-subject-form">
-      <select  [(ngModel)]="SelectedCategory" class="subject-selector" name="categories" id="categories">
-        <option  *ngFor="let data of allCategories" (click)="onOptionSelect(data.id)" class="subject-variables">{{data.id}}</option>
+      <select (change)="getcompanyid($event.target.value)" class="subject-selector" name="categories" id="categories">
+        <option  *ngFor="let data of allCategories" [value]="data.id" id="data.id" class="subject-variables">{{data.name}}</option>
       </select>
     </form>
 

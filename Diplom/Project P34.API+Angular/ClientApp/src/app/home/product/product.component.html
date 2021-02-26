@@ -1,9 +1,9 @@
 <div class="row">
 
-  <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+  <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6" *ngFor="let prods of products">
     <div class="product-wrap">
       <div class="product-image">
-        <a><img src="../../assets/images/Products/photo-1.jpg"></a>
+        <a><img src={{prods.image}}></a>
         <div class="shadow"></div>
         <div class="actions">
           <div class="actions-btn">
@@ -15,75 +15,21 @@
                 <a class="add-to-wishlist-button" title="Додати у список бажань"></a>
               </div>
               <div class="quikview">
-                <a class="quikview-button" routerLink="['product-view']" title="Перегляд товару"></a>
+                <a class="quikview-button"  (click)="viewProduct(prods.id)" routerLink="/product-view"  title="Перегляд товару"></a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="product-list">
-        <h3>Футболка UF</h3>
-        <div class="price">₴ 499</div>
+        <h3>{{prods.name}}</h3>
+        <div class="price">{{prods.price}}</div>
       </div>
     </div>
   </div>
 
-  <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
-    <div class="product-wrap">
-      <div class="product-image">
-        <a href=""><img src="../../assets/images/Products/photo-2.jpg"></a>
-        <div class="shadow"></div>
-        <div class="actions">
-          <div class="actions-btn">
-            <div class="add-to-cart">
-              <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
-            </div>
-            <div class="add-to-links">
-              <div class="add-to-wishlist">
-                <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
-              </div>
-              <div class="quikview">
-                <a class="quikview-button" href="#" title="Перегляд товару"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <h3>Футболка UF</h3>
-        <div class="price">₴ 449</div>
-      </div>
-    </div>
-  </div>
+</div>
 
-  <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
-    <div class="product-wrap">
-      <div class="product-image">
-        <a href=""><img src="../../assets/images/Products/photo-3.jpg"></a>
-        <div class="shadow"></div>
-        <div class="actions">
-          <div class="actions-btn">
-            <div class="add-to-cart">
-              <a class="add-to-cart-button" href="#" title="Додати у корзину"></a>
-            </div>
-            <div class="add-to-links">
-              <div class="add-to-wishlist">
-                <a class="add-to-wishlist-button" href="#" title="Додати у список бажань"></a>
-              </div>
-              <div class="quikview">
-                <a class="quikview-button" href="#" title="Перегляд товару"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <h3>Футболка UF</h3>
-        <div class="price">₴ 369</div>
-      </div>
-    </div>
-  </div>
-
+<div class="row">
   <button class="btn btn-primary btn-load-more">Завантажити ще</button>
-
 </div>
