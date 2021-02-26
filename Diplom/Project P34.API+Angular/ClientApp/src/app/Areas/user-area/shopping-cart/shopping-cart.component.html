@@ -19,52 +19,91 @@
 
   <div class="row">
     <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <table class="table table-with-products">
-        <thead class="table-leader">
-          <tr>
-            <th class="table-header-item">Фото</th>
-            <th class="table-header-item">Назва</th>
-            <th class="table-header-item">Ціна</th>
-            <th class="table-header-item">Артикул</th>
-            <th class="table-header-item">Кількість</th>
-            <th class="table-header-item">Сума</th>
-            <th class="table-header-item"></th>
-          </tr>
-        </thead>
+      <form action="">
+        <table class="table table-with-products">
+          <thead class="table-leader">
+            <tr>
+              <th class="table-header-item">Фото</th>
+              <th class="table-header-item">Назва</th>
+              <th class="table-header-item">Ціна</th>
+              <th class="table-header-item sm-item">Артикул</th>
+              <th class="table-header-item">Кількість</th>
+              <th class="table-header-item sm-item">Сума</th>
+              <th class="table-header-item"></th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr class="table-row">
-            <td class="table-body-item image-block"><img class="image-of-product" alt="Фотографія продукту"
-                src="../../../../assets/images/Products/photo-1.jpg"></td>
-            <td class="table-body-item">
-              <p class="data-of-product">
-                <a [routerLink]="['']" class="link-of-product">
-                  Футболка UF
-                </a>
-              </p>
-            </td>
-            <td class="table-body-item">
-              <p class="data-of-product">100$</p>
-            </td>
-            <td class="table-body-item">
-              <p class="data-of-product">SH12-5</p>
-            </td>
-            <td class="table-body-item">
-              <input type="number" class="form-control" placeholder="1">
-            </td>
-            <td class="table-body-item">
-              <p class="data-of-product">100$</p>
-            </td>
-            <td class="table-body-item">
-              <span class="action-icon"><i class="fa fa-times action-icon" aria-hidden="true"></i></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <tbody>
+            <tr class="table-row">
+              <td class="table-body-item image-block">
+                <img class="image-of-product" alt="Фотографія продукту" src="../../../../assets/images/Products/photo-1.jpg">
+              </td>
+              <td class="table-body-item">
+                <p class="data-of-product">
+                  <a [routerLink]="['']" class="link-of-product">
+                    Футболка UF
+                  </a>
+                </p>
+              </td>
+              <td class="table-body-item">
+                <p class="data-of-product">100$</p>
+              </td>
+              <td class="table-body-item sm-item">
+                <p class="data-of-product">SH12-5</p>
+              </td>
+              <td class="table-body-item">
+                <input type="number" class="form-control count-of-product" placeholder="1">
+              </td>
+              <td class="table-body-item sm-item">
+                <p class="data-of-product">100$</p>
+              </td>
+              <td class="table-body-item">
+                <span class="action-icon"><i class="fa fa-times action-icon" aria-hidden="true"></i></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
     </div>
   </div>
 
   <div class="row">
-    <span class="btn btn-load-more">Оформити замовлення</span>
+    <span class="btn btn-load-more" data-toggle="modal" data-target="#modalOrder">Оформити замовлення <span
+        class="all-sum">( 100 $ )</span></span>
+  </div>
+
+  <!--MODAL WINDOW-->
+  <div class="modal fade" id="modalOrder" tabindex="-1" role="dialog" aria-labelledby="modalOrderLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalOrderLabel">Замовлення</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <form>
+              <input type="text" class="form-control" placeholder="Місто:">
+              <input type="text" class="form-control" placeholder="Область:">
+              <input type="text" class="form-control" placeholder="Вулиця:">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td class="card-areas"><input type="text" class="form-control" placeholder="Будинок:"></td>
+                    <td class="card-areas"><input type="text" class="form-control" placeholder="Квартира:"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-order" data-dismiss="modal">Замовити</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
