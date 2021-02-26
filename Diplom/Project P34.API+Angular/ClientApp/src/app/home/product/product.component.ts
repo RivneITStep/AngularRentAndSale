@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from './product-view/service/product.service';
 import { ProductItem } from './product-view/model/product-item.model';
 
@@ -9,6 +9,10 @@ import { ProductItem } from './product-view/model/product-item.model';
 })
 export class ProductComponent implements OnInit {
 
+
+  @Input()
+  searchResult: ProductItem[];
+
   constructor(private productService: ProductService) 
   {
     this.productService.getProducts().subscribe(
@@ -17,6 +21,8 @@ export class ProductComponent implements OnInit {
       }
     );
    }
+
+
   products: ProductItem[] = [];
   product: ProductItem = new ProductItem();
   viewProduct(id: string){
@@ -24,7 +30,7 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    console.log(this.searchResult);
   }
 
 }

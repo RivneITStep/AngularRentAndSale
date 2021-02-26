@@ -4,7 +4,9 @@ import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SignInModel } from './../Models/login.model';
 import { NotifierService } from 'angular-notifier';
+import { ProductItem } from '../home/product/product-view/model/product-item.model';
 
+import { ProductManagerService } from '../../app/Areas/admin-area/Services/product-manager.service';
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
@@ -18,7 +20,14 @@ export class NavMenuComponent implements OnInit {
   isAdmin: boolean;
   isError: boolean;
 
+
+  listOfData: ProductItem[] = [];
+
+  searchProduct: string;
+  searchResult: ProductItem[] = [];
+
   constructor(
+    private productService: ProductManagerService,
     private apiService: ApiService,
     private router: Router,
     private spinner: NgxSpinnerService,
@@ -36,8 +45,25 @@ export class NavMenuComponent implements OnInit {
     }
 
   ngOnInit() {
+
+
+    // this.productService.getAllProducts().subscribe((AllProducts: ProductItem[]) => {
+    //   this.listOfData = AllProducts;
+    //   console.log(this.listOfData);
+    // }
+  // );
+
+
+
+
     this.isError = false;
   }
+
+  SearchProduct() {
+    this.searchResult = this.listOfData.filter(
+      t => t.name.includes(this.searchProduct)
+      );
+    }
 
   validateEmail(email: string) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
