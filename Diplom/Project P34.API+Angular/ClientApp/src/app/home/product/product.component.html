@@ -15,7 +15,7 @@
                 <a class="add-to-wishlist-button" title="Додати у список бажань"></a>
               </div>
               <div class="quikview">
-                <a class="quikview-button"  (click)="viewProduct(prods.id)" routerLink="/product-view"  title="Перегляд товару"></a>
+                <a class="quikview-button" (click)="viewProduct(prods.id)" routerLink="/product-view" title="Перегляд товару"></a>
               </div>
             </div>
           </div>
@@ -23,7 +23,7 @@
       </div>
       <div class="product-list">
         <h3>{{prods.name}}</h3>
-        <div class="price">{{prods.price}}</div>
+        <div class="price">{{prods.price}} ₴</div>
       </div>
     </div>
   </div>
@@ -31,5 +31,5 @@
 </div>
 
 <div class="row">
-  <button class="btn btn-primary btn-load-more">Завантажити ще</button>
+  <button class="btn btn-load-more">Завантажити ще</button>
 </div>

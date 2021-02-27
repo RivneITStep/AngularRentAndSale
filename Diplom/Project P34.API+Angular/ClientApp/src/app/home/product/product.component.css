@@ -1,20 +1,16 @@
 .btn-load-more {
   display: block;
-  margin: 20px auto 40px;
-  border-radius: 0px !important;
-  background-color: #f0f0f1 !important;
-  color: #191919 !important;
-  border: 1px solid #f0f0f1 !important;
-  letter-spacing: 2px !important;
-  padding: 10px 20px !important;
+  margin: 20px auto;
+  border-radius: 0px;
+  color: #f0f0f1;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
-.btn-load-more:hover, .btn-load-more:active, .btn-load-more:focus {
-  background-color: tomato !important;
-  color: #ffffff !important;
-  border: tomato 1px solid !important;
-  box-shadow: none !important;
-}
+.btn-load-more:hover,
+.btn-load-more:active,
+.btn-load-more:focus { color: tomato; transition: all .6s; }
 
 
 /*PRODUCT CARDS*/
