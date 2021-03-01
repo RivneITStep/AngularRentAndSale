@@ -168,5 +168,5 @@
 @media screen and (min-width: 280px) and (max-width: 375px) {
   .search-form { width: 90%; }
 
-  .quest-col { width: 100%; }
+  .quest-col { width: 100%; padding: 0 25px; }
 }
