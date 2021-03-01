@@ -114,6 +114,22 @@ function ChoosePage(evt, choosePage) {
     document.getElementById("defaultOpenPage").click();
 </script>
 
+<!--HISTORY OF ORDERS-->
+<script>
+  let coll = document.getElementsByClassName('btn-collapse');
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener('click', function() {
+        this.classList.toggle('active');
+        let content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    }
+</script>
+
 <!--BOOTSTRAP'S SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
