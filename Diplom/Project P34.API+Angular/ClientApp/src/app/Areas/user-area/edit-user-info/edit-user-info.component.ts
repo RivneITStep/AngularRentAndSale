@@ -16,8 +16,11 @@ import { ApiService } from '../../../core/api.service';
 })
 export class EditUserInfoComponent implements OnInit {
 
-  constructor(private userService: UserService,
-    private notifier: NotifierService) { 
+  constructor(
+    private userService: UserService,
+    private notifier: NotifierService,
+    private spinner: NgxSpinnerService,
+    private router: Router) {
 
     const token = localStorage.getItem('token');
       if (token !== null) {
@@ -41,24 +44,28 @@ export class EditUserInfoComponent implements OnInit {
   user: UserItem = new UserItem();
 
   Save() {
+    this.spinner.show();
     this.userService.editUser(this.user.id, this.user).subscribe(
       data => {
         console.log(data);
         if (data.status === 200) {
           this.notifier.notify('success', 'Edited!');
+          this.spinner.hide();
+          this.router.navigate(['/user-area/personal-room']);
         } else {
            console.log(data.errors);
           for (let i = 0; i < data.errors.length; i++) {
             this.notifier.notify('error', data.errors[i]);
+            this.spinner.hide();
           }
         }
       },
       errors => {
         console.log(errors);
       });
-  } 
-  
-  
+  }
+
+
 
 
 }
