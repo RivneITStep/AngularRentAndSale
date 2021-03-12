@@ -26,7 +26,7 @@
   color: #191919;
   border-radius: 0%;
   letter-spacing: 2px;
-  margin: 2% 0;
+  margin: 1.2% 0;
   border: 0px #f0f0f1 solid !important;
   height: 42px;
 }
@@ -35,46 +35,9 @@
 .form-control:hover,
 .form-control:focus { box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); transition: all .6s; border: 0px #f0f0f1 solid !important; }
 
-.image-block__input { width: 45%; float: right; margin: 0; }
+.image-block__input { width: 45%; float: right; margin: 1% auto; }
 
-.user-image { width: 300px; height: 300px; }
-
-.srch-form {
-  position: relative;
-  width: 45%;
-  display: block;
-  font-size: 16px !important;
-}
-
-.srch-area {
-  width: 100%;
-  height: 42px;
-  padding-left: 10px;
-  border: 0 solid #000000;
-  outline: none;
-  background-color: #f0f0f1;
-  color: #191919;
-  letter-spacing: 3px;
-}
-
-.srch-btn {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 20%;
-  height: 42px;
-  border: none !important;
-  background-color: tomato !important;
-  border-radius: 0 !important;
-  cursor: pointer;
-}
-
-.srch-btn:before {
-  content: "\f002";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: #F9F0DA;
-}
+.user-image { width: 300px; height: 300px; margin: 0 auto; }
 
 .subtitle {
   text-align: center;
@@ -82,6 +45,8 @@
   color: #b4b4b4;
   letter-spacing: 1px;
   margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-submit {
