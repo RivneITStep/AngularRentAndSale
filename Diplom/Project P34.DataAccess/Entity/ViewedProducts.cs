@@ -14,10 +14,12 @@ namespace Project_P34.DataAccess.Entity
 
 
 
+        public string UserId { get; set; }
 
         //Id userMoreinfo 1-1
-        public virtual UserMoreInfo UserMoreInfo { get; set; }
+        public virtual User User { get; set; }
+
         //id porduct 1-8+
-        public ICollection<Product> Products { get; set; }
+        public virtual List<Product> Products { get; set; } = new List<Product>();
     }
 }

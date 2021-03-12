@@ -3,6 +3,7 @@ import { SubcategoryItem } from '../../Models/subcategory-item.model';
 import { SubcategoryManagerService } from '../../Services/subcategory-manager.service';
 import { NotifierService } from 'angular-notifier';
 import { Router } from '@angular/router';
+import { ApiResult } from 'src/app/Models/result.model';
 
 @Component({
   selector: 'app-list-subcategory',
@@ -16,6 +17,29 @@ export class ListSubcategoryComponent implements OnInit {
   constructor(private subCategoryService: SubcategoryManagerService,
     private notifier: NotifierService,
     private router: Router) { }
+
+
+
+
+    RemoveSub(id: string) {
+      this.subCategoryService.removeSubCategory(id).subscribe(
+        (data: ApiResult) => {
+          if (data.status === 200) {
+            this.notifier.notify('success', 'Subcategory removed :)');
+  
+            console.log(data);
+  
+          } else {
+            for (let i = 0; i < data.errors; i++) {
+              this.notifier.notify('error', data.errors[i]);
+  
+            }
+          }
+        }
+      );
+    }
+
+
 
   ngOnInit() {
 

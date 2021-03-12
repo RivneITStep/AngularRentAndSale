@@ -43,6 +43,7 @@ export class AddSubcategoryComponent implements OnInit {
 
     if (this.isError === false) {
       console.log(this.SelectedCategory);
+      // this.model.categoryId=document.getElementById("categories").nodeValue;
       this.subCategoryService.addSubCategory(this.model).subscribe(
         data => {
           console.log(data);

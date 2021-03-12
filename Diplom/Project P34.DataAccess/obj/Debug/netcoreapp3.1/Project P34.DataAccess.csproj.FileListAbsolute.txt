@@ -52,3 +52,4 @@ C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debu
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.AssemblyInfo.cs
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.dll
 C:\Users\admin\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.csprojAssemblyReference.cache
