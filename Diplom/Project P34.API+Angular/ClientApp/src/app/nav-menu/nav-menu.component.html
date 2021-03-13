@@ -22,22 +22,14 @@
         <li class="nav-item" *ngIf="isAdmin === true">
           <a [routerLink]="['/admin-panel']" class="nav-link">Панель</a>
         </li>
-        <li class="nav-item">
-          <button class="btn btn-theme btn-act"></button>
+        <li class="nav-item" *ngIf="isLoggedIn === true && isAdmin === false">
+          <button [routerLink]="['/user-area/personal-room']" class="btn btn-account btn-act"></button>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn === true && isAdmin === false">
+          <button [routerLink]="['/user-area/wish-list']" class="btn btn-wishlist btn-act"></button>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn === true && isAdmin === false">
           <button [routerLink]="['/user-area/shopping-cart']" class="btn btn-cart btn-act"></button>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Українська
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Українська</a>
-            <a class="dropdown-item" href="#">Русский</a>
-            <a class="dropdown-item" href="#">English</a>
-          </div>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn === false"><a class="nav-link" data-toggle="modal"
             data-target="#exampleModal">Вхід</a></li>
