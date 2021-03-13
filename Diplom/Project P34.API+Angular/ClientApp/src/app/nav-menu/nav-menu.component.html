@@ -10,9 +10,10 @@
 
     <li class="nav-item nav-item-search">
       <form class="srch-form srch-form-top">
-        <input name="search" [(ngModel)]="searchProduct" (ngModelChange)="SearchProduct()" type="text"
+          <!-- (ngModelChange)="SearchProduct()" -->
+        <input name="search" [(ngModel)]="searchProduct"  type="text"
         placeholder="Пошук товару:" class="srch-area srch-area-top" type="text" placeholder="Пошук:">
-        <button  class="btn btn-primary srch-btn" type="submit"></button>
+        <button (click)="SearchProduct()" class="btn btn-primary srch-btn"></button>
       </form>
     </li>
 

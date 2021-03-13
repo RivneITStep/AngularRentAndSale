@@ -3,6 +3,7 @@ import { CategoryManagerService } from '../../Services/category-manager.service'
 import { NotifierService } from 'angular-notifier';
 import { Router } from '@angular/router';
 import { CategoryItem } from '../../Models/category-item.model';
+import { ApiResult } from 'src/app/Models/result.model';
 
 @Component({
   selector: 'app-list-category',
@@ -17,6 +18,30 @@ export class ListCategoryComponent implements OnInit {
   constructor(private categoryServise: CategoryManagerService,
     private notifier: NotifierService,
     private router: Router) { }
+
+
+
+    RemoveCategory(id: string) {
+      this.categoryServise.removeCategory(id).subscribe(
+        (data: ApiResult) => {
+          if (data.status === 200) {
+            this.notifier.notify('success', 'Category removed :)');
+  
+            console.log(data);
+  
+          } else {
+            for (let i = 0; i < data.errors; i++) {
+              this.notifier.notify('error', data.errors[i]);
+  
+            }
+          }
+        }
+      );
+    }
+
+
+
+
 
   ngOnInit() {
     this.categoryServise.getAllCategories().subscribe((AllCategories: CategoryItem[]) => {

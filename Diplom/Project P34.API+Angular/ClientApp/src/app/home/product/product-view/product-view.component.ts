@@ -8,6 +8,8 @@ import { ProductService } from './service/product.service';
   styleUrls: ['./product-view.component.css']
 })
 export class ProductViewComponent implements OnInit {
+  
+  product: ProductItem = new ProductItem();
 
   constructor(private productService: ProductService) {
 
@@ -21,7 +23,6 @@ export class ProductViewComponent implements OnInit {
     
   }
 
-  product: ProductItem = new ProductItem();
 
   ngOnInit():void {
     //BTS OF SIZE

@@ -17,9 +17,9 @@ getAllCategories() {
   return this.http.get(this.baseUrl+'/getCategories');
 }
 
-// removeCategory(id: string) {
-//   return this.http.post(this.baseUrl + '/RemoveProduct/' + id,  id , { headers: {'Content-Type': 'application/json'}});
-// }
+removeCategory(id: string) {
+  return this.http.post(this.baseUrl + '/removeCategory/' + id,  id , { headers: {'Content-Type': 'application/json'}});
+}
 
 getCategory(id: string) {
   return this.http.get(this.baseUrl + '/' + id);

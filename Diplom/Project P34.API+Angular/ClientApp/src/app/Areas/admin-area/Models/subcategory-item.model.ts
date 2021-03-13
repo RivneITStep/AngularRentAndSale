@@ -6,6 +6,6 @@ export class SubcategoryItem {
     constructor() {
         this.id = null;
         this.name = null;
-        this.categoryId = null;
+       
     }
 }
