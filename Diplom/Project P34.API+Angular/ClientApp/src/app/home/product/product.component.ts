@@ -83,7 +83,7 @@ searchProd:string;
         data => {
           console.log(data);
           if (data.status === 200) {
-            this.notifier.notify('success', 'ViewProduct is added!');
+            this.notifier.notify('success', 'Добавлено в переглянуті');
 
           } else {
             console.log(data.errors);
