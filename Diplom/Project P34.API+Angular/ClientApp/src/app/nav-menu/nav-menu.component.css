@@ -15,7 +15,9 @@
     padding-top: 6px !important;
 }
 
-.btn-theme::before { content: '\f186'; font-family: FontAwesome; }
+.btn-wishlist::before { content: '\f08a'; font-family: FontAwesome; }
+
+.btn-account::before { content: '\f007'; font-family: FontAwesome; }
 
 .btn-cart::before { content: '\f07a'; font-family: FontAwesome; }
 
@@ -87,6 +89,7 @@
 }
 
 .srch-btn:active, .srch-btn:focus { box-shadow: none !important; }
+
 
 /*LOGIN PLATFORM*/
 
@@ -233,8 +236,8 @@
 
 /* PHONES */
 @media screen and (max-width: 768px) {
-    .btn-theme::before {
-      content: 'Темна тема: ВКЛ';
+    .btn-wishlist::before {
+      content: 'Бажане';
       font-family: 'Montserrat', sans-serif;
       font-size: 16px;
     }
@@ -246,9 +249,15 @@
       letter-spacing: 2px;
     }
 
+    .btn-account::before {
+      content: 'Особистий кабінет';
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+    }
+
     .btn-act { padding-left: 0px; }
 
-    .btn-theme::after {
+    .btn-wishlist::after {
       content: '';
       display: block;
       width: 100%;
@@ -258,6 +267,15 @@
     }
 
     .btn-cart::after {
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: tomato;
+      height: 1px;
+      transform: scale(1);
+    }
+
+    .btn-account::after {
       content: '';
       display: block;
       width: 100%;
@@ -278,8 +296,14 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
-  .btn-theme::before {
-    content: 'Темна тема: ВКЛ';
+  .btn-wishlist::before {
+    content: 'Бажане';
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+  }
+
+  .btn-account::before {
+    content: 'Особистий кабінет';
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
   }
@@ -293,7 +317,16 @@
 
   .btn-act { padding-left: 0px; }
 
-  .btn-theme::after {
+  .btn-wishlist::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #f0f0f1;
+    height: 1px;
+    transform: scale(1);
+  }
+
+  .btn-account::after {
     content: '';
     display: block;
     width: 100%;

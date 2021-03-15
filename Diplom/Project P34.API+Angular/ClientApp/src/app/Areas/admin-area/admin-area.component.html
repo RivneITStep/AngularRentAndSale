@@ -1,9 +1,7 @@
-<h5 class="dashboard-danger">Вибачте, функція доступна тільки на широких екранах...</h5>
-
 <div class="row dashboard-block">
 
   <!--ACTIONS-->
-  <div class="col col-lg-6 col-md-6 col-sm-0 col-xs-0">
+  <div class="col col-lg-6 col-md-6 col-sm-0 col-xs-0 col-actions">
 
     <div class="tab">
       <button class="tablinks tablink-action" onclick="chooseAction(event, 'addCategory')">Додати
@@ -37,7 +35,7 @@
       </form>
       <button class="btn btn-primary add-subject-btn">Додати</button>
     </div> -->
-<app-add-product></app-add-product>
+    <app-add-product></app-add-product>
     <!-- <div id="addProduct" class="tabcontent tabcontent-action" >
       <form class="add-subject-form">
         <input class="add-subject-area" type="text" placeholder="Назва продукту:">
@@ -98,7 +96,7 @@
   </div>
 
   <!--LISTS-->
-  <div class="col col-lg-6 col-md-6 col-sm-0 col-xs-0">
+  <div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12">
 
     <div class="tab">
       <button class="tablinks tablink-list" onclick="openList(event, 'categoryList')"
@@ -111,9 +109,8 @@
     </div>
 
 
-
     <app-list-category></app-list-category>
-<!-- 
+    <!--
     <div id="categoryList" class="tabcontent tabcontent-list">
       <form class="add-subject-form">
         <input type="text" class="data-of-category-area" placeholder="Чоловіче">
@@ -121,7 +118,7 @@
         <button class="btn btn-primary list-btn remove-btn" type="button"></button>
       </form>
     </div> -->
-<app-list-subcategory></app-list-subcategory>
+    <app-list-subcategory></app-list-subcategory>
     <!-- <div id="subcategoryList" class="tabcontent tabcontent-list">
       <form class="add-subject-form">
         <input type="text" class="data-of-category-area" placeholder="Кеди">
@@ -166,11 +163,8 @@
               </div>
             </div>
           </div> -->
-          <app-list-product></app-list-product>
+    <app-list-product></app-list-product>
 
-
-
-          
     <div id="userList" class="tabcontent tabcontent-list">
       <form class="srch-form srch-form-top">
         <input class="srch-area srch-area-top" type="text" placeholder="Пошук:">
