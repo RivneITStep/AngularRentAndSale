@@ -389,7 +389,10 @@
         },
         "runtime": {
           "bin/placeholder/Project P34.DataAccess.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

@@ -72,31 +72,31 @@ namespace Project_P34.API_Angular.Controllers
         {
             List<ProductDTO> data = new List<ProductDTO>();
 
-            
-            var product = _context.products.Include(t=>t.Images).FirstOrDefault(t => t.Id == id);
+
+            var product = _context.products./*Include(t => t.Images).*/FirstOrDefault(t => t.Id == id);
 
             var images = _context.images.Where(t => t.ProductId == id);
 
 
             ProductDTO temp = new ProductDTO();
 
-                temp.Id = product.Id;
-                temp.Name = product.Name;
-                temp.Image = product.Image;
-                temp.Price = product.Price;
-                temp.Size = product.Size;
-                temp.CountryMade = product.CountryMade;
-                temp.Description = product.Description;
-                temp.Rating = product.Rating;
-                temp.Count = product.Count;
+            temp.Id = product.Id;
+            temp.Name = product.Name;
+            temp.Image = product.Image;
+            temp.Price = product.Price;
+            temp.Size = product.Size;
+            temp.CountryMade = product.CountryMade;
+            temp.Description = product.Description;
+            temp.Rating = product.Rating;
+            temp.Count = product.Count;
             //foreach (var item in images)
             //{
             //    temp.Images.Add(item.Image);
             //}
-                
 
-                data.Add(temp);
-            
+
+            data.Add(temp);
+
             return data;
         }
 
@@ -128,7 +128,7 @@ namespace Project_P34.API_Angular.Controllers
             Images images = new Images();
 
             products.Id = Guid.NewGuid().ToString();
-          
+
             products.Name = model.Name;
             products.Image = model.Image;
             products.Price = model.Price;
@@ -191,52 +191,99 @@ namespace Project_P34.API_Angular.Controllers
 
 
         [HttpPost("removeProduct/{id}")]
-        public ResultDto removeCategory([FromRoute] string id)
+        public ResultDto removeProduct([FromRoute] string id)
         {
-            try
+            //try
+            //{
+            var images = _context.images.Where(t => t.ProductId == id);
+
+            foreach (var itemImage in images)
             {
-                var product = _context.products.FirstOrDefault(t => t.Id == id);
+                _context.images.Remove(itemImage);
+            }
+            _context.SaveChanges();
 
-
+            var product = _context.products.FirstOrDefault(t => t.Id == id);
+            if (product != null)
+            {
                 _context.products.Remove(product);
-
-                _context.SaveChanges();
-
-                return new ResultDto
-                {
-                    Status = 200,
-                    Message = "Ok"
-                };
-
             }
-            catch (Exception e)
+            _context.SaveChanges();
+
+
+
+
+            return new ResultDto
             {
-                List<string> temp = new List<string>();
-                temp.Add(e.Message);
+                Status = 200,
+                Message = "Ok"
+            };
 
-                return new ResultDto
-                {
-                    Status = 500,
-                    Message = "Error",
-                    Errors = temp
-                };
+            //}
+            //catch (Exception e)
+            //{
+            //    List<string> temp = new List<string>();
+            //    temp.Add(e.Message);
 
-            }
+            //    return new ResultDto
+            //    {
+            //        Status = 500,
+            //        Message = "Error",
+            //        Errors = temp
+            //    };
+
+            //}
         }
 
 
 
-        [HttpPost("searchProduct/{search}")]
-        public Task<IEnumerable<ProductDTO>> searchByProduct([FromRoute] string searchString)
+        [HttpGet("searchProduct")] //localhost:12312?searchString=text
+        public List<ProductDTO> searchByProduct([FromQuery] string searchString)
         {
-            var product = from m in _context.products
-                       select m;
-
-            if (!String.IsNullOrEmpty(searchString))
+            if (searchString == null)
             {
-                product = product.Where(s => s.Name.Contains(searchString));
+
+                List<ProductDTO> data = new List<ProductDTO>();
+
+                var dataFromDB = _context.products.ToList();
+
+                foreach (var item in dataFromDB)
+                {
+                    ProductDTO temp = new ProductDTO();
+
+                    temp.Id = item.Id;
+                    temp.Name = item.Name;
+                    temp.Image = item.Image;
+                    temp.Price = item.Price;
+                    temp.Size = item.Size;
+                    temp.CountryMade = item.CountryMade;
+                    temp.Description = item.Description;
+                    temp.Rating = item.Rating;
+                    temp.Count = item.Count;
+                    temp.SubcategoryId = item.SubcategoryId;
+
+                    data.Add(temp);
+                }
+                return data;
             }
-            return (Task<IEnumerable<ProductDTO>>) product;
+            else
+            { 
+            var products = _context.products
+                .Where(t => t.Name.Contains(searchString)).Select(q => new ProductDTO
+                {
+                    Id = q.Id,
+                    Name = q.Name,
+                    Price = q.Price,
+                    Image = q.Image,
+                    Size = q.Size,
+                    CountryMade = q.CountryMade,
+                    Description = q.Description,
+                    Rating = q.Rating,
+                    Count = q.Count,
+                    SubcategoryId = q.SubcategoryId
+                }).ToList();
+            return products;
+            }
         }
 
         [HttpPost("addToWishList")]

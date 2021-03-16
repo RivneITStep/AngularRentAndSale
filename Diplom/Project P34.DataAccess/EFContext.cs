@@ -76,10 +76,10 @@ namespace Project_P34.DataAccess
                 .WithOne(t => t.UserMoreInfo)
                 .HasForeignKey<WishList>(ui => ui.Id);
 
-            builder.Entity<UserMoreInfo>()
+            builder.Entity<User>()
                 .HasOne(u => u.ViewedProducts)
-                .WithOne(t => t.UserMoreInfo)
-                .HasForeignKey<ViewedProducts>(ui => ui.Id);
+                .WithOne(t => t.User)
+                .HasForeignKey<ViewedProducts>(ui => ui.UserId);
 
 
             base.OnModelCreating(builder);

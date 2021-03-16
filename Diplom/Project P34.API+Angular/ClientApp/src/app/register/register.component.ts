@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit {
           if (data.status === 200) {
             this.spinner.hide();
             this.notifier.notify('success', 'You registered!');
-            this.router.navigate(['/']);
+            this.router.navigate(['/login']);
           } else {
              console.log(data.errors);
             for (let i = 0; i < data.errors.length; i++) {

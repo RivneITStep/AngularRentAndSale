@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project_P34.DataAccess;
 
 namespace Project_P34.API_Angular.Migrations
 {
     [DbContext(typeof(EFContext))]
-    partial class EFContextModelSnapshot : ModelSnapshot
+    [Migration("20210306223622_fixlinks5")]
+    partial class fixlinks5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -410,13 +412,9 @@ namespace Project_P34.API_Angular.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL");
 
                     b.ToTable("tblViewedProducts");
                 });
@@ -552,7 +550,9 @@ namespace Project_P34.API_Angular.Migrations
                 {
                     b.HasOne("Project_P34.DataAccess.Entity.User", "User")
                         .WithOne("ViewedProducts")
-                        .HasForeignKey("Project_P34.DataAccess.Entity.ViewedProducts", "UserId");
+                        .HasForeignKey("Project_P34.DataAccess.Entity.ViewedProducts", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.WishList", b =>

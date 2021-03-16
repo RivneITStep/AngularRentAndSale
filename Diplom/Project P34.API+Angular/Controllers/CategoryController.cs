@@ -73,7 +73,7 @@ namespace Project_P34.API_Angular.Controllers
 
             categories.Name = model.Name;
             categories.Id = model.Id;
-            
+
 
             _context.SaveChanges();
 
@@ -93,10 +93,36 @@ namespace Project_P34.API_Angular.Controllers
             {
                 var category = _context.categories.FirstOrDefault(t => t.Id == id);
 
+                var subcategory = _context.subCategories.Where(e => e.CategoryId == id).ToList();
 
+
+                if (subcategory.Count != 0)
+                {
+                    foreach (var itemSub in subcategory)
+                    {
+
+                var products = _context.products.Where(t => t.SubcategoryId == itemSub.Id).ToList();
+                        foreach (var item in products)
+                        {
+                            var images = _context.images.Where(t => t.ProductId == item.Id).ToList();
+                            if (images.Count != 0)
+                            {
+                                foreach (var itemImage in images)
+                                {
+                                    _context.images.Remove(itemImage);
+                                }
+                            }
+                            _context.products.Remove(item);
+                        }
+                _context.subCategories.Remove(itemSub);
+                    }
+                }
                 _context.categories.Remove(category);
 
                 _context.SaveChanges();
+
+
+
 
                 return new ResultDto
                 {
@@ -126,7 +152,7 @@ namespace Project_P34.API_Angular.Controllers
         public Task<IEnumerable<CategoryDTO>> searchByCategory([FromRoute] string searchString)
         {
             var cats = from m in _context.categories
-                         select m;
+                       select m;
 
             if (!String.IsNullOrEmpty(searchString))
             {

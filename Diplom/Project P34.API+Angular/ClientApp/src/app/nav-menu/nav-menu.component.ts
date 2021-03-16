@@ -7,6 +7,7 @@ import { NotifierService } from 'angular-notifier';
 import { ProductItem } from '../home/product/product-view/model/product-item.model';
 
 import { ProductManagerService } from '../../app/Areas/admin-area/Services/product-manager.service';
+import { ProductService } from '../home/product/product-view/service/product.service';
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
@@ -22,11 +23,17 @@ export class NavMenuComponent implements OnInit {
 
 
   listOfData: ProductItem[] = [];
+<<<<<<< HEAD
   searchProduct: string;
+=======
+
+  searchProduct: string = "Носк";
+>>>>>>> d362137c4c2728a5e0daff46ba53a779cf4e3d69
   searchResult: ProductItem[] = [];
 
   constructor(
     private productService: ProductManagerService,
+    private productService2:  ProductService,
     private apiService: ApiService,
     private router: Router,
     private spinner: NgxSpinnerService,
@@ -59,9 +66,11 @@ export class NavMenuComponent implements OnInit {
   }
 
   SearchProduct() {
-    this.searchResult = this.listOfData.filter(
-      t => t.name.includes(this.searchProduct)
-      );
+    this.productService2.es.emit(this.searchProduct);
+    // this.productService2.search=this.searchProduct;
+      // this.searchResult = this.listOfData.filter(
+      //   t => t.name.toLowerCase().includes(this.searchProduct.toLowerCase())
+      // );
     }
 
   validateEmail(email: string) {

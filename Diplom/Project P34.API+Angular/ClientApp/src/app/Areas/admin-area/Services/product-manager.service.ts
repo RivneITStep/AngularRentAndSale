@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { ApiResult } from './../../../Models/result.model';
 import { ProductItem } from './../Models/product-item.model';
 import { HttpClient } from '@angular/common/http';
@@ -9,16 +9,21 @@ import { ImagesItem } from '../Models/Images-item.model';
   providedIn: 'root'
 })
 export class ProductManagerService {
+  
   baseUrl = '/api/Product';
-  constructor(private http: HttpClient) {}
- 
+  constructor(private http: HttpClient) { }
+
+
+  
+
   getAllProducts() {
     return this.http.get(this.baseUrl + '/getProducts');
   }
 
   removeProduct(id: string) {
-    return this.http.post(this.baseUrl + '/RemoveProduct/' + id,  id , { headers: {'Content-Type': 'application/json'}});
+    return this.http.post(this.baseUrl + '/removeProduct/' + id, id);
   }
+  // , { headers: {'Content-Type': 'application/json'}}
 
   getProduct(id: string) {
     return this.http.get(this.baseUrl + '/' + id);
@@ -32,8 +37,14 @@ export class ProductManagerService {
     return this.http.post<ApiResult>(this.baseUrl + '/addProduct', model);
   }
 
+<<<<<<< HEAD
 
 // addImageToProduct(model:ImagesItem, id:string){
 // return this.http.post<ApiResult>(this.baseUrl+'/addImagesToProduct/'+id,model)
 // }
+=======
+  // addImageToProduct(model:ImagesItem, id:string){
+  // return this.http.post<ApiResult>(this.baseUrl+'/addImagesToProduct/'+id,model)
+  // }
+>>>>>>> d362137c4c2728a5e0daff46ba53a779cf4e3d69
 }

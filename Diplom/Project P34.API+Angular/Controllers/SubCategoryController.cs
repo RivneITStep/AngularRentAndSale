@@ -31,7 +31,7 @@ namespace Project_P34.API_Angular.Controllers
             List<SubCategoryDTO> data = new List<SubCategoryDTO>();
 
             var dataFromDB = _context.subCategories.ToList();
-         
+
 
             foreach (var item in dataFromDB)
             {
@@ -50,7 +50,7 @@ namespace Project_P34.API_Angular.Controllers
         {
             List<ProductDTO> data = new List<ProductDTO>();
 
-            
+
             var products = _context.products.Where(t => t.SubcategoryId == id);
 
             foreach (var item in products)
@@ -80,13 +80,14 @@ namespace Project_P34.API_Angular.Controllers
 
             subcategories.Id = Guid.NewGuid().ToString();
             subcategories.Name = model.Name;
+            subcategories.CategoryId = model.CategoryId;
 
-            var category = _context.categories.Include(t => t.Subcategories).SingleOrDefault(t => t.Id == model.CategoryId);
-            category.Subcategories.Add(subcategories);
+            //var category = _context.categories.Include(t => t.Subcategories).SingleOrDefault(t => t.Id == model.CategoryId);
+            //category.Subcategories.Add(subcategories);
             //subcategories.CategoryId = model.CategoryId;
 
 
-            //_context.subCategories.Add(subcategories);
+            _context.subCategories.Add(subcategories);
 
             _context.SaveChanges();
 
@@ -125,14 +126,21 @@ namespace Project_P34.API_Angular.Controllers
             try
             {
                 var subcategory = _context.subCategories.FirstOrDefault(t => t.Id == id);
-
                 var products = _context.products.Where(t => t.SubcategoryId == id).ToList();
 
-                if (products.Count!= 0)
+                if (products.Count != 0)
                 {
                     foreach (var item in products)
                     {
-                    _context.products.Remove(item);
+                        var images = _context.images.Where(t => t.ProductId == item.Id).ToList();
+                        if (images.Count != 0)
+                        {
+                            foreach (var itemImage in images)
+                            {
+                                _context.images.Remove(itemImage);
+                            }
+                        }
+                        _context.products.Remove(item);
                     }
                 }
 

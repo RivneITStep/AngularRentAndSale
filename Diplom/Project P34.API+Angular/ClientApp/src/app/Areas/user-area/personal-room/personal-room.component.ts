@@ -12,18 +12,20 @@ import { UserItem } from './models/user-item.model';
 })
 export class PersonalRoomComponent implements OnInit {
 
-  constructor( private userService: UserService) {
+  constructor(
+    private userService: UserService,
+    private spinner: NgxSpinnerService,) {
       const token = localStorage.getItem('token');
       if (token !== null) {
         const jwtData = token.split('.')[1];
         const decodedJwtJsonData = window.atob(jwtData);
         const decodedJwtData = JSON.parse(decodedJwtJsonData);
 
-
         this.userService.getUser(decodedJwtData.id).subscribe(
           (data: UserItem) => {
+            this.spinner.show();
             this.user = data;
-            
+            this.spinner.hide();
           }
         );
 
@@ -36,14 +38,14 @@ export class PersonalRoomComponent implements OnInit {
 
   user: UserItem = new UserItem();
 
-  ngOnInit() {    
+  ngOnInit() {
   }
 
 
-  
 
 
-  
+
+
 
 
 

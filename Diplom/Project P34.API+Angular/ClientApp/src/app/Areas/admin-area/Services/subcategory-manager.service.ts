@@ -15,9 +15,9 @@ getAllSubCategories() {
   return this.http.get(this.baseUrl+'/getSubCategories');
 }
 
-// removeCategory(id: string) {
-//   return this.http.post(this.baseUrl + '/RemoveProduct/' + id,  id , { headers: {'Content-Type': 'application/json'}});
-// }
+removeSubCategory(id: string) {
+  return this.http.post(this.baseUrl + '/removeSubCategory/' + id,  id , { headers: {'Content-Type': 'application/json'}});
+}
 
 getSubCategory(id: string) {
   return this.http.get(this.baseUrl + '/' + id);

@@ -11,6 +11,7 @@
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
     <RootNamespace>Project_P34.API_Angular</RootNamespace>
+    <AssemblyName>Diplom.API+Angular</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,7 +31,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +48,14 @@
   <ItemGroup>
     <Compile Include="Migrations\20210130212303_top.cs" />
     <Compile Include="Migrations\20210130212303_top.Designer.cs" />
+    <Compile Include="Migrations\20210227121831_fix viewed product.cs" />
+    <Compile Include="Migrations\20210227121831_fix viewed product.Designer.cs" />
+    <Compile Include="Migrations\20210304150523_fix links3.cs" />
+    <Compile Include="Migrations\20210304150523_fix links3.Designer.cs" />
+    <Compile Include="Migrations\20210306223622_fixlinks5.cs" />
+    <Compile Include="Migrations\20210306223622_fixlinks5.Designer.cs" />
+    <Compile Include="Migrations\20210310181659_fix idUsertoViewedProd.cs" />
+    <Compile Include="Migrations\20210310181659_fix idUsertoViewedProd.Designer.cs" />
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
   </ItemGroup>
 

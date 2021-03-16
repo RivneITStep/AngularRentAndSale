@@ -7,6 +7,9 @@ namespace Project_P34.DataAccess.Entity
 {
     public class User : IdentityUser
     {
-        public virtual UserMoreInfo UserMoreInfo { get; set; }   
+        public virtual UserMoreInfo UserMoreInfo { get; set; }
+
+        //id viewedProduct      1user - 1 viewedProduct +
+        public virtual ViewedProducts ViewedProducts { get; set; }
     }
 }
