@@ -29,15 +29,6 @@
         <input [(ngModel)]="model.price" name="price"  class="add-subject-area" type="number" placeholder="Ціна продукту:">
       </form>
 
-      <!-- <form class="add-subject-form">
-        <select class="subject-selector" name="categories" id="categories">
-          <option class="subject-variables">Чоловіче</option>
-          <option class="subject-variables">Жіноче</option>
-          <option class="subject-variables">Дитяче</option>
-          <option class="subject-variables">Аксесуари</option>
-        </select>
-      </form> -->
-
       <form class="add-subject-form">
         <select  [(ngModel)]="SelectedSubCategory" class="subject-selector" name="categories" id="categories">
           <option *ngFor="let data of allSubCategories" (click)="onOptionSelect(data.id)" class="subject-variables">{{data.id}}</option>

@@ -23,12 +23,8 @@ export class NavMenuComponent implements OnInit {
 
 
   listOfData: ProductItem[] = [];
-<<<<<<< HEAD
-  searchProduct: string;
-=======
 
-  searchProduct: string = "Носк";
->>>>>>> d362137c4c2728a5e0daff46ba53a779cf4e3d69
+  searchProduct: string = "";
   searchResult: ProductItem[] = [];
 
   constructor(

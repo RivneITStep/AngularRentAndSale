@@ -25,9 +25,9 @@ getCategory(id: string) {
   return this.http.get(this.baseUrl + '/' + id);
 }
 
-// editCategory(id: string, model: CategoryItem): Observable<ApiResult> {
-//   return this.http.post<ApiResult>(this.baseUrl + '/editProduct/' + id, model);
-// }
+editCategory(id: string, model: CategoryItem): Observable<ApiResult> {
+  return this.http.post<ApiResult>(this.baseUrl + '/editCategory/' + id, model);
+}
 
 addCategory(model: CategoryItem): Observable<ApiResult> {
   return this.http.post<ApiResult>(this.baseUrl + '/addCategory', model);
