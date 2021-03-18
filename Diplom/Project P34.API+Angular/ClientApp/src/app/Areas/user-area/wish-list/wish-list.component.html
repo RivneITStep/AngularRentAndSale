@@ -4,8 +4,8 @@
   </div>
 
   <!--ЗРОБИТИ ПЕРЕВІРКУ НА НАЯВНІСТЬ ПРОДУКТІВ У СПИСКУ-->
-  <!--
-  <div class="row">
+  
+  <div class="row" *ngIf="isEmpty === false">
     <ul class="empty-list-menu">
       <li class="empty-list-menu-item">
         <p class="empty-list-text">Ваш список бажань порожній</p>
@@ -15,7 +15,7 @@
       </li>
     </ul>
   </div>
-  -->
+ 
 
   <div class="row" *ngFor="let prods of showStorage">
     <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-6">
@@ -30,10 +30,10 @@
               </div>
               <div class="remove-from-links">
                 <div class="remove-from-wishlist">
-                  <a class="remove-from-wishlist-button" (click)="removeFromWishList()" title="Видалити зі списку бажань"></a>
+                  <a class="remove-from-wishlist-button" (click)="removeFromWishList(prods[0].id)" title="Видалити зі списку бажань"></a>
                 </div>
                 <div class="quikview">
-                  <a class="quikview-button" routerLink="/product-view" title="Перегляд товару"></a>
+                  <a class="quikview-button" routerLink="/product-view" (click)="viewProduct(prods[0].id)" title="Перегляд товару"></a>
                 </div>
               </div>
             </div>
