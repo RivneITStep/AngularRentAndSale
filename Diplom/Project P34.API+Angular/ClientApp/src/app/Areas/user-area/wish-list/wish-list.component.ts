@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishListComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.showStorage = JSON.parse(localStorage.getItem("wishlist"));
+  }
+
+
+
+  public showStorage = "";
+
+  public tmp = "";
+
+  removeFromWishList(){
+    this.showStorage
+  }
 
   ngOnInit() {
   }

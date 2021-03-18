@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -175,19 +176,28 @@ namespace Project_IDA.Api___Angular.Controllers
 
 
         [HttpPost("recoverPassword")]
-        public ResultDto recoverPassword([FromBody] RecoverPasswordDTO model)
+        public async Task <ResultDto> recoverPassword([FromBody] RecoverPasswordDTO model)
         {
+
+
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var newPass = CreatePassword(10);
+            var result = await _userManager.ResetPasswordAsync(user, token, newPass);
+
          
-            MailAddress from = new MailAddress("veremeychukdenis2@gmail.com", "Denchik");
+            MailAddress from = new MailAddress("undeadfamilyshop@gmail.com", "Recover Password");
             MailAddress to = new MailAddress(model.Email.ToString());
             MailMessage m = new MailMessage(from, to);
             m.Subject = "Recover Password | Undead Family";
-            m.Body = "<h2>pass</h2>";
+            m.Body = "<img src='https://upload.wikimedia.org/wikipedia/commons/b/bf/White_dog_lying_on_the_floor.jpg'>" + "<br>" + "<h2>" + newPass + "</h2>";
             m.IsBodyHtml = true;
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new NetworkCredential("veremeychukdenis2@gmail.com", "AcVsMXKhw8nc1cc4");
+            smtp.Credentials = new NetworkCredential("undeadfamilyshop@gmail.com", "Qwerty-1");
             smtp.EnableSsl = true;
             smtp.Send(m);
+            await _context.SaveChangesAsync();
 
             return new ResultDto
             {
@@ -197,6 +207,19 @@ namespace Project_IDA.Api___Angular.Controllers
         }
 
 
-     
+        public string CreatePassword(int length)
+        {
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            StringBuilder res = new StringBuilder();
+            Random rnd = new Random();
+            while (0 < length--)
+            {
+                res.Append(valid[rnd.Next(valid.Length)]);
+            }
+            return res.ToString();
+        }
+
+
+
     }
 }

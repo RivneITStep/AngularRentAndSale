@@ -1,12 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from './product-view/service/product.service';
 import { ProductItem } from './product-view/model/product-item.model';
-<<<<<<< HEAD
 import { WishListModel } from '../../Models/wishlist.model';
-=======
-import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
-import { NotifierService } from 'angular-notifier';
->>>>>>> d362137c4c2728a5e0daff46ba53a779cf4e3d69
 
 @Component({
   selector: 'app-product',
@@ -15,8 +10,8 @@ import { NotifierService } from 'angular-notifier';
 })
 export class ProductComponent implements OnInit {
 
-  viewProducts: ViewedProductModel[] = [];
-  model: ViewedProductModel = new ViewedProductModel();
+  //viewProducts: ViewedProductModel[] = [];
+ // model: ViewedProductModel = new ViewedProductModel();
   
   products: ProductItem[] = [];
   product: ProductItem = new ProductItem();
@@ -25,8 +20,7 @@ export class ProductComponent implements OnInit {
 searchProd:string;
   searchResult: ProductItem[] = [];
 
-  constructor(private productService: ProductService,
-    private notifier: NotifierService) {
+  constructor(private productService: ProductService) {
 
     
 
@@ -46,6 +40,8 @@ searchProd:string;
 //   }
 
 
+  wishlistArray: ProductItem[] = [];
+  
 
   ngOnInit() {
     this.productService.getProducts().subscribe(
@@ -61,6 +57,13 @@ searchProd:string;
           this.products = data;
         });
       });
+
+      const tmp = localStorage.getItem("wishlist");
+      if(tmp != null){
+        this.wishlistArray = JSON.parse(localStorage.getItem("wishlist"));
+      }
+
+
       // this.productService.searchProduct(text).subscribe((data2:ProductItem[])=>{
       //   this.searchResult=data2;
       // });
@@ -68,55 +71,22 @@ searchProd:string;
    
   }
 
-<<<<<<< HEAD
-  products: ProductItem[] = [];
-  product: ProductItem = new ProductItem();
+
   wishList: WishListModel = new WishListModel();
   viewProduct(id: string){
-=======
-  viewProduct(id: string) {
->>>>>>> d362137c4c2728a5e0daff46ba53a779cf4e3d69
     this.productService.temp = id;
-
-<<<<<<< HEAD
-  addToWishList(id: string){
-    this.wishList.id = id;
-    this.productService.addToWishList(this.wishList);
   }
 
-  ngOnInit() {
-    console.log(this.searchResult);
-=======
-
-    /*добавление в недавно просмотренние*/
-    this.model.searchProductId = id;
-    
-    const token = localStorage.getItem('token');
-    if (token !== null) {
-
-      const jwtData = token.split('.')[1];
-      const decodedJwtJsonData = window.atob(jwtData);
-      const decodedJwtData = JSON.parse(decodedJwtJsonData);
-
-      this.model.userId = decodedJwtData.id;
-      this.productService.addViewedProduct(this.model).subscribe(
-        data => {
-          console.log(data);
-          if (data.status === 200) {
-            this.notifier.notify('success', 'Добавлено в переглянуті');
-
-          } else {
-            console.log(data.errors);
-            for (let i = 0; i < data.errors.length; i++) {
-              this.notifier.notify('error', data.errors[i]);
-            }
-
-          }
-        })
-    }
->>>>>>> d362137c4c2728a5e0daff46ba53a779cf4e3d69
+  addToWishList(id: string){
+    this.productService.getProductById(id).subscribe(
+      (data: ProductItem) => {
+        this.wishlistArray.push(data);
+        localStorage.setItem("wishlist", JSON.stringify(this.wishlistArray));
+      }
+    );
   }
 
   
 
+  
 }
