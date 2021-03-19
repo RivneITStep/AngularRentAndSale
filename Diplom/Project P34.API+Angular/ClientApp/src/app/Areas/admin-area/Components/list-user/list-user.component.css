@@ -380,6 +380,8 @@
 
 .btn-ban:hover, .btn-ban:active, .btn-ban:focus { box-shadow: 0 0 30px rgba(255, 99, 71, .5) !important; }
 
+.data-of-employee { font-size: 12px; margin-left: 6px; }
+
 /*MEDIA*/
 
 /*LAPTOPS 'N' HIGH SCREENS */
