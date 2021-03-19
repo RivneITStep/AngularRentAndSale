@@ -13,6 +13,7 @@ namespace Project_P34.API_Angular.Mapper
         public MapperProfiles()
         {
             CreateMap<SupportRequest, SupportDTO>().ReverseMap();
+            CreateMap<WishList, WishListDTO>().ReverseMap();
         }
     }
 }

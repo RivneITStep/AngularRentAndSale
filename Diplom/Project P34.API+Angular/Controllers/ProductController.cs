@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,10 +19,12 @@ namespace Project_P34.API_Angular.Controllers
     public class ProductController : ControllerBase
     {
         private readonly EFContext _context;
+        private readonly IMapper _mapper;
 
-        public ProductController(EFContext context)
+        public ProductController(EFContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         //*
@@ -280,6 +283,33 @@ namespace Project_P34.API_Angular.Controllers
                     SubcategoryId = q.SubcategoryId
                 }).ToList();
             return products;
+            }
+        }
+
+        [HttpPost("addToWishList")]
+        public async Task<ResultDto> addToWishList([FromBody] WishListDTO model)
+        {
+            try
+            {
+                var wishlist = _mapper.Map<WishListDTO, WishList>(model);
+                await _context.wishLists.AddAsync(wishlist);
+                await _context.SaveChangesAsync();
+                return new ResultDto
+                {
+                    Status = 200,
+                    Message = "OK"
+                };
+            }
+            catch (Exception ex)
+            {
+                List<string> temp = new List<string>();
+                temp.Add(ex.Message);
+                return new ResultErrorDto
+                {
+                    Status = 500,
+                    Message = "Error",
+                    Errors = temp
+                };
             }
         }
 

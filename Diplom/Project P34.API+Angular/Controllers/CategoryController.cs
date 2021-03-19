@@ -65,14 +65,27 @@ namespace Project_P34.API_Angular.Controllers
 
         }
 
+        [HttpGet("{id}")]
+        public List<CategoryDTO> getCategory([FromRoute] string id)
+        {
+            List<CategoryDTO> data = new List<CategoryDTO>();
+            var category = _context.categories.FirstOrDefault(t => t.Id == id);
+
+            CategoryDTO model = new CategoryDTO();
+            model.Id = category.Id;
+            model.Name = category.Name;
+         
+            data.Add(model);
+            return data;
+        }
 
         [HttpPost("editCategory/{id}")]
         public ResultDto editCategory([FromRoute] string id, [FromBody] CategoryDTO model)
         {
             var categories = _context.categories.FirstOrDefault(t => t.Id == id);
 
-            categories.Name = model.Name;
             categories.Id = model.Id;
+            categories.Name = model.Name;
 
 
             _context.SaveChanges();

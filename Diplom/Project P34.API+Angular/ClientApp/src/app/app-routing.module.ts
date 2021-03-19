@@ -42,6 +42,7 @@ import {ListCategoryComponent} from './Areas/admin-area/Components/list-category
 import {ListSubcategoryComponent} from './Areas/admin-area/Components/list-subcategory/list-subcategory.component';
 import {ListProductComponent} from './Areas/admin-area/Components/list-product/list-product.component';
 
+
 /*USER AREA*/
 import { UserAreaComponent } from './Areas/user-area/user-area.component';
 import { PersonalRoomComponent } from './Areas/user-area/personal-room/personal-room.component';
@@ -120,10 +121,11 @@ const routes: Routes = [
     canActivate: [AdminGuard],
     children: [
       // { path: '', component: AdminAreaComponent, pathMatch: 'full' },
-      { path: 'editProduct/:id', component: EditProductComponent, pathMatch: 'full' },
+      { path: 'edit-product/:id', component: EditProductComponent, pathMatch: 'full' },
       { path: 'addProduct', component: AddProductComponent, pathMatch: 'full' },
       { path: 'addSubcategory', component: AddSubcategoryComponent, pathMatch: 'full' },
       { path: 'addCategory', component: AddCategoryComponent, pathMatch: 'full' },
+    
     ]
   },
 

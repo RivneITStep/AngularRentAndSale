@@ -12,7 +12,8 @@ import { ApiResult } from 'src/app/Models/result.model';
 })
 export class ListCategoryComponent implements OnInit {
 
-
+  model2: CategoryItem;
+  categoryId: string;
   listOfData: CategoryItem[] = [];
 
   constructor(private categoryServise: CategoryManagerService,
@@ -39,7 +40,25 @@ export class ListCategoryComponent implements OnInit {
       );
     }
 
+    editCat(id: string){
 
+   this.categoryServise.getCategory(id)
+    .subscribe((categorry: CategoryItem) => {
+        this.model2 = categorry;
+      });
+
+      // this.categoryServise.editCategory(id, this.model2).subscribe(
+      //   (data: ApiResult) => {
+      //     if (data.status === 200) {
+      //       this.notifier.notify('success', 'Категорія змінена!');
+      //       // this.router.navigate(['/admin-panel/categories-list-view']);
+      //     }
+      //   },
+      //   (error) => {
+      //     this.notifier.notify('error', 'ERROR!!!');
+      //   }
+      // );
+    }
 
 
 

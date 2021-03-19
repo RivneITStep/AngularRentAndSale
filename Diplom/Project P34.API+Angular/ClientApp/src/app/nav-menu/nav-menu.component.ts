@@ -24,7 +24,7 @@ export class NavMenuComponent implements OnInit {
 
   listOfData: ProductItem[] = [];
 
-  searchProduct: string = "Носк";
+  searchProduct: string = "";
   searchResult: ProductItem[] = [];
 
   constructor(
