@@ -37,6 +37,7 @@ namespace Project_P34.API_Angular.Controllers
 
             temp.Id = viewItem.Id;
             temp.products = viewItem.Products;
+            temp.TotalPrice = viewItem.TotalPrice;
 
             return temp;
 
@@ -53,6 +54,7 @@ namespace Project_P34.API_Angular.Controllers
             if (product != null)
             {
 
+                cart.TotalPrice -= product.Price;
                 cart.Products.Remove(product);
             }
             _context.SaveChanges();
@@ -80,6 +82,7 @@ namespace Project_P34.API_Angular.Controllers
             if (cart == null)
             {
                 cartproducts.Id = model.UserId;
+                cartproducts.TotalPrice += prod.Price;
                 cartproducts.Products.Add(prod);
 
                 //var user = _context.Users.FirstOrDefault(t => t.Id == model.UserId);
@@ -89,7 +92,8 @@ namespace Project_P34.API_Angular.Controllers
             }
             else
             {
-
+              
+                cart.TotalPrice += product.Price;
                 _context.carts.FirstOrDefault(t => t.Id == model.UserId).Products.Add(prod);
                 //view.Products.Add(prod);
             }

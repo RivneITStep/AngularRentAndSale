@@ -11,6 +11,8 @@ namespace Project_P34.DTO.Models
     
         public string SearchProductId { get; set; }
 
+        public float TotalPrice { get; set; }
+
         public string UserId { get; set; }
 
         public List<Product> products { get; set; }

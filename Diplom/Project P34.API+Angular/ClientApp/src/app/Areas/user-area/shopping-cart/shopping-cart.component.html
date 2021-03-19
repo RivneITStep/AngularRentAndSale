@@ -58,7 +58,7 @@
                 <p class="data-of-product">{{data.price}}$</p>
               </td>
               <td class="table-body-item">
-                <span class="action-icon"><i class="fa fa-times action-icon" aria-hidden="true"></i></span>
+                <span class="action-icon"><i class="fa fa-times action-icon" aria-hidden="true" (click)=removeProductCart(data.id)></i></span>
               </td>
             </tr>
           </tbody>
@@ -69,7 +69,7 @@
 
   <div class="row">
     <span class="btn btn-load-more" data-toggle="modal" data-target="#modalOrder">Оформити замовлення<span
-        class="all-sum">( 100 $ )</span></span>
+        class="all-sum">( {{model.totalPrice}} $ )</span></span>
   </div>
 
   <!--MODAL WINDOW-->

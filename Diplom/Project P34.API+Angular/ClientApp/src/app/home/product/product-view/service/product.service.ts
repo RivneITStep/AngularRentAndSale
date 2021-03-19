@@ -56,6 +56,11 @@ import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
       return this.http.post<ApiResult>(this.url2 + '/addViewedProduct', model);
     }
 
+
+    removeProductCart(idUser: string, idProduct: string):Observable<ApiResult>{
+      return this.http.post<ApiResult>(this.url3 + '/removeProductCart/'+idUser+'/'+idProduct,null);
+    }
+
     searchProduct(id: string): Observable<ProductItem[]> {
       return this.http.get<ProductItem[]>(this.baseUrl + `/searchProduct?searchString=${id}`);
     }

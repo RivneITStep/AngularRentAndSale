@@ -1,0 +1,12 @@
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Release\netcoreapp3.1\Project P34.DTO.deps.json
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Release\netcoreapp3.1\Project P34.DTO.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Release\netcoreapp3.1\Project P34.DTO.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Release\netcoreapp3.1\Project P34.DataAccess.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\bin\Release\netcoreapp3.1\Project P34.DataAccess.pdb
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Release\netcoreapp3.1\Project P34.DTO.csprojAssemblyReference.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Release\netcoreapp3.1\Project P34.DTO.csproj.CoreCompileInputs.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Release\netcoreapp3.1\Project P34.DTO.AssemblyInfoInputs.cache
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Release\netcoreapp3.1\Project P34.DTO.AssemblyInfo.cs
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Release\netcoreapp3.1\Project P34.DTO.csproj.CopyComplete
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Release\netcoreapp3.1\Project P34.DTO.dll
+D:\DIPLOM\AngularRentAndSale\Diplom\Project P34.DTO\obj\Release\netcoreapp3.1\Project P34.DTO.pdb

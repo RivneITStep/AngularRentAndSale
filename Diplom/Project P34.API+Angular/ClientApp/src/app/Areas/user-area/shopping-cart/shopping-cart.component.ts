@@ -3,6 +3,7 @@ import { ProductItem } from 'src/app/home/product/product-view/model/product-ite
 import { CartModel } from 'src/app/Models/cart';
 import { ProductService } from 'src/app/home/product/product-view/service/product.service';
 import { NotifierService } from 'angular-notifier';
+import { ApiResult } from 'src/app/Models/result.model';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -19,6 +20,36 @@ export class ShoppingCartComponent implements OnInit {
   constructor(private productService: ProductService,
     private notifier: NotifierService) { }
 
+
+  removeProductCart(idProduct: string) {
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+
+      const jwtData = token.split('.')[1];
+      const decodedJwtJsonData = window.atob(jwtData);
+      const decodedJwtData = JSON.parse(decodedJwtJsonData);
+
+      this.productService.removeProductCart(decodedJwtData.id, idProduct).subscribe(
+        (data: ApiResult) => {
+          if (data.status === 200) {
+            this.notifier.notify('success', 'REEMOVED CartProd:)');
+
+            this.productService.getCartProducts(decodedJwtData.id).subscribe(
+              (data: CartModel) => {
+                this.model = data;
+                this.products = this.model.products;
+              }
+            );
+
+          } else {
+            for (let i = 0; i < data.errors; i++) {
+              this.notifier.notify('error', data.errors[i]);
+
+            }
+          }
+        });
+    }
+  }
   ngOnInit() {
 
     const token = localStorage.getItem('token');

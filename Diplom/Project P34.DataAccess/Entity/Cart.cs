@@ -14,6 +14,7 @@ namespace Project_P34.DataAccess.Entity
         //Id product 1-8
         //id userMoreinfo 1-1
         public virtual User User { get; set; }
+        public float TotalPrice { get; set; } = 0;
         public virtual List<Product> Products { get; set; } = new List<Product>();
     }
 }

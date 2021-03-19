@@ -87,6 +87,7 @@ import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Componen
 import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
 import { from } from 'rxjs';
 import { AddCategoryComponent } from './Areas/admin-area/Components/add-category/add-category.component';
+import { ProductComponent } from './home/product/product.component';
 
 const routes: Routes = [
   //PRODUCT VIEW
@@ -126,7 +127,7 @@ const routes: Routes = [
       { path: 'addProduct', component: AddProductComponent, pathMatch: 'full' },
       { path: 'addSubcategory', component: AddSubcategoryComponent, pathMatch: 'full' },
       { path: 'addCategory', component: AddCategoryComponent, pathMatch: 'full' },
-    
+     
     ]
   },
 
