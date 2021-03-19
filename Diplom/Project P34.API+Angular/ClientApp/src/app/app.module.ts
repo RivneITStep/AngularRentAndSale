@@ -218,7 +218,7 @@ const notifierOptions: NotifierOptions = {
       DemoNgZorroAntdModule
    ],
 
-  providers: [],
+  providers: [  ],
   bootstrap: [AppComponent]
 })
 

@@ -82,8 +82,7 @@ export class ProductComponent implements OnInit {
 
   addToWishList(id: string) {
     this.showStorage = JSON.parse(localStorage.getItem("wishlist"));
-    var tmp = this.showStorage.find(t=> id === id);
-    if(tmp === undefined){
+    if(!this.showStorage.includes(id)){
 
       this.productService.getProductById(id).subscribe(
         (data: ProductItem) => {

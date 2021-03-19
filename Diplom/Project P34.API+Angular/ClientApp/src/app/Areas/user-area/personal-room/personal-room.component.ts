@@ -42,6 +42,11 @@ export class PersonalRoomComponent implements OnInit {
   }
 
 
+  Edit(){
+
+  }
+
+
 
 
 
