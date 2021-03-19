@@ -37,7 +37,14 @@ export class ProductManagerService {
     return this.http.post<ApiResult>(this.baseUrl + '/addProduct', model);
   }
 
+
+
+// addImageToProduct(model:ImagesItem, id:string){
+// return this.http.post<ApiResult>(this.baseUrl+'/addImagesToProduct/'+id,model)
+// }
+
   // addImageToProduct(model:ImagesItem, id:string){
   // return this.http.post<ApiResult>(this.baseUrl+'/addImagesToProduct/'+id,model)
   // }
+
 }

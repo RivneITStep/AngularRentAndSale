@@ -12,7 +12,7 @@
             </div>
             <div class="add-to-links">
               <div class="add-to-wishlist">
-                <a class="add-to-wishlist-button" title="Додати у список бажань"></a>
+                <a class="add-to-wishlist-button" (click)="addToWishList(prods.id)" title="Додати у список бажань"></a>
               </div>
               <div class="quikview">
                 <a class="quikview-button" (click)="viewProduct(prods.id)" routerLink="/product-view" title="Перегляд товару"></a>

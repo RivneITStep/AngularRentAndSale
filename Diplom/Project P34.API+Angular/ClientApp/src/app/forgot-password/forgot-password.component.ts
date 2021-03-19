@@ -43,7 +43,7 @@ export class ForgotPasswordComponent implements OnInit {
       (data: ApiResult) => {
         if (data.status === 200) {
           this.notifier.notify('success', 'Mail sended successfuly');
-          this.router.navigate(['/home']);
+          this.router.navigate(['/login']);
         }
       },
       (error) => {
