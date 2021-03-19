@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { ProductItem } from '../model/product-item.model';
 import { WishListModel } from '../../../../Models/wishlist.model';
 import { ApiResult } from '../../../../Models/result.model';
+import { CartModel } from 'src/app/Models/cart';
+import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
 
 @Injectable({
     providedIn: 'root'
@@ -46,13 +48,13 @@ import { ApiResult } from '../../../../Models/result.model';
       return this.http.get(this.url3 + '/getCartProducts/'+ id);
     }
 
-    addCartProducts(model: ViewedProductModel): Observable<ApiResult>{
+    addCartProducts(model: CartModel): Observable<ApiResult>{
       return this.http.post<ApiResult>(this.url3 + '/addCartProducts', model);
     }
     
-    // addViewedProduct(model: ViewedProductModel): Observable<ApiResult> {
-    //   return this.http.post<ApiResult>(this.url2 + '/addViewedProduct', model);
-    // }
+    addViewedProduct(model: ViewedProductModel): Observable<ApiResult> {
+      return this.http.post<ApiResult>(this.url2 + '/addViewedProduct', model);
+    }
 
     searchProduct(id: string): Observable<ProductItem[]> {
       return this.http.get<ProductItem[]>(this.baseUrl + `/searchProduct?searchString=${id}`);

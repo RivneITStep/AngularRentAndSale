@@ -4,6 +4,7 @@ import { ProductItem } from './product-view/model/product-item.model';
 import { WishListModel } from '../../Models/wishlist.model';
 import { NotifierService } from 'angular-notifier';
 import { CartModel } from 'src/app/Models/cart';
+import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
 
 @Component({
     selector: 'app-product',
