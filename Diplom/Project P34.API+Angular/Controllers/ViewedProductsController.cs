@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Project_IDA.DTO.Models.Result;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
@@ -26,30 +25,23 @@ namespace Project_P34.API_Angular.Controllers
 
 
 
-        [HttpGet("getViewedProducts")]/*ID FROM TOKEN*/
-        public IEnumerable<ViewedProductsDTO> getViewedProducts()
+        [HttpGet("getViewedProducts/{id}")]/*ID FROM TOKEN*/
+        public ViewedProductsDTO getViewedProducts([FromRoute] string id)
         {
 
-            List<ViewedProductsDTO> data = new List<ViewedProductsDTO>();
-
-            //var user = _context.Users.SingleOrDefault(t => t.Id == id);
-
-
-            var viewItem = _context.viewedProducts.ToList();
-
-
-            foreach (var item in viewItem)
-            {
+            
             ViewedProductsDTO temp = new ViewedProductsDTO();
-                temp.Id = item.Id;
-                temp.UserId = item.UserId;
 
-                temp.products=item.Products.ToList();
-                
-               
-            data.Add(temp);
-            }
-            return data;
+            var viewItem = _context.viewedProducts.Include(t=>t.Products).FirstOrDefault(t=>t.Id==id);
+
+
+                temp.Id = viewItem.Id;
+                temp.UserId = viewItem.UserId;
+
+                temp.products = viewItem.Products;
+ 
+            return temp;
+        
         }
 
 
@@ -60,29 +52,27 @@ namespace Project_P34.API_Angular.Controllers
 
             var product =  _context.products.FirstOrDefault(t => t.Id == model.SearchProductId);
             var prod = _context.products.Include(t => t.ViewedProducts).FirstOrDefault(t => t.Id == model.SearchProductId);
-            var view = _context.viewedProducts.FirstOrDefault(t => t.UserId == model.UserId);
+            var view = _context.viewedProducts.FirstOrDefault(t => t.Id == model.UserId);
 
             if (view == null)
             {
-                viewproducts.Id = Guid.NewGuid().ToString();
+                viewproducts.Id = model.UserId; /*Guid.NewGuid().ToString();*/
 
                 var user = _context.Users.FirstOrDefault(t => t.Id == model.UserId);
                 viewproducts.UserId = model.UserId;
 
-                viewproducts.Products.Add(prod);
+                _context.viewedProducts.FirstOrDefault(t => t.Id == model.UserId).Products.Add(prod);
 
                 _context.viewedProducts.Add(viewproducts);
             }
             else
             {
-                foreach (var item in view.Products)
-                {
-                    if (item.Id != model.SearchProductId)
-                    {
-                        view.Products.Add(prod);
-                        _context.viewedProducts.Add(view);
-                    }
-                }
+
+                _context.viewedProducts.FirstOrDefault(t => t.Id == model.UserId).Products.Add(prod);
+                        //view.Products.Add(prod);
+                      
+                    
+                
             }
 
             _context.SaveChanges();

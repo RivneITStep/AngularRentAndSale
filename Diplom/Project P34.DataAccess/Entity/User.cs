@@ -11,5 +11,7 @@ namespace Project_P34.DataAccess.Entity
 
         //id viewedProduct      1user - 1 viewedProduct +
         public virtual ViewedProducts ViewedProducts { get; set; }
+
+        public virtual Cart Carts { get; set; }
     }
 }

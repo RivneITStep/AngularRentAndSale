@@ -104,6 +104,7 @@ import { AddCategoryComponent } from './Areas/admin-area/Components/add-category
 import { ListCategoryComponent } from './Areas/admin-area/Components/list-category/list-category.component';
 import { ListProductComponent } from './Areas/admin-area/Components/list-product/list-product.component';
 import { ListSubcategoryComponent } from './Areas/admin-area/Components/list-subcategory/list-subcategory.component';
+import { ListUserComponent }from './Areas/admin-area/Components/list-user/list-user.component';
 
 registerLocaleData(en);
 
@@ -169,6 +170,7 @@ const notifierOptions: NotifierOptions = {
       ListCategoryComponent,
       ListSubcategoryComponent,
       ListProductComponent,
+      ListUserComponent,
 
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,

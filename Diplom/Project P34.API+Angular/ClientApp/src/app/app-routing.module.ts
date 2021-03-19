@@ -41,6 +41,7 @@ import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subca
 import {ListCategoryComponent} from './Areas/admin-area/Components/list-category/list-category.component';
 import {ListSubcategoryComponent} from './Areas/admin-area/Components/list-subcategory/list-subcategory.component';
 import {ListProductComponent} from './Areas/admin-area/Components/list-product/list-product.component';
+import { ListUserComponent } from './Areas/admin-area/Components/list-user/list-user.component';
 
 
 /*USER AREA*/
@@ -86,6 +87,7 @@ import { PrivateRoomFirstComponent } from './footer/Components/INFO/faq/Componen
 import { PrivateRoomSecondComponent } from './footer/Components/INFO/faq/Components/Private room/private-room-second/private-room-second.component';
 import { from } from 'rxjs';
 import { AddCategoryComponent } from './Areas/admin-area/Components/add-category/add-category.component';
+import { ProductComponent } from './home/product/product.component';
 
 const routes: Routes = [
   //PRODUCT VIEW
@@ -125,7 +127,7 @@ const routes: Routes = [
       { path: 'addProduct', component: AddProductComponent, pathMatch: 'full' },
       { path: 'addSubcategory', component: AddSubcategoryComponent, pathMatch: 'full' },
       { path: 'addCategory', component: AddCategoryComponent, pathMatch: 'full' },
-    
+     
     ]
   },
 

@@ -155,6 +155,9 @@ namespace Project_P34.API_Angular.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<float>("TotalPrice")
+                        .HasColumnType("real");
+
                     b.HasKey("Id");
 
                     b.ToTable("tblCart");
@@ -410,13 +413,9 @@ namespace Project_P34.API_Angular.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL");
 
                     b.ToTable("tblViewedProducts");
                 });
@@ -487,7 +486,7 @@ namespace Project_P34.API_Angular.Migrations
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.Cart", b =>
                 {
-                    b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
+                    b.HasOne("Project_P34.DataAccess.Entity.User", "User")
                         .WithOne("Carts")
                         .HasForeignKey("Project_P34.DataAccess.Entity.Cart", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -552,7 +551,9 @@ namespace Project_P34.API_Angular.Migrations
                 {
                     b.HasOne("Project_P34.DataAccess.Entity.User", "User")
                         .WithOne("ViewedProducts")
-                        .HasForeignKey("Project_P34.DataAccess.Entity.ViewedProducts", "UserId");
+                        .HasForeignKey("Project_P34.DataAccess.Entity.ViewedProducts", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.WishList", b =>
