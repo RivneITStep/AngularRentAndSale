@@ -7,8 +7,8 @@
   <div class="container">
     <div class="row">
 
-      <div class="col col-lg-6 col-md-6 col-sm-0 col-xs-0">
-        <div class="product-wrap" *ngFor="let data of searchResult">
+      <div class="col col-lg-6 col-md-6 col-sm-0 col-xs-0" style="margin-bottom: 5%;" *ngFor="let data of searchResult">
+        <div class="product-wrap">
           <div class="product-image">
             <a href=""><img src="{{data.image}}"></a>
             <div class="shadow"></div>
@@ -22,7 +22,7 @@
                     <a  class="remove-product-button" (click)="RemoveProduct(data.id)" title="Видалити продукт"></a>
                   </div>
                   <div class="quikview">
-                    <a class="quikview-button" href="#" title="Перегляд товару"></a>
+                    <a class="quikview-button" routerLink="/product-view" title="Перегляд товару"></a>
                   </div>
                 </div>
               </div>
