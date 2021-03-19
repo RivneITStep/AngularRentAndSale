@@ -13,6 +13,7 @@ import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
     constructor(private http: HttpClient) { }
     baseUrl = '/api/Product';
     url2= '/api/ViewedProducts';
+    url3= '/api/Cart';
     temp = '';
 
     es: EventEmitter<string> = new EventEmitter();
@@ -33,8 +34,16 @@ import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
       return this.http.get(this.baseUrl + '/getProducts');
     }
 
-    getViewedProducts(){
-      return this.http.get(this.url2 + '/getViewedProducts');
+    getViewedProducts(id:string){
+      return this.http.get(this.url2 + '/getViewedProducts/'+ id);
+    }
+
+    getCartProducts(id:string){
+      return this.http.get(this.url3 + '/getCartProducts/'+ id);
+    }
+
+    addCartProducts(model: ViewedProductModel): Observable<ApiResult>{
+      return this.http.post<ApiResult>(this.url3 + '/addCartProducts', model);
     }
     
     addViewedProduct(model: ViewedProductModel): Observable<ApiResult> {

@@ -216,20 +216,7 @@ namespace Project_P34.API_Angular.Controllers
                 Message = "Ok"
             };
 
-            //}
-            //catch (Exception e)
-            //{
-            //    List<string> temp = new List<string>();
-            //    temp.Add(e.Message);
-
-            //    return new ResultDto
-            //    {
-            //        Status = 500,
-            //        Message = "Error",
-            //        Errors = temp
-            //    };
-
-            //}
+         
         }
 
 

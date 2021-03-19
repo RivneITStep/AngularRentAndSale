@@ -12,8 +12,8 @@ namespace Project_P34.DataAccess.Entity
         [Key]
         public string Id { get; set; }
         //Id product 1-8
-        public ICollection<Product> Products { get; set; }
         //id userMoreinfo 1-1
-        public virtual UserMoreInfo UserMoreInfo { get; set; }
+        public virtual User User { get; set; }
+        public virtual List<Product> Products { get; set; } = new List<Product>();
     }
 }
