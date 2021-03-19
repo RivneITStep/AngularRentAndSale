@@ -32,7 +32,7 @@ namespace Project_P34.DataAccess.Entity
       
         public virtual WishList WishLists { get; set; }
         //id cart            1user - 1 cart +
-        public virtual Cart Carts { get; set; }
+      
       
 
 

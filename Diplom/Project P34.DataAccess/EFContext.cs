@@ -66,9 +66,9 @@ namespace Project_P34.DataAccess
                   .HasForeignKey(pt => pt.viewProductId);
 
 
-            builder.Entity<UserMoreInfo>()
+            builder.Entity<User>()
                 .HasOne(u => u.Carts)
-                .WithOne(t => t.UserMoreInfo)
+                .WithOne(t => t.User)
                 .HasForeignKey<Cart>(ui => ui.Id);
 
             builder.Entity<UserMoreInfo>()
@@ -79,7 +79,7 @@ namespace Project_P34.DataAccess
             builder.Entity<User>()
                 .HasOne(u => u.ViewedProducts)
                 .WithOne(t => t.User)
-                .HasForeignKey<ViewedProducts>(ui => ui.UserId);
+                .HasForeignKey<ViewedProducts>(ui => ui.Id);
 
 
             base.OnModelCreating(builder);

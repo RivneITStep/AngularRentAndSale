@@ -56,6 +56,10 @@
     <Compile Include="Migrations\20210306223622_fixlinks5.Designer.cs" />
     <Compile Include="Migrations\20210310181659_fix idUsertoViewedProd.cs" />
     <Compile Include="Migrations\20210310181659_fix idUsertoViewedProd.Designer.cs" />
+    <Compile Include="Migrations\20210316192325_fix viewedproduct2.cs" />
+    <Compile Include="Migrations\20210316192325_fix viewedproduct2.Designer.cs" />
+    <Compile Include="Migrations\20210318230449_fix links Cart.cs" />
+    <Compile Include="Migrations\20210318230449_fix links Cart.Designer.cs" />
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
   </ItemGroup>
 

@@ -41,6 +41,7 @@ import { AddSubcategoryComponent } from './Areas/admin-area/Components/add-subca
 import {ListCategoryComponent} from './Areas/admin-area/Components/list-category/list-category.component';
 import {ListSubcategoryComponent} from './Areas/admin-area/Components/list-subcategory/list-subcategory.component';
 import {ListProductComponent} from './Areas/admin-area/Components/list-product/list-product.component';
+import { ListUserComponent } from './Areas/admin-area/Components/list-user/list-user.component';
 
 
 /*USER AREA*/

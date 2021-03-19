@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/home/product/product-view/service/product.service';
+import { NotifierService } from 'angular-notifier';
+import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
+import { ProductItem } from 'src/app/home/product/product-view/model/product-item.model';
 
 @Component({
   selector: 'app-history-of-orders',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryOfOrdersComponent implements OnInit {
 
-  constructor() { }
+
+ 
+
+
+  constructor() {
+
+     }
 
   ngOnInit():void {
+
+    
+
     
     //DON'T TOUCH!!!
     let coll = document.getElementsByClassName('btn-collapse');
