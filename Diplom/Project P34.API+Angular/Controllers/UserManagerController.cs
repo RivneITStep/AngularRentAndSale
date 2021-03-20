@@ -40,6 +40,7 @@ namespace Project_P34.API_Angular.Controllers
                 temp.Email = item.Email;
                 temp.Id = item.Id;
                 temp.Phone = item.PhoneNumber;
+                temp.PictureUrl = item.PictureUrl;
                 if(moreInfo != null)
                 {
                     temp.FullName = moreInfo.FullName;
@@ -104,6 +105,7 @@ namespace Project_P34.API_Angular.Controllers
             model.Id = user.Id;
             model.Email = user.Email;
             model.Phone = user.PhoneNumber;
+            model.PictureUrl = user.PictureUrl;
 
             if (userMoreInfo!=null)
             {
@@ -125,6 +127,7 @@ namespace Project_P34.API_Angular.Controllers
             userMoreInfo.FullName = model.FullName;
             userMoreInfo.Age = model.Age;
             user.Email = model.Email;
+            user.PictureUrl = model.PictureUrl;
 
             _context.SaveChanges();
 

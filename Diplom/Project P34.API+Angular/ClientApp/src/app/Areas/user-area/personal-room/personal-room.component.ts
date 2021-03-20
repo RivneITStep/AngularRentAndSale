@@ -25,6 +25,7 @@ export class PersonalRoomComponent implements OnInit {
           (data: UserItem) => {
             this.spinner.show();
             this.user = data;
+            console.log(this.user);
             this.spinner.hide();
           }
         );
@@ -40,16 +41,6 @@ export class PersonalRoomComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
-  Edit(){
-
-  }
-
-
-
-
-
 
 
 

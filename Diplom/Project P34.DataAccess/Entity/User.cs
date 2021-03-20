@@ -13,5 +13,7 @@ namespace Project_P34.DataAccess.Entity
         public virtual ViewedProducts ViewedProducts { get; set; }
 
         public virtual Cart Carts { get; set; }
+
+        public string PictureUrl { get; set; }
     }
 }

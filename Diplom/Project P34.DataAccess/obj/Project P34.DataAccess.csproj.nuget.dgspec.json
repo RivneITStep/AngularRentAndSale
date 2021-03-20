@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Project P34.DataAccess.csproj": {}
   },
   "projects": {
@@ -13,32 +12,14 @@
         "projectPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Project P34.DataAccess.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\PC\\Desktop\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
-=======
-    "C:\\Users\\admin\\Downloads\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Project P34.DataAccess.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\admin\\Downloads\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Project P34.DataAccess.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Project P34.DataAccess.csproj",
-        "projectName": "Project P34.DataAccess",
-        "projectPath": "C:\\Users\\admin\\Downloads\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\Project P34.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\AngularRentAndSale\\Diplom\\Project P34.DataAccess\\obj\\",
->>>>>>> 2fcf3857e2b6f3310c0395e1d15b0fba37839c14
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-=======
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> 2fcf3857e2b6f3310c0395e1d15b0fba37839c14
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -112,11 +93,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
->>>>>>> 2fcf3857e2b6f3310c0395e1d15b0fba37839c14
         }
       }
     }

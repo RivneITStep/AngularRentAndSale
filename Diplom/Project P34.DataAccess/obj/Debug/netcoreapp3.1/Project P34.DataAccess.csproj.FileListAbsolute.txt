@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.deps.json
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.runtimeconfig.json
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.runtimeconfig.dev.json
@@ -11,15 +10,3 @@ C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\n
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.dll
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.pdb
 C:\Users\PC\Desktop\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.genruntimeconfig.cache
-=======
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.deps.json
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.runtimeconfig.json
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.runtimeconfig.dev.json
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.dll
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Project P34.DataAccess.pdb
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.csprojAssemblyReference.cache
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.AssemblyInfoInputs.cache
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.AssemblyInfo.cs
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.dll
-C:\Users\admin\Downloads\AngularRentAndSale\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Project P34.DataAccess.pdb
->>>>>>> 2fcf3857e2b6f3310c0395e1d15b0fba37839c14
