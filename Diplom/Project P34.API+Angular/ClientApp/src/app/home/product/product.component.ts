@@ -5,6 +5,7 @@ import { WishListModel } from '../../Models/wishlist.model';
 import { NotifierService } from 'angular-notifier';
 import { CartModel } from 'src/app/Models/cart';
 import { ViewedProductModel } from 'src/app/Models/viewedProduct.model';
+import { ProtocolMode } from 'angularx-social-login/providers/microsoft-login-provider';
 
 @Component({
     selector: 'app-product',
@@ -18,6 +19,8 @@ export class ProductComponent implements OnInit {
     modelCart: CartModel = new CartModel();
     products: ProductItem[] = [];
     product: ProductItem = new ProductItem();
+    cartProduct: ProductItem = new ProductItem();
+    cart: ProductItem[] = [];
 
     listOfData: ProductItem[] = [];
     searchProd: string;
@@ -131,6 +134,38 @@ export class ProductComponent implements OnInit {
                 })
         }
     }
+
+    addToCart(id: string) {
+        var array: ProductItem[] = [];
+
+        if (sessionStorage.getItem('cart') === null) {
+            this.productService.getProductById(id).subscribe(
+                (data: ProductItem) => {
+                    array.push(data);
+                    this.setStorageItem(array);
+                    this.notifier.notify('success', 'Продукт добавлений у корзину');
+                }
+            );
+        } else {
+            array = (JSON.parse(sessionStorage.getItem('cart')) as ProductItem[]);
+            this.productService.getProductById(id).subscribe(
+                (data: ProductItem) => {
+                    array.push(data);
+                    this.setStorageItem(array);
+                    this.notifier.notify('success', 'Продукт добавлений у корзину');
+                }
+            );
+        }
+
+
+
+    }
+
+    setStorageItem(array) {
+        sessionStorage.removeItem('cart');
+        sessionStorage.setItem('cart', JSON.stringify(array));
+    }
+
 
     showStorage = [];
 

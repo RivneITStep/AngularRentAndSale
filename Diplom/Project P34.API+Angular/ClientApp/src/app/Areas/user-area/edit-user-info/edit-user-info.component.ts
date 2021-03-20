@@ -49,6 +49,9 @@ export class EditUserInfoComponent implements OnInit {
       data => {
         console.log(data);
         if (data.status === 200) {
+          var userImg = document.getElementById("user-img") as HTMLImageElement;
+          userImg.src = this.user.pictureUrl;
+          this.user.pictureUrl = userImg.textContent;
           this.notifier.notify('success', 'Edited!');
           this.spinner.hide();
           this.router.navigate(['/user-area/personal-room']);

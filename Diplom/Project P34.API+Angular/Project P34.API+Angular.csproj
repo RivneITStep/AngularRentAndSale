@@ -62,6 +62,8 @@
     <Compile Include="Migrations\20210318230449_fix links Cart.Designer.cs" />
     <Compile Include="Migrations\20210319151430_fix cart + totalprice.cs" />
     <Compile Include="Migrations\20210319151430_fix cart + totalprice.Designer.cs" />
+    <Compile Include="Migrations\20210320091236_For user img.cs" />
+    <Compile Include="Migrations\20210320091236_For user img.Designer.cs" />
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
   </ItemGroup>
 
@@ -69,6 +71,10 @@
     <ProjectReference Include="..\Project P34.DataAccess\Project P34.DataAccess.csproj" />
     <ProjectReference Include="..\Project P34.Domain\Project P34.Domain.csproj" />
     <ProjectReference Include="..\Project P34.DTO\Project P34.DTO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

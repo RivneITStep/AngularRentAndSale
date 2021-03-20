@@ -34,31 +34,31 @@
           </thead>
 
           <tbody>
-            <tr class="table-row" *ngFor="let data of products">
+            <tr class="table-row" *ngFor="let data of cart">
               <td class="table-body-item image-block">
-                <img class="image-of-product" alt="Фотографія продукту" src="{{data.image}}">
+                <img class="image-of-product" alt="Фотографія продукту" [src]="data[0].image">
               </td>
               <td class="table-body-item">
                 <p class="data-of-product">
-                  <a (click)="viewProduct(data.id)" routerLink="/product-view" class="link-of-product">
-                    {{data.name}}
+                  <a [routerLink]="['']" class="link-of-product">
+                    {{data[0].name}}
                   </a>
                 </p>
               </td>
               <td class="table-body-item">
-                <p class="data-of-product">{{data.price}}</p>
+                <p class="data-of-product">{{data[0].price}}</p>
               </td>
               <td class="table-body-item sm-item">
-                <p class="data-of-product">{{data.size}}</p>
+                <p class="data-of-product">{{data[0].size}}</p>
               </td>
               <td class="table-body-item">
                 <input type="number" class="form-control count-of-product" placeholder="1">
               </td>
               <td class="table-body-item sm-item">
-                <p class="data-of-product">{{data.price}}$</p>
+                <p class="data-of-product">{{data[0].price}}$</p>
               </td>
               <td class="table-body-item">
-                <span class="action-icon"><i class="fa fa-times action-icon" aria-hidden="true" (click)=removeProductCart(data.id)></i></span>
+                <span class="action-icon"><i class="fa fa-times action-icon" aria-hidden="true" (click)=removeFromCart(data.id)></i></span>
               </td>
             </tr>
           </tbody>
@@ -88,15 +88,8 @@
             <form>
               <input type="text" class="form-control" placeholder="Місто:">
               <input type="text" class="form-control" placeholder="Область:">
-              <input type="text" class="form-control" placeholder="Вулиця:">
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <td class="card-areas"><input type="text" class="form-control" placeholder="Будинок:"></td>
-                    <td class="card-areas"><input type="text" class="form-control" placeholder="Квартира:"></td>
-                  </tr>
-                </tbody>
-              </table>
+              <input type="text" class="form-control" placeholder="Відділення Нової Пошти:">
+              <input type="text" class="form-control" placeholder="Телефон:">
             </form>
           </div>
         </div>

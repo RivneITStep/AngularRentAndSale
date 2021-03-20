@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Project_IDA.DTO.Models;
@@ -217,6 +220,64 @@ namespace Project_IDA.Api___Angular.Controllers
                 res.Append(valid[rnd.Next(valid.Length)]);
             }
             return res.ToString();
+        }
+
+        [HttpPost("upload/image/{id}"), DisableRequestSizeLimit]
+        public async Task<ResultDto> Upload(string id)
+        {
+            try
+            {
+                var user = await _context.userMoreInfos.SingleOrDefaultAsync(t => t.Id == id);
+                var file = Request.Form.Files[0];
+                var folderName = Path.Combine("wwwroot", "Images");
+                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+                if (file.Length > 0)
+                {
+                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+
+                    var ext = Path.GetExtension(fileName);
+                    var newFileName = Guid.NewGuid().ToString() + ext;
+                    if (user.Image != null)
+                    {
+                        var pathToDelete = Path.Combine(pathToSave, user.Image);
+                        if (System.IO.File.Exists(pathToDelete))
+                        {
+                            System.IO.File.Delete(pathToDelete);
+                        }
+                    }
+
+                    user.Image = newFileName;
+                    var fullPath = Path.Combine(pathToSave, newFileName);
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+
+                    await _context.SaveChangesAsync();
+
+                    return new ResultDto
+                    {
+                        Status = 200,
+                        Message = "Posted"
+                    };
+                }
+                else
+                {
+                    return new ResultDto
+                    {
+                        Status = 500,
+                        Message = "Not found"
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ResultDto
+                {
+                    Status = 500,
+                    Message = ex.Message
+                };
+            }
         }
 
 

@@ -11,6 +11,7 @@ namespace Project_P34.DTO.Models
         public int Age { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        
+        public string PictureUrl { get; set; }
+
     }
 }
