@@ -51,7 +51,7 @@ import { NotFoundComponent } from './NotFound/NotFound.component';
 /*COMPONENTS OF THE STORE*/
 import { CarouselComponent } from './carousel/carousel.component';
 import { CategoryComponent } from './home/category/category.component';
-import { SubcategoryComponent } from './home/category/subcategory/subcategory.component';
+// import { SubcategoryComponent } from './home/category/subcategory/subcategory.component';
 import { ProductComponent } from './home/product/product.component';
 import { ProductViewComponent } from './home/product/product-view/product-view.component';
 
@@ -105,6 +105,7 @@ import { ListCategoryComponent } from './Areas/admin-area/Components/list-catego
 import { ListProductComponent } from './Areas/admin-area/Components/list-product/list-product.component';
 import { ListSubcategoryComponent } from './Areas/admin-area/Components/list-subcategory/list-subcategory.component';
 import { ListUserComponent }from './Areas/admin-area/Components/list-user/list-user.component';
+import { TokenInterceptorService } from './token-interceptor.service';
 
 registerLocaleData(en);
 
@@ -175,7 +176,7 @@ const notifierOptions: NotifierOptions = {
       /*COMPONENTS OF THE STORE*/
       CarouselComponent,
       CategoryComponent,
-      SubcategoryComponent,
+      // SubcategoryComponent,
       ProductComponent,
       ProductViewComponent,
 
@@ -220,7 +221,13 @@ const notifierOptions: NotifierOptions = {
       DemoNgZorroAntdModule
    ],
 
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 

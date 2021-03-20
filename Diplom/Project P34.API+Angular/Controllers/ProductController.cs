@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -100,6 +101,7 @@ namespace Project_P34.API_Angular.Controllers
             return data;
         }
 
+        [Authorize(Roles ="Admin")]
         [HttpPost("addImageToProduct/{id}")]
         public ResultDto addImageToProduct([FromBody] ImagesDTO model, [FromRoute] string id)
         {

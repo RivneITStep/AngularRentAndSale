@@ -66,8 +66,37 @@ export class ShoppingCartComponent implements OnInit {
         }
       );
     }
-
-
   }
+  viewProduct(id: string) {
+    this.productService.temp = id;
+
+
+    /*добавление в недавно просмотренние*/
+    this.model.searchProductId = id;
+
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+
+        const jwtData = token.split('.')[1];
+        const decodedJwtJsonData = window.atob(jwtData);
+        const decodedJwtData = JSON.parse(decodedJwtJsonData);
+
+        this.model.userId = decodedJwtData.id;
+        this.productService.addViewedProduct(this.model).subscribe(
+            data => {
+                console.log(data);
+                if (data.status === 200) {
+                    this.notifier.notify('success', 'Добавлено в переглянуті');
+
+                } else {
+                    console.log(data.errors);
+                    for (let i = 0; i < data.errors.length; i++) {
+                        this.notifier.notify('error', data.errors[i]);
+                    }
+
+                }
+            })
+    }
+}
 
 }

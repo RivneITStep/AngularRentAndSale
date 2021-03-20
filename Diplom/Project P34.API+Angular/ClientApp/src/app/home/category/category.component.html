@@ -2,22 +2,22 @@
 
   <div class="col col-lg-12 col-md 12 col-sm-12 col-xs-12">
 
-    <div class="dropdown show">
+    <div class="dropdown show" *ngFor="let dataCategory of listOfCategories">
       <a class="category-item" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">Чоловіче<span class="lil-arrow">></span></a>
+        aria-expanded="false">{{dataCategory.name}}<span class="lil-arrow">></span></a>
       <div class="dropdown-menu dropdown-menu-subcategories" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Кеди</a>
-        <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Майки</a>
+        <a class="dropdown-item dropdown-subcategories" (click)=subcategoriesFromCategory(dataCategory.id) href="#"><span class="lil-arrow drop-arrow">></span>КЕДЫ</a>
+        <!-- <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Майки</a>
         <a class="dropdown-item dropdown-subcategories" href="#"><span
             class="lil-arrow drop-arrow">></span>Сорочки</a>
         <a class="dropdown-item dropdown-subcategories" href="#"><span
             class="lil-arrow drop-arrow">></span>Футболки</a>
         <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Худі</a>
-        <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Штани</a>
+        <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Штани</a> -->
       </div>
     </div>
 
-    <div class="dropdown show">
+    <!-- <div class="dropdown show">
       <a class="category-item" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">Жіноче<span class="lil-arrow">></span></a>
       <div class="dropdown-menu dropdown-menu-subcategories" aria-labelledby="dropdownMenuLink">
@@ -42,9 +42,9 @@
         <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Кофти</a>
         <a class="dropdown-item dropdown-subcategories" href="#"><span class="lil-arrow drop-arrow">></span>Штани</a>
       </div>
-    </div>
+    </div> -->
 
-    <div class="dropdown show">
+    <!-- <div class="dropdown show">
       <a class="category-item" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">Аксесуари<span class="lil-arrow">></span></a>
       <div class="dropdown-menu dropdown-menu-subcategories" aria-labelledby="dropdownMenuLink">
@@ -61,7 +61,7 @@
         <a class="dropdown-item dropdown-subcategories" href="#"><span
             class="lil-arrow drop-arrow">></span>Шкарпетки</a>
       </div>
-    </div>
+    </div> -->
 
     <!--MODAL WINDOW OF CATEGORIES-->
     <button type="button" class="btn btn-primary btn-catalogue" data-toggle="modal"

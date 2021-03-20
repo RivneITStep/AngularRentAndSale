@@ -40,7 +40,7 @@
               </td>
               <td class="table-body-item">
                 <p class="data-of-product">
-                  <a [routerLink]="['']" class="link-of-product">
+                  <a (click)="viewProduct(data.id)" routerLink="/product-view" class="link-of-product">
                     {{data.name}}
                   </a>
                 </p>

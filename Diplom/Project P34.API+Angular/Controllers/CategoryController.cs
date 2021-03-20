@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Project_IDA.DTO.Models.Result;
 using Project_P34.DataAccess;
 using Project_P34.DataAccess.Entity;
@@ -43,6 +44,27 @@ namespace Project_P34.API_Angular.Controllers
             }
             return data;
         }
+
+
+        //[HttpGet("getCategoriesWithSub")]
+        //public IEnumerable<CategoryDTO> getCategoriesWithSub()
+        //{
+        //    List<CategoryDTO> data = new List<CategoryDTO>();
+        //    CategoryDTO data2 = new CategoryDTO();
+        //    int ik = 0;
+        //    var dataFromDB = _context.categories.Include(t => t.Subcategories);
+         
+        //    foreach (var item in dataFromDB)
+        //    {
+        //        CategoryDTO temp = new CategoryDTO();
+
+        //        temp.Id = item.Id;
+        //        temp.Name = item.Name;
+        //        temp.Subcategories = item.Subcategories.ToList();
+        //        data.Add(temp);
+        //    }
+        //    return data;
+        //}
 
 
         [HttpPost("addCategory")]

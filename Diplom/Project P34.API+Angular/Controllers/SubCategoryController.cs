@@ -45,6 +45,30 @@ namespace Project_P34.API_Angular.Controllers
             return data;
         }
 
+
+        [HttpGet("subcategoriesFromCategory/{idCategory}")]
+        public IEnumerable<SubCategoryDTO> subcategoriesFromCategory([FromRoute] string idCategory)
+        {
+            List<SubCategoryDTO> data = new List<SubCategoryDTO>();
+
+
+            var subCategory = _context.subCategories.Where(t => t.CategoryId == idCategory);
+
+            SubCategoryDTO temp = new SubCategoryDTO();
+            foreach (var item in subCategory)
+            {
+
+                temp.Id = item.Id;
+                temp.Name = item.Name;
+                temp.CategoryId = item.CategoryId;
+
+                data.Add(temp);
+            }
+            return data;
+        }
+
+
+
         [HttpGet("getSubCategoryProducts/{id}")]
         public IEnumerable<ProductDTO> getSubCategoryProducts([FromRoute] string id)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -69,7 +70,7 @@ namespace Project_P34.API_Angular.Controllers
             };
         }
 
-
+        [Authorize(Roles = "Admin, User")]
         [HttpPost("addCartProducts")]
         public ResultDto addCartProducts([FromBody] CartDTO model)
         {
